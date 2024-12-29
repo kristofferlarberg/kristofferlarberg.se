@@ -1,0 +1,31 @@
+{
+  "languages": [
+    "CSS",
+    "HTML",
+    "Javascript",
+    "TypeScript"
+  ],
+  "frameworks": [
+    "Gatsby",
+    "Next.js",
+    "React",
+    "React Native",
+    "Testing Library",
+    "Vue.js"
+  ],
+  "tools": [
+    "CircleCI",
+    "Contentful",
+    "Cypress",
+    "Datadog",
+    "Git",
+    "Node.js",
+    "Tanstack Query"
+  ],
+  "concepts": [
+    "Accessibility",
+    "Agile methods",
+    "Package management",
+    "REST API"
+  ]
+}

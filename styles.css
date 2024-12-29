@@ -46,12 +46,18 @@ h2 {
 }
 
 h3 {
+  text-decoration: underline;
+  margin: 0 0 0.5rem 0;
   font-size: 1.7rem;
   letter-spacing: -0.02rem;
   font-weight: 500;
   @media (min-width: 1000px) {
     font-size: 2rem;
   }
+}
+
+h3::first-letter {
+  text-transform: capitalize;
 }
 
 p {
@@ -171,15 +177,18 @@ footer {
 .skills > h2 {
   font-size: 1.7rem;
   font-weight: 700;
-  text-align: left;
   margin: 0;
   width: 100%;
   box-sizing: border-box;
   color: white;
   @media (min-width: 1000px) {
     font-size: 2rem;
-    text-align: center;
   }
+}
+
+.skills > p {
+  margin: 0;
+  color: white;
 }
 
 .skills > div {
@@ -194,11 +203,7 @@ footer {
   }
 }
 
-.skills > div > div > h3 {
-  margin: 0 0 0.5rem 0;
-}
-
-.skills > div > div:nth-child(1) {
+.skills-one {
   padding: 0 0 2rem 0;
   border-bottom: 1px solid white;
   @media (min-width: 1000px) {
@@ -207,7 +212,7 @@ footer {
   }
 }
 
-.skills > div > div:nth-child(2) {
+.skills-two {
   padding: 3rem 0 2rem 0;
   border-bottom: 1px solid white;
   @media (min-width: 1000px) {
@@ -215,7 +220,7 @@ footer {
   }
 }
 
-.skills > div > div:nth-child(3) {
+.skills-three {
   border-right: 0;
   border-bottom: 1px solid white;
   padding: 3rem 0 2rem 0;
@@ -226,7 +231,7 @@ footer {
   }
 }
 
-.skills > div > div:nth-child(4) {
+.skills-four {
   padding: 3rem 0 0 0;
   @media (min-width: 1000px) {
     padding: 3rem 0 0 3rem;
