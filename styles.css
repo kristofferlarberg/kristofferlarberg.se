@@ -1,0 +1,276 @@
+:root {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  font-family: "HK Grotesk", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  @media (min-width: 1000px) {
+    font-size: 2rem;
+  }
+}
+
+main {
+  max-width: 100%;
+  margin: 0;
+  overflow: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+h1 {
+  font-size: 2.2rem;
+  letter-spacing: -0.02rem;
+  font-weight: 500;
+  line-height: 3rem;
+  margin: 0;
+  @media (min-width: 1000px) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  letter-spacing: -0.02rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+  letter-spacing: -0.02rem;
+  font-weight: 500;
+  @media (min-width: 1000px) {
+    font-size: 2rem;
+  }
+}
+
+p {
+  margin: 1.7rem 0;
+}
+
+p.disclaimer {
+  margin: 6rem 2rem 0 2rem;
+  width: auto;
+  text-align: center;
+}
+
+a,
+a:active,
+a:visited {
+  color: #0c0c0c;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: inset 0 -0.25rem 0 0 #0c0c0c;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  cursor: pointer;
+  @media (min-width: 1000px) {
+    box-shadow: inset 0 0 0 0 #0c0c0c;
+  }
+}
+
+a:hover {
+  box-shadow: inset 0 -0.25rem 0 0 #0c0c0c;
+  @media (min-width: 1000px) {
+    box-shadow: inset 0 -0.3rem 0 0 #0c0c0c;
+    transition: box-shadow 0.1s;
+  }
+}
+
+a:focus {
+  outline: 0.25rem solid #0c0c0c;
+  box-shadow: inset 0 0 0 0 #0c0c0c;
+  @media (min-width: 1000px) {
+    outline: 0.3rem solid #0c0c0c;
+    box-shadow: inset 0 0 0 0 #0c0c0c;
+  }
+}
+
+ul {
+  line-height: 3.5rem;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+section {
+  padding: 4rem 2rem 6rem 2rem;
+  @media (min-width: 1000px) {
+    padding: 5rem 6rem 6rem 6rem;
+  }
+}
+
+footer {
+  padding: 4rem 2rem 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  @media (min-width: 1000px) {
+    padding: 5rem 6rem 6rem 6rem;
+    align-items: flex-start;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 1000px) {
+    align-items: flex-start;
+  }
+}
+
+.introduction {
+  width: 100%;
+  opacity: 1;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  overflow: auto;
+  color: white;
+  background-color: #0c0c0c;
+  border-radius: 20px;
+  transition: opacity 0.3s ease;
+  @media (min-width: 1000px) {
+    width: 60%;
+  }
+}
+
+.skills {
+  width: 100%;
+  margin-top: 0;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  box-sizing: border-box;
+  background-color: #0c0c0c;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.skills > h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  @media (min-width: 1000px) {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.skills > div {
+  color: white;
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.skills > div > div > h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.skills > div > div:nth-child(1) {
+  padding: 0 0 2rem 0;
+  border-bottom: 1px solid white;
+  @media (min-width: 1000px) {
+    padding: 0 3rem 2rem 0;
+    border-right: 1px solid white;
+  }
+}
+
+.skills > div > div:nth-child(2) {
+  padding: 3rem 0 2rem 0;
+  border-bottom: 1px solid white;
+  @media (min-width: 1000px) {
+    padding: 0 0 2rem 3rem;
+  }
+}
+
+.skills > div > div:nth-child(3) {
+  border-right: 0;
+  border-bottom: 1px solid white;
+  padding: 3rem 0 2rem 0;
+  @media (min-width: 1000px) {
+    padding: 3rem 3rem 0 0;
+    border-right: 1px solid white;
+    border-bottom: none;
+  }
+}
+
+.skills > div > div:nth-child(4) {
+  padding: 3rem 0 0 0;
+  @media (min-width: 1000px) {
+    padding: 3rem 0 0 3rem;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@font-face {
+  font-family: "HK Grotesk";
+  src: url("./fonts/HKGrotesk-Medium.eot");
+  src: url("./fonts/HKGrotesk-Medium.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/HKGrotesk-Medium.woff2") format("woff2"),
+    url("./fonts/HKGrotesk-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: medium;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HK Grotesk";
+  src: url("./fonts/HKGrotesk-Bold.eot");
+  src: url("./fonts/HKGrotesk-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/HKGrotesk-Bold.woff2") format("woff2"),
+    url("./fonts/HKGrotesk-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./fonts/SpaceMono-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
