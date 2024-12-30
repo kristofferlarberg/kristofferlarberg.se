@@ -9,9 +9,6 @@ async function fetchDataAndCreateLists() {
 
     const categories = Object.keys(data);
 
-    const placeholder = document.getElementById("skill-description");
-    placeholder.remove();
-
     categories.forEach((category, i) => {
       const div = document.getElementById(category);
 

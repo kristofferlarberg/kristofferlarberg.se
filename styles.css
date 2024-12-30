@@ -11,11 +11,24 @@ body {
   width: 100vw;
   margin: 0;
   font-family: "HK Grotesk", sans-serif;
+  color: #0c0c0c;
   font-size: 1.7rem;
   font-weight: 500;
   line-height: 2.5rem;
+  background-color: #fffafa;
   @media (min-width: 1000px) {
     font-size: 2rem;
+  }
+}
+
+header {
+  padding: 4rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 1000px) {
+    padding: 5rem 6rem 6rem 6rem;
+    align-items: flex-start;
   }
 }
 
@@ -26,13 +39,13 @@ main {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color: white;
 }
 
 h1 {
   font-size: 2.2rem;
   letter-spacing: -0.02rem;
   font-weight: 500;
+  color: #0c0c0c;
   line-height: 3rem;
   margin: 0;
   @media (min-width: 1000px) {
@@ -41,11 +54,14 @@ h1 {
 }
 
 h2 {
+  color: #0c0c0c;
   letter-spacing: -0.02rem;
   line-height: 3rem;
+  font-weight: 500;
 }
 
 h3 {
+  color: #0c0c0c;
   text-decoration: underline;
   margin: 0 0 0.5rem 0;
   font-size: 1.7rem;
@@ -62,12 +78,6 @@ h3::first-letter {
 
 p {
   margin: 1.7rem 0;
-}
-
-p.disclaimer {
-  margin: 6rem 2rem 0 2rem;
-  width: auto;
-  text-align: center;
 }
 
 a,
@@ -122,6 +132,19 @@ section {
   }
 }
 
+section > p {
+  width: 100%;
+  @media (min-width: 1000px) {
+    width: 60%;
+  }
+}
+
+section:nth-child(3) {
+  -webkit-box-shadow: -1px -7px 9px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.2);
+}
+
 footer {
   padding: 4rem 2rem 6rem 2rem;
   display: flex;
@@ -145,15 +168,13 @@ footer {
 
 .introduction {
   width: 100%;
-  opacity: 1;
   padding: 1rem 2rem;
   box-sizing: border-box;
   display: flex;
   overflow: auto;
-  color: white;
-  background-color: #0c0c0c;
+  color: #0c0c0c;
+  background-color: #e5dbff;
   border-radius: 20px;
-  transition: opacity 0.3s ease;
   @media (min-width: 1000px) {
     width: 60%;
   }
@@ -180,19 +201,23 @@ footer {
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  color: white;
+  color: #fffafa;
   @media (min-width: 1000px) {
     font-size: 2rem;
   }
 }
 
 .skills > p {
+  width: 100%;
   margin: 0;
-  color: white;
+  color: #fffafa;
+  @media (min-width: 1000px) {
+    width: 60%;
+  }
 }
 
 .skills > div {
-  color: white;
+  color: #fffafa;
   width: 100%;
   display: inline-grid;
   grid-template-columns: 1fr;
