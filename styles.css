@@ -27,7 +27,7 @@ header {
   flex-direction: column;
   align-items: center;
   @media (min-width: 1000px) {
-    padding: 5rem 6rem 6rem 6rem;
+    padding: 5rem 6rem 0 6rem;
     align-items: flex-start;
   }
 }
@@ -61,7 +61,7 @@ h2 {
 }
 
 h3 {
-  color: #0c0c0c;
+  color: #fffafa;
   text-decoration: underline;
   margin: 0 0 0.5rem 0;
   font-size: 1.7rem;
@@ -137,6 +137,10 @@ section > p {
   @media (min-width: 1000px) {
     width: 60%;
   }
+}
+
+section:nth-child(1) {
+  padding-top: 3rem;
 }
 
 section:nth-child(3) {
