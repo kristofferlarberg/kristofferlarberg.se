@@ -5,7 +5,7 @@
     "Javascript",
     "TypeScript"
   ],
-  "frameworks": [
+  "frameworks/libraries": [
     "Gatsby",
     "Next.js",
     "React",
@@ -26,6 +26,8 @@
     "Accessibility",
     "Agile methods",
     "Package management",
-    "REST API"
+    "Pair and mob programming",
+    "REST API",
+    "Test-driven development"
   ]
 }
