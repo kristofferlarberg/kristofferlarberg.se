@@ -1,0 +1,3 @@
+User-agent: *
+Visit-time: 0200-0300
+Crawl-delay: 20
