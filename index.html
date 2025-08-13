@@ -72,23 +72,37 @@
         </p>
       </section>
       <section style="background-color: #e5dbff">
-        <div class="skills">
-          <h2>Tech stack</h2>
-          <p>
-            My current technical experience includes HTML, CSS, JavaScript and
-            contemporary frontend frameworks and libraries. I have experience
-            with tools for CI/CD pipelines and testing (in some cases working
-            with test-driven development). I've also worked with various CMS and
-            tools for handling data. Listed below are skills on a level of
-            intermediate to expert.
-          </p>
-          <div>
-            <div id="languages"></div>
-            <div id="frameworks/libraries"></div>
-            <div id="tools"></div>
-            <div id="concepts"></div>
+        <figure>
+          <figcaption>Skills plotted by confidence level (vertical) and years of experience (horizontal)</figcaption>
+          <div class="graph-container">
+              <span class="axis-label x-label">
+                  <span class="sr-only">X axis: </span>Duration (years) →
+              </span>
+              <span class="axis-label y-label">
+                  <span class="sr-only">Y axis: </span>Confidence ↑
+              </span>
+              <ul class="skills-list">
+                  <li class="skill" data-name="Git" data-taught="true" data-future="false" data-collaborated="true" style="left: calc700px; bottom: 450px;">
+                      <span aria-label="Filled circle">●</span> Git
+                      <span class="sr-only">Daily use, 10 years experience, confidence 9 of 10</span>
+                  </li>
+                  <li class="skill" data-name="Docker" data-taught="false" data-future="true" data-collaborated="true" style="left: 280px; bottom: 300px;">
+                      <span aria-label="Partially filled circle">○</span> Docker
+                      <span class="sr-only">Weekly use, 4 years experience, confidence 6 of 10</span>
+                  </li>
+                  <li class="skill" data-name="MongoDB" data-taught="false" data-future="false" data-collaborated="false" style="left: 280px; bottom: 250px;">
+                      <span aria-hidden="true">◐</span> MongoDB
+                      <span class="sr-only">Monthly use, 4 years experience, confidence 5 of 10</span>
+                  </li>
+              </ul>
           </div>
-        </div>
+          <div class="legend" role="complementary">
+              <span class="sr-only">Legend</span>
+              <span aria-label="Filled circle">●</span> Daily | 
+              <span aria-label="Partially filled circle">◐</span> Weekly
+              <span aria-label="Empty circle">○</span> Monthly | 
+          </div>
+      </figure>
       </section>
       <footer>
         <h2 class="sr-only">Contact</h2>
