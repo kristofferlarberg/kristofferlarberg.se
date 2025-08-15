@@ -2,77 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="CV for Kristoffer Larberg" />
+    <meta name="description" content="Website about Kristoffer Larberg" />
     <meta name="author" content="Kristoffer Larberg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kristoffer Larberg</title>
+    <title>kristofferlarberg.se</title>
     <link rel="canonical" href="https://kristofferlarberg.se" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Kristoffer Larberg</h1>
+      <h1>kristofferlarberg.se</h1>
     </header>
     <main>
       <section class="container" style="gap: 3rem">
         <h2 class="sr-only">Introduction</h2>
         <div class="introduction">
           <p>
-            I’m a Stockholm based developer who likes building well made
-            functionality and intuitive user experiences, for services that play
-            an important role in the lives of its users. This is a CV type of
-            site. See my GitHub for examples of projects.
+            I’m a Stockholm based developer who likes building services that
+            help people. This site is a way for me to make sense of my developer
+            practice. Maybe you'll find it interesting as well.
           </p>
-        </div>
-        <div class="container">
-          <a
-            href="https://github.com/kristofferlarberg"
-            rel="noreferrer"
-            style="margin: 0 0 1rem 0"
-          >
-            <span aria-hidden="true">→</span>
-            GitHub
-          </a>
-          <a
-            href="https://se.linkedin.com/in/kristofferlarberg"
-            rel="noreferrer"
-          >
-            <span aria-hidden="true">→</span>
-            LinkedIn
-          </a>
         </div>
       </section>
       <section style="background-color: #efefef">
-        <h2>Experience</h2>
-        <p>
-          I currently work as a frontend developer at a product company and have
-          previously had positions at two smaller consulting agencies.
-        </p>
+        <h2 class="circle">Process</h2>
         <ul style="list-style-type: disc; padding-left: 2rem">
-          <li>
-            I'm used to the agile work process and I think pair and mob
-            programming are valuable and fun ways of working.
+          <li class="circle">
+            I believe in pair and mob programming as valuable and fun ways of
+            working.
           </li>
-          <li>
-            I'm experienced within accessibility and hold a CPACC certification.
-            This has become my main interest within frontend development.
+          <li class="circle">
+            I have worked a little with test-driven development and would not
+            object to do more of that.
           </li>
-          <li>I like to be creative and I like solving problems.</li>
-          <li>
-            It's also nice to learn new things. I'm currently broadening myself
-            toward backend and dabbling a little with Python.
+          <li class="circle">
+            I'm used to different forms of agile processes. Sometimes multiple
+            at once, sometimes quite strictly limited to a single one.
+          </li>
+          <li class="circle">
+            <span>
+              I've worked alot with accessibility and I'm
+              <a
+                href="https://www.accessibilityassociation.org/certification-overview"
+                class="text"
+              >
+                CPACC
+              </a>
+              certified. This site is by the way built with the progressive
+              enhancement strategy.
+            </span>
           </li>
         </ul>
-        <p>
-          Prior to being employed I freelanced within design and web
-          development. My focus has over the years gone from design to
-          development. Nowadays I professionally see myself strictly as being a
-          developer, but with a sense for the visual.
-        </p>
       </section>
       <section style="background-color: #e5dbff">
         <div class="filters">
-          <h2 id="filters-heading">Filters</h2>
+          <h2 id="filters-heading">Skills</h2>
           <button data-filter="all" class="active" aria-pressed="true">
             All Skills
           </button>
@@ -149,11 +133,11 @@
           <div class="legend" role="complementary">
             <span class="sr-only">Legend</span>
             <span aria-label="Filled circle">●</span>
-            Daily |
+            Daily
             <span aria-label="Partially filled circle">◐</span>
             Weekly
             <span aria-label="Empty circle">○</span>
-            Monthly |
+            Monthly
           </div>
         </figure>
       </section>
