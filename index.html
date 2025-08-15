@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <script src="script.js"></script>
     <header>
       <h1>Kristoffer Larberg</h1>
     </header>
@@ -72,37 +71,91 @@
         </p>
       </section>
       <section style="background-color: #e5dbff">
+        <div class="filters">
+          <h2 id="filters-heading">Filters</h2>
+          <button data-filter="all" class="active" aria-pressed="true">
+            All Skills
+          </button>
+          <button data-filter="taught" aria-pressed="false">
+            Skills I've Taught
+          </button>
+          <button data-filter="future" aria-pressed="false">
+            Future Interest
+          </button>
+          <button data-filter="collaborated" aria-pressed="false">
+            Collaborative Skills
+          </button>
+        </div>
+
         <figure>
-          <figcaption>Skills plotted by confidence level (vertical) and years of experience (horizontal)</figcaption>
+          <figcaption>
+            Skills plotted by confidence level (vertical) and years of
+            experience (horizontal)
+          </figcaption>
           <div class="graph-container">
-              <span class="axis-label x-label">
-                  <span class="sr-only">X axis: </span>Duration (years) →
-              </span>
-              <span class="axis-label y-label">
-                  <span class="sr-only">Y axis: </span>Confidence ↑
-              </span>
-              <ul class="skills-list">
-                  <li class="skill" data-name="Git" data-taught="true" data-future="false" data-collaborated="true" style="left: calc700px; bottom: 450px;">
-                      <span aria-label="Filled circle">●</span> Git
-                      <span class="sr-only">Daily use, 10 years experience, confidence 9 of 10</span>
-                  </li>
-                  <li class="skill" data-name="Docker" data-taught="false" data-future="true" data-collaborated="true" style="left: 280px; bottom: 300px;">
-                      <span aria-label="Partially filled circle">○</span> Docker
-                      <span class="sr-only">Weekly use, 4 years experience, confidence 6 of 10</span>
-                  </li>
-                  <li class="skill" data-name="MongoDB" data-taught="false" data-future="false" data-collaborated="false" style="left: 280px; bottom: 250px;">
-                      <span aria-hidden="true">◐</span> MongoDB
-                      <span class="sr-only">Monthly use, 4 years experience, confidence 5 of 10</span>
-                  </li>
-              </ul>
+            <span class="axis-label x-label">
+              <span class="sr-only">X axis:</span>
+              Duration (years) →
+            </span>
+            <span class="axis-label y-label">
+              <span class="sr-only">Y axis:</span>
+              Confidence ↑
+            </span>
+            <ul class="skills-list">
+              <li
+                class="skill"
+                data-name="Git"
+                data-taught="true"
+                data-future="false"
+                data-collaborated="true"
+                style="left: calc700px; bottom: 450px"
+              >
+                <span aria-label="Filled circle">●</span>
+                Git
+                <span class="sr-only">
+                  Daily use, 10 years experience, confidence 9 of 10
+                </span>
+              </li>
+              <li
+                class="skill"
+                data-name="Docker"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="left: 280px; bottom: 300px"
+              >
+                <span aria-label="Empty circle">○</span>
+                Docker
+                <span class="sr-only">
+                  Weekly use, 4 years experience, confidence 6 of 10
+                </span>
+              </li>
+              <li
+                class="skill"
+                data-name="MongoDB"
+                data-taught="false"
+                data-future="false"
+                data-collaborated="false"
+                style="left: 280px; bottom: 250px"
+              >
+                <span aria-label="Partially filled circle">◐</span>
+                MongoDB
+                <span class="sr-only">
+                  Monthly use, 4 years experience, confidence 5 of 10
+                </span>
+              </li>
+            </ul>
           </div>
           <div class="legend" role="complementary">
-              <span class="sr-only">Legend</span>
-              <span aria-label="Filled circle">●</span> Daily | 
-              <span aria-label="Partially filled circle">◐</span> Weekly
-              <span aria-label="Empty circle">○</span> Monthly | 
+            <span class="sr-only">Legend</span>
+            <span aria-label="Filled circle">●</span>
+            Daily |
+            <span aria-label="Partially filled circle">◐</span>
+            Weekly
+            <span aria-label="Empty circle">○</span>
+            Monthly |
           </div>
-      </figure>
+        </figure>
       </section>
       <footer>
         <h2 class="sr-only">Contact</h2>
@@ -129,4 +182,5 @@
       </footer>
     </main>
   </body>
+  <script src="script.js"></script>
 </html>
