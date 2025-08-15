@@ -14,7 +14,7 @@
       <h1>kristofferlarberg.se</h1>
     </header>
     <main>
-      <section class="container" style="gap: 3rem">
+      <section class="container" style="gap: 3rem; padding-top: 3rem">
         <h2 class="sr-only">Introduction</h2>
         <div class="introduction">
           <p>
@@ -24,22 +24,17 @@
           </p>
         </div>
       </section>
-      <section style="background-color: #efefef">
-        <h2 class="circle">Process</h2>
-        <ul style="list-style-type: disc; padding-left: 2rem">
-          <li class="circle">
-            I believe in pair and mob programming as valuable and fun ways of
-            working.
-          </li>
-          <li class="circle">
-            I have worked a little with test-driven development and would not
-            object to do more of that.
-          </li>
-          <li class="circle">
-            I'm used to different forms of agile processes. Sometimes multiple
-            at once, sometimes quite strictly limited to a single one.
-          </li>
-          <li class="circle">
+      <section
+        style="
+          background-color: #efefef;
+          display: flex;
+          flex-direction: row;
+          padding: 0;
+        "
+      >
+        <h2 class="square">Process</h2>
+        <ul class="mindmap">
+          <li class="square">
             <span>
               I've worked alot with accessibility and I'm
               <a
@@ -51,6 +46,18 @@
               certified. This site is by the way built with the progressive
               enhancement strategy.
             </span>
+          </li>
+          <li class="square">
+            I believe in pair and mob programming as valuable and fun ways of
+            working.
+          </li>
+          <li class="square">
+            I have worked with test-driven development and would like to do more
+            of that.
+          </li>
+          <li class="square" style="border-bottom: none">
+            I'm used to different forms of agile processes. Sometimes multiple
+            at once, sometimes strictly limited to a single one.
           </li>
         </ul>
       </section>
