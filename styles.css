@@ -5,10 +5,6 @@
   scroll-behavior: smooth;
   overflow-y: scroll;
   overflow-x: hidden;
-
-  /* Graph container dimensions */
-  --graph-width: 1000px;
-  --graph-height: 600px;
 }
 
 body {
@@ -151,7 +147,7 @@ a.text {
 }
 
 a.text:hover,
-li.circle: > a:hover {
+li.circle > a:hover {
   box-shadow: inset 0 -0.25rem 0 0 #0c0c0c;
 }
 
@@ -238,8 +234,20 @@ section:nth-child(3) {
 }
 
 figure {
-  display: flex;
+  container-type: inline-size;
+  display: none;
   flex-direction: column;
+  width: 100%;
+  margin: 3rem 0 0 0;
+  @container (min-width: 640px) {
+    .graph-container {
+      display: flex;
+      width: 640px;
+    }
+  }
+  @media (min-width: 200px) {
+    display: flex;
+  }
 }
 
 figcaption {
@@ -282,10 +290,19 @@ footer {
   }
 }
 
+.graph-placeholder {
+  display: block;
+  @media (min-width: 200px) {
+    display: none;
+  }
+}
+
 .graph-container {
+  --x-max: 20;
+  --y-max: 20;
   position: relative;
-  width: var(--graph-width);
-  height: var(--graph-height);
+  width: 200px;
+  aspect-ratio: 1 / 1;
   border-left: 2px solid #0c0c0c;
   border-bottom: 2px solid #0c0c0c;
   margin: 0 auto;
@@ -299,6 +316,8 @@ footer {
 
 .skill {
   position: absolute;
+  left: calc(var(--x) / var(--x-max) * 100%);
+  bottom: calc(var(--y) / var(--y-max) * 100%);
 }
 
 .axis-label {
