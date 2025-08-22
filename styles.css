@@ -215,6 +215,7 @@ li.skill {
   position: absolute;
   left: calc(var(--x) / var(--x-max) * 100%);
   bottom: calc(var(--y) / var(--y-max) * 100%);
+  font-size: 1rem;
 }
 
 ul.categories {
@@ -268,10 +269,41 @@ figure {
   flex-direction: column;
   width: 100%;
   margin: 3rem 0 0 0;
+
+  @container (min-width: 500px) {
+    .graph-container {
+      display: flex;
+      width: 380px;
+    }
+  }
+
   @container (min-width: 640px) {
     .graph-container {
       display: flex;
-      width: 640px;
+      width: 520px;
+    }
+    li.skill {
+      font-size: 1.7rem;
+    }
+    .x-label {
+      font-size: 1.7rem;
+    }
+    .y-label {
+      font-size: 1.7rem;
+    }
+  }
+
+  @container (min-width: 768px) {
+    .graph-container {
+      display: flex;
+      width: 648px;
+    }
+  }
+
+  @container (min-width: 1024px) {
+    .graph-container {
+      display: flex;
+      width: 869px;
     }
   }
   @media (min-width: 300px) {
@@ -323,7 +355,7 @@ footer {
   --x-max: 10;
   --y-max: 20;
   position: relative;
-  width: 200px;
+  width: 180px;
   aspect-ratio: 1 / 1;
   border-left: 2px solid #0c0c0c;
   border-bottom: 2px solid #0c0c0c;
@@ -332,18 +364,22 @@ footer {
 
 .axis-label {
   position: absolute;
+  text-align: center;
 }
 
 .x-label {
-  bottom: -30px;
+  bottom: -27px;
   left: 50%;
   transform: translateX(-50%);
+  font-size: 1.4rem;
+  width: 100%;
 }
 
 .y-label {
-  left: -80px;
+  left: -57px;
   top: 50%;
   transform: rotate(-90deg);
+  font-size: 1.4rem;
 }
 
 .filters {
