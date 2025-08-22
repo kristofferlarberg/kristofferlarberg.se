@@ -3,7 +3,20 @@ function createFilterButtons() {
   const buttons = document.querySelectorAll("button");
   const skills = document.querySelectorAll(".skill");
 
-  filters.style.display = "block";
+  // Function to check width and show/hide filters
+  function checkWidthAndShowFilters() {
+    if (window.innerWidth >= 300) {
+      filters.style.display = "block";
+    } else {
+      filters.style.display = "none";
+    }
+  }
+
+  // Initial check
+  checkWidthAndShowFilters();
+
+  // Add resize event listener
+  window.addEventListener("resize", checkWidthAndShowFilters);
 
   // Add click handlers
   buttons.forEach((button) => {
