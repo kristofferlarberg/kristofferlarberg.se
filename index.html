@@ -62,8 +62,10 @@
         </ul>
       </section>
       <section style="background-color: #e5dbff">
+        <h2>Experience</h2>
+
+        <!-- Skills filtering, if browser uses javacript -->
         <div class="filters">
-          <h2 id="filters-heading">Skills</h2>
           <button data-filter="all" class="active" aria-pressed="true">
             All Skills
           </button>
@@ -78,6 +80,25 @@
           </button>
         </div>
 
+        <!-- Default skills content as list -->
+        <div class="graph-placeholder">
+          <ul>
+            <li>
+              Contentful, weekly use, 4 years experience, confidence 10 of 20
+            </li>
+            <li>Datadog, weekly use, 2 years experience, confidence 8 of 20</li>
+            <li>git, daily use, 5 years experience, confidence 14 of 20</li>
+            <li>
+              Node.js, monthly use, 4 years experience, confidence 8 of 20
+            </li>
+            <li>
+              Tanstack Query, weekly use, 6 years experience, confidence 12 of
+              20
+            </li>
+          </ul>
+        </div>
+
+        <!-- Skills content as graph, above 200px screen width -->
         <figure>
           <figcaption>
             Skills plotted by confidence level (vertical) and years of
@@ -95,74 +116,108 @@
             <ul class="skills-list">
               <li
                 class="skill"
-                data-name="Git"
-                data-taught="true"
+                data-name="Contentful"
+                data-taught="false"
                 data-future="false"
                 data-collaborated="true"
-                style="--x: 7.5; --y: 8"
+                style="--x: 4; --y: 10"
               >
-                <span aria-label="Filled circle">●</span>
-                Git
+                <span aria-label="Partially filled circle">◐</span>
+                Contentful
                 <span class="sr-only">
-                  Daily use, 10 years experience, confidence 9 of 10
+                  weekly use, 4 years experience, confidence 10 of 20
                 </span>
               </li>
               <li
                 class="skill"
-                data-name="Docker"
+                data-name="Datadog"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
-                style="--x: 2.8; --y: 2.5"
+                style="--x: 2; --y: 8"
               >
-                <span aria-label="Empty circle">○</span>
-                Docker
+                <span aria-label="Partially filled circle">◐</span>
+                Datadog
                 <span class="sr-only">
-                  Weekly use, 4 years experience, confidence 6 of 10
+                  weekly use, 2 years experience, confidence 8 of 20
                 </span>
               </li>
               <li
                 class="skill"
-                data-name="MongoDB"
+                data-name="git"
+                data-taught="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 5; --y: 15"
+              >
+                <span aria-label="Filled circle">●</span>
+                git
+                <span class="sr-only">
+                  daily use, 5 years experience, confidence 15 of 20
+                </span>
+              </li>
+              <li
+                class="skill"
+                data-name="Node.js"
                 data-taught="false"
-                data-future="false"
+                data-future="true"
                 data-collaborated="false"
-                style="--x: 1; --y: 1"
+                style="--x: 5; --y: 14"
+              >
+                <span aria-label="Empty circle">○</span>
+                Node.js
+                <span class="sr-only">
+                  monthly use, 4 years experience, confidence 8 of 20
+                </span>
+              </li>
+              <li
+                class="skill"
+                data-name="Tanstack Query"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 6; --y: 12"
               >
                 <span aria-label="Partially filled circle">◐</span>
-                MongoDB
+                Tanstack Query
                 <span class="sr-only">
-                  Monthly use, 4 years experience, confidence 5 of 10
+                  weekly use, 6 years experience, confidence 12 of 20
                 </span>
               </li>
             </ul>
           </div>
-          <div class="legend" role="complementary">
-            <span class="sr-only">Legend</span>
-            <span aria-label="Filled circle">●</span>
-            Daily
-            <span aria-label="Partially filled circle">◐</span>
-            Weekly
-            <span aria-label="Empty circle">○</span>
-            Monthly
+          <div class="legend">
+            <h3>Legend</h3>
+            <div>
+              <h4>Estimated average frequency</h4>
+              <dl>
+                <dt><span aria-label="Filled circle">●</span></dt>
+                <dd>Daily</dd>
+                <dt><span aria-label="Partially filled circle">◐</span></dt>
+                <dd>Weekly</dd>
+                <dt><span aria-label="Empty circle">○</span></dt>
+                <dd>Monthly</dd>
+              </dl>
+            </div>
+            <div>
+              <h4>Categories</h4>
+              <dl>
+                <dt><span aria-label="">x</span></dt>
+                <dd>Languages</dd>
+                <dt><span aria-label="">x</span></dt>
+                <dd>Testing</dd>
+                <dt><span aria-label="">x</span></dt>
+                <dd>CI/CD</dd>
+                <dt><span aria-label="">x</span></dt>
+                <dd>Tools</dd>
+                <dt><span aria-label="">x</span></dt>
+                <dd>Frameworks/libraries</dd>
+                <dt><span aria-label="">x</span></dt>
+                <dd><span>Concepts</span></dd>
+              </dl>
+            </div>
           </div>
         </figure>
-        <div class="graph-placeholder" role="complementary">
-          <ul>
-            <li>
-              Git
-              <span> Daily use, 10 years experience, confidence 9 of 10 </span>
-            </li>
-            <li>
-              Docker
-              <span> Weekly use, 4 years experience, confidence 6 of 10 </span>
-            </li>
-            <li>
-              MongoDB
-              <span> Monthly use, 4 years experience, confidence 5 of 10 </span>
-            </li>
-          </ul>
-        </div>
       </section>
       <footer>
         <h2 class="sr-only">Contact</h2>

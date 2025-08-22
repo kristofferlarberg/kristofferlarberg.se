@@ -77,8 +77,6 @@ h2.square {
 }
 
 h3 {
-  color: #fffafa;
-  text-decoration: underline;
   margin: 0 0 0.5rem 0;
   font-size: 1.7rem;
   letter-spacing: -0.02rem;
@@ -298,7 +296,7 @@ footer {
 }
 
 .graph-container {
-  --x-max: 20;
+  --x-max: 10;
   --y-max: 20;
   position: relative;
   width: 200px;
