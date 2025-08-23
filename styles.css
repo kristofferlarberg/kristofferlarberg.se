@@ -211,11 +211,12 @@ ul.skills {
   line-height: 0;
 }
 
+/* font-size is also set in figure container queries */
 li.skill {
   position: absolute;
-  left: calc(var(--x) / var(--x-max) * 100%);
-  bottom: calc(var(--y) / var(--y-max) * 100%);
-  font-size: 1rem;
+  left: calc((var(--x) + 1) / (var(--x-max) + 1) * 100%);
+  bottom: calc(((var(--y) + 1) * 2) / (var(--y-max) + 1) * 100%) !important;
+  font-size: 1.4rem;
 }
 
 ul.categories {
@@ -274,41 +275,85 @@ figure {
     .graph-container {
       display: flex;
       width: 380px;
+      aspect-ratio: 1 / 1;
+      --y-max: 20;
+    }
+    .y-label {
+      width: 100%;
+      left: calc(-50% - 27px);
+    }
+    li.skill {
+      bottom: calc((var(--y) + 1) / (var(--y-max) + 1) * 100%) !important;
     }
   }
 
   @container (min-width: 640px) {
     .graph-container {
-      display: flex;
       width: 520px;
     }
+    .axis-label {
+      font-size: 1.7rem;
+    }
+
     li.skill {
-      font-size: 1.7rem;
-    }
-    .x-label {
-      font-size: 1.7rem;
-    }
-    .y-label {
       font-size: 1.7rem;
     }
   }
 
   @container (min-width: 768px) {
     .graph-container {
-      display: flex;
       width: 648px;
     }
   }
 
   @container (min-width: 1024px) {
     .graph-container {
-      display: flex;
       width: 869px;
     }
   }
+
   @media (min-width: 300px) {
     display: flex;
   }
+}
+
+/* Width is set in figure container queries */
+.graph-container {
+  --x-max: 10;
+  --y-max: 40;
+  position: relative;
+  width: 180px;
+  aspect-ratio: 1 / 2;
+  border-left: 2px solid #0c0c0c;
+  border-bottom: 2px solid #0c0c0c;
+  margin: 0 auto;
+}
+
+/* font-size is also set in figure container queries */
+.axis-label {
+  position: absolute;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+/* font-size is also set in figure container queries */
+/* left: width of container / 2 + space for empty initial span  */
+/* bottom: 0%  - height of x label */
+.x-label {
+  left: calc(50% + 5px);
+  bottom: calc(0% - 50px);
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+/* font-size is also set in figure container queries */
+/* left: minus value of height of container - height of numbers row */
+/* top: height of container / 2  - height of x label - space for empty initial span */
+.y-label {
+  left: calc(-100% - 27px);
+  top: calc(50% - 25px - 10px);
+  transform: rotate(-90deg);
+  width: 362px;
 }
 
 figcaption {
@@ -351,37 +396,7 @@ footer {
   }
 }
 
-.graph-container {
-  --x-max: 10;
-  --y-max: 20;
-  position: relative;
-  width: 180px;
-  aspect-ratio: 1 / 1;
-  border-left: 2px solid #0c0c0c;
-  border-bottom: 2px solid #0c0c0c;
-  margin: 0 auto;
-}
-
-.axis-label {
-  position: absolute;
-  text-align: center;
-}
-
-.x-label {
-  bottom: -27px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.4rem;
-  width: 100%;
-}
-
-.y-label {
-  left: -57px;
-  top: 50%;
-  transform: rotate(-90deg);
-  font-size: 1.4rem;
-}
-
+/* diplay value is also set with javascript */
 .filters {
   display: none;
 }
