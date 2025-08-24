@@ -3,12 +3,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   margin: 0;
   font-family: "HK Grotesk", sans-serif;
   color: #0c0c0c;
@@ -199,7 +200,7 @@ ul {
 ul.graph-placeholder {
   display: block;
   width: auto;
-  @media (min-width: 200px) {
+  @media (min-width: 250px) {
     display: none;
   }
 }
@@ -208,7 +209,7 @@ ul.skills {
   list-style: none;
   padding: 0;
   margin: 0;
-  line-height: 0;
+  line-height: 1;
 }
 
 /* font-size is also set in figure container queries */
@@ -217,6 +218,8 @@ li.skill {
   left: calc((var(--x) + 1) / (var(--x-max) + 1) * 100%);
   bottom: calc(((var(--y) + 1) * 3) / (var(--y-max) + 1) * 100%);
   font-size: 1.4rem;
+  white-space: nowrap;
+  transform: translate(-50%, 50%);
 }
 
 ul.categories {
@@ -252,9 +255,9 @@ dd {
 }
 
 section {
-  padding: 4rem 2rem 6rem 2rem;
+  padding: 40px 20px 60px 20px;
   @media (min-width: 1000px) {
-    padding: 5rem 6rem 6rem 6rem;
+    padding: 50px 60px 60px 60px;
   }
 }
 
@@ -278,7 +281,6 @@ figure {
       width: calc(100% - 50px);
       aspect-ratio: 1 / 1;
       --y-max: 20;
-      margin: 0 0 0 auto;
     }
     .y-label {
       width: 100%;
@@ -292,9 +294,6 @@ figure {
   @container (min-width: 640px) {
     .graph-container {
       width: calc(100% - 50px);
-    }
-    .axis-label {
-      font-size: 1.7rem;
     }
     li.skill {
       font-size: 1.7rem;
@@ -313,47 +312,46 @@ figure {
     }
   }
 
-  @media (min-width: 200px) {
+  @media (min-width: 250px) {
     display: flex;
   }
 }
 
 /* Width is set in figure container queries */
 .graph-container {
-  --x-max: 10;
+  --x-max: 6;
   --y-max: 60;
   position: relative;
-  width: 132px;
-  aspect-ratio: 1 / 3;
+  width: calc(100% - 50px);
+  aspect-ratio: 1 / 2;
   border-left: 2px solid #0c0c0c;
   border-bottom: 2px solid #0c0c0c;
-  margin: 0 auto;
+  margin: 0 0 0 auto;
 }
 
-/* font-size is also set in figure container queries */
 .axis-label {
   position: absolute;
   text-align: center;
   font-size: 1.4rem;
+  line-height: 1;
 }
 
-/* font-size is also set in figure container queries */
 /* bottom: 0%  - height of x label */
 .x-label {
   left: 50%;
-  bottom: calc(0% - 50px);
+  bottom: calc(0% - 35px - 7px);
   transform: translateX(-50%);
   width: calc(100% + 15px);
 }
 
 /* font-size is also set in figure container queries */
-/* left: minus value of height of container - height of numbers row */
-/* top: height of container / 2  - height of x label - space for empty initial span */
+/* left: minus value of height of container - height of numbers row - margin */
+/* top: height of container / 2  - space for empty initial span */
 .y-label {
-  left: calc(-100% - 100px);
-  top: calc(50% - 25px - 10px);
+  left: calc(-100% - 14px - 7px);
+  top: calc(50% - 30px);
   transform: rotate(-90deg);
-  width: 398px;
+  width: calc(100% * 2);
 }
 
 figcaption {
