@@ -199,7 +199,7 @@ ul {
 ul.graph-placeholder {
   display: block;
   width: auto;
-  @media (min-width: 300px) {
+  @media (min-width: 200px) {
     display: none;
   }
 }
@@ -215,7 +215,7 @@ ul.skills {
 li.skill {
   position: absolute;
   left: calc((var(--x) + 1) / (var(--x-max) + 1) * 100%);
-  bottom: calc(((var(--y) + 1) * 2) / (var(--y-max) + 1) * 100%) !important;
+  bottom: calc(((var(--y) + 1) * 3) / (var(--y-max) + 1) * 100%);
   font-size: 1.4rem;
 }
 
@@ -269,14 +269,16 @@ figure {
   display: none;
   flex-direction: column;
   width: 100%;
+  justify-content: right;
   margin: 3rem 0 0 0;
 
   @container (min-width: 500px) {
     .graph-container {
       display: flex;
-      width: 380px;
+      width: calc(100% - 50px);
       aspect-ratio: 1 / 1;
       --y-max: 20;
+      margin: 0 0 0 auto;
     }
     .y-label {
       width: 100%;
@@ -289,12 +291,11 @@ figure {
 
   @container (min-width: 640px) {
     .graph-container {
-      width: 520px;
+      width: calc(100% - 50px);
     }
     .axis-label {
       font-size: 1.7rem;
     }
-
     li.skill {
       font-size: 1.7rem;
     }
@@ -302,17 +303,17 @@ figure {
 
   @container (min-width: 768px) {
     .graph-container {
-      width: 648px;
+      width: calc(100% - 50px);
     }
   }
 
   @container (min-width: 1024px) {
     .graph-container {
-      width: 869px;
+      width: calc(100% - 50px);
     }
   }
 
-  @media (min-width: 300px) {
+  @media (min-width: 200px) {
     display: flex;
   }
 }
@@ -320,10 +321,10 @@ figure {
 /* Width is set in figure container queries */
 .graph-container {
   --x-max: 10;
-  --y-max: 40;
+  --y-max: 60;
   position: relative;
-  width: 180px;
-  aspect-ratio: 1 / 2;
+  width: 132px;
+  aspect-ratio: 1 / 3;
   border-left: 2px solid #0c0c0c;
   border-bottom: 2px solid #0c0c0c;
   margin: 0 auto;
@@ -337,23 +338,22 @@ figure {
 }
 
 /* font-size is also set in figure container queries */
-/* left: width of container / 2 + space for empty initial span  */
 /* bottom: 0%  - height of x label */
 .x-label {
-  left: calc(50% + 5px);
+  left: 50%;
   bottom: calc(0% - 50px);
   transform: translateX(-50%);
-  width: 100%;
+  width: calc(100% + 15px);
 }
 
 /* font-size is also set in figure container queries */
 /* left: minus value of height of container - height of numbers row */
 /* top: height of container / 2  - height of x label - space for empty initial span */
 .y-label {
-  left: calc(-100% - 27px);
+  left: calc(-100% - 100px);
   top: calc(50% - 25px - 10px);
   transform: rotate(-90deg);
-  width: 362px;
+  width: 398px;
 }
 
 figcaption {
