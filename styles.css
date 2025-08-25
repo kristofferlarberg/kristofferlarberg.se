@@ -197,7 +197,7 @@ ul {
   }
 }
 
-ul.graph-placeholder {
+.graph-placeholder {
   display: block;
   width: auto;
   @media (min-width: 250px) {
