@@ -6,7 +6,7 @@ function createFilterButtons() {
   // Function to check width and show/hide filters
   function checkWidthAndShowFilters() {
     if (window.innerWidth >= 250) {
-      filters.style.display = "block";
+      filters.style.display = "flex";
     } else {
       filters.style.display = "none";
     }
