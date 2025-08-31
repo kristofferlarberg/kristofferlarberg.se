@@ -310,7 +310,7 @@ figure {
   --x-max: 6;
   --y-max: 40;
   position: relative;
-  width: calc(100% - 50px);
+  width: calc(100% - 20px);
   aspect-ratio: 1 / 2;
   border-left: 2px solid var(--black);
   border-bottom: 2px solid var(--black);
@@ -324,12 +324,11 @@ figure {
   line-height: 1;
 }
 
-/* bottom: 0%  - height of x label */
 .x-label {
-  left: 50%;
+  left: calc(50%);
   bottom: calc(-35px - 7px);
   transform: translateX(-50%);
-  width: calc(100% + 15px);
+  width: 100%;
 }
 
 /* font-size is also set in figure container queries */
@@ -337,7 +336,7 @@ figure {
 /* top: height of container / 2  - space for empty initial span */
 .y-label {
   left: calc(-100% - 14px - 7px);
-  top: calc(50% - 30px);
+  top: calc(50% - 25px);
   transform: rotate(-90deg);
   width: calc(100% * 2);
 }
