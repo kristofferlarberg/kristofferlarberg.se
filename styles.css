@@ -215,27 +215,36 @@ li.skill {
 
 li.skill::after {
   content: "";
-  display: flex;
-  justify-content: center;
-  --radius: 2px;
   height: 20px;
   width: 100%;
 }
 
-li.skill.testing::after {
-  content: "⌑⌑⌑⌑";
+li.skill.languages {
+  text-decoration: underline solid 1px var(--black);
 }
-li.skill.cicd::after {
-  content: "◊◊◊◊";
+li.skill.frameworks-libraries {
+  text-decoration: underline double 1px var(--black);
 }
-li.skill.tools::after {
-  content: "⁒⁒⁒⁒";
+li.skill.backend-data {
+  text-decoration: underline dotted 1px var(--black);
 }
-li.skill.frameworks::after {
-  content: "⌘⌘⌘";
+li.skill.testing {
+  text-decoration: underline dashed 1px var(--black);
 }
-li.skill.concepts::after {
-  content: "⁂⁂⁂";
+li.skill.tooling {
+  text-decoration: underline wavy 1px var(--black);
+}
+
+li.skill.full::after {
+  content: "●";
+}
+
+li.skill.half::after {
+  content: "◐";
+}
+
+li.skill.empty::after {
+  content: "○";
 }
 
 dd {

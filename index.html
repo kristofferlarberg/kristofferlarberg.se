@@ -30,17 +30,14 @@
 
         <!-- Default skills content as list -->
         <div class="graph-placeholder">
-          <h3>Concepts</h3>
+          <h3>Languages</h3>
           <ul>
-            <li>Package management</li>
-            <li>REST API</li>
+            <li>CSS</li>
+            <li>HTML</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
           </ul>
-          <h3>CI/CD</h3>
-          <ul>
-            <li>CircleCI</li>
-            <li>GitHub Actions</li>
-          </ul>
-          <h3>Frameworks/libraries</h3>
+          <h3>Frameworks and libraries</h3>
           <ul>
             <li>Gatsby</li>
             <li>Next.js</li>
@@ -48,25 +45,24 @@
             <li>React Native</li>
             <li>Vue.js</li>
           </ul>
-          <h3>Languages</h3>
+          <h3>Backend and data</h3>
           <ul>
-            <li>CSS</li>
-            <li>HTML</li>
-            <li>Javascript</li>
-            <li>TypeScript</li>
+            <li>Node.js</li>
+            <li>REST API</li>
+            <li>TanStack Query</li>
           </ul>
           <h3>Testing</h3>
           <ul>
             <li>Cypress</li>
-            <li>React Testing Library</li>
+            <li>Testing Library</li>
           </ul>
-          <h3>Tools</h3>
+          <h3>Tooling</h3>
           <ul>
-            <li>Contentful</li>
-            <li>Datadog0</li>
             <li>git</li>
-            <li>Node.js</li>
-            <li>Tanstack Query</li>
+            <li>CircleCI</li>
+            <li>Datadog</li>
+            <li>Contentful</li>
+            <li>Package management (npm, yarn, pnpm)</li>
           </ul>
         </div>
 
@@ -132,87 +128,263 @@
             </span>
             <ul class="skills">
               <li
-                class="skill testing"
-                data-name="Contentful"
-                data-taught="false"
-                data-future="false"
-                data-collaborated="true"
-                style="--x: 4; --y: 10"
-              >
-                Contentful
-                <span aria-label="Partially filled circle">◐</span>
-                <span class="sr-only">
-                  weekly use, 4 years experience, confidence 10 of 20
-                </span>
-              </li>
-              <li
-                class="skill cicd"
-                data-name="Datadog"
-                data-taught="false"
+                class="skill languages full"
+                data-name="HTML"
+                data-taught="true"
                 data-future="true"
                 data-collaborated="true"
-                style="--x: 2; --y: 8"
+                style="--x: 5; --y: 17"
               >
-                Datadog
-                <span aria-label="Partially filled circle">◐</span>
+                HTML
                 <span class="sr-only">
-                  weekly use, 2 years experience, confidence 8 of 20
+                  Daily use, 5 years experience, confidence 17 of 20.
                 </span>
               </li>
               <li
-                class="skill tools"
-                data-name="git"
+                class="skill languages full"
+                data-name="CSS"
+                data-taught="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 5; --y: 16"
+              >
+                CSS
+                <span class="sr-only">
+                  Daily use, 5 years experience, confidence 16 of 20.
+                </span>
+              </li>
+              <li
+                class="skill languages full"
+                data-name="JavaScript"
                 data-taught="true"
                 data-future="true"
                 data-collaborated="true"
                 style="--x: 5; --y: 15"
               >
-                git
-                <span aria-label="Filled circle">●</span>
+                JavaScript
                 <span class="sr-only">
-                  daily use, 5 years experience, confidence 15 of 20
+                  Daily use, 5 years experience, confidence 15 of 20.
                 </span>
               </li>
               <li
-                class="skill frameworks"
+                class="skill languages full"
+                data-name="TypeScript"
+                data-taught="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 4; --y: 11"
+              >
+                TypeScript
+                <span class="sr-only">
+                  Daily use, 4 years experience, confidence 11 of 20.
+                </span>
+              </li>
+              <li
+                class="skill frameworks-libraries full"
+                data-name="React"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 5; --y: 16"
+              >
+                React
+                <span class="sr-only">
+                  Daily use, 5 years experience, confidence 16 of 20.
+                </span>
+              </li>
+              <li
+                class="skill frameworks-libraries half"
+                data-name="React Native"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 1; --y: 11"
+              >
+                React Native
+                <span class="sr-only">
+                  Weekly use, 1 years experience, confidence 11 of 20.
+                </span>
+              </li>
+              <li
+                class="skill frameworks-libraries empty"
+                data-name="Vue.js"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="false"
+                style="--x: 0.5; --y: 8"
+              >
+                Vue.js
+                <span class="sr-only">
+                  Monthly use, 0.5 years experience, confidence 8 of 20.
+                </span>
+              </li>
+              <li
+                class="skill frameworks-libraries full"
+                data-name="Next.js"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 3; --y: 13"
+              >
+                Next.js
+                <span class="sr-only">
+                  Daily use, 3 years experience, confidence 13 of 20.
+                </span>
+              </li>
+              <li
+                class="skill frameworks-libraries full"
+                data-name="Gatsby"
+                data-taught="false"
+                data-future="false"
+                data-collaborated="true"
+                style="--x: 2; --y: 15"
+              >
+                Gatsby
+                <span class="sr-only">
+                  Daily use, 2 years experience, confidence 15 of 20.
+                </span>
+              </li>
+              <li
+                class="skill backend-data empty"
                 data-name="Node.js"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="false"
-                style="--x: 5; --y: 14"
+                style="--x: 1; --y: 8"
               >
                 Node.js
-                <span aria-label="Empty circle">○</span>
                 <span class="sr-only">
-                  monthly use, 4 years experience, confidence 8 of 20
+                  Monthly use, 1 years experience, confidence 8 of 20.
                 </span>
               </li>
               <li
-                class="skill concepts"
-                data-name="Tanstack Query"
+                class="skill backend-data half"
+                data-name="REST API"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
-                style="--x: 5; --y: 12"
+                style="--x: 4; --y: 12"
               >
-                Tanstack Query
-                <span aria-label="Partially filled circle">◐</span>
+                REST API
                 <span class="sr-only">
-                  weekly use, 5 years experience, confidence 12 of 20
+                  Weekly use, 4 years experience, confidence 12 of 20.
                 </span>
               </li>
               <li
-                class="skill concepts"
-                data-name="Tanstack Query"
+                class="skill backend-data half"
+                data-name="TanStack Query"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
-                style="--x: 1; --y: 18"
+                style="--x: 5; --y: 11"
               >
-                Test
-                <span aria-label="Partially filled circle">◐</span>
+                TanStack Query
                 <span class="sr-only">
-                  weekly use, 5 years experience, confidence 12 of 20
+                  Weekly use, 5 years experience, confidence 11 of 20.
+                </span>
+              </li>
+              <li
+                class="skill testing full"
+                data-name="Cypress"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 1; --y: 10"
+              >
+                Cypress
+                <span class="sr-only">
+                  Daily use, 1 years experience, confidence 10 of 20.
+                </span>
+              </li>
+              <li
+                class="skill testing full"
+                data-name="Testing Library"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 2; --y: 12"
+              >
+                Testing Library
+                <span class="sr-only">
+                  Daily use, 2 years experience, confidence 12 of 20.
+                </span>
+              </li>
+              <li
+                class="skill tooling full"
+                data-name="git"
+                data-taught="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 5; --y: 16"
+              >
+                git
+                <span class="sr-only">
+                  Daily use, 5 years experience, confidence 16 of 20.
+                </span>
+              </li>
+              <li
+                class="skill tooling full"
+                data-name="CircleCI"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 2; --y: 10"
+              >
+                CircleCI
+                <span class="sr-only">
+                  Daily use, 2 years experience, confidence 10 of 20.
+                </span>
+              </li>
+              <li
+                class="skill tooling full"
+                data-name="Datadog"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 2; --y: 10.5"
+              >
+                Datadog
+                <span class="sr-only">
+                  Daily use, 2 years experience, confidence 10.5 of 20.
+                </span>
+              </li>
+              <li
+                class="skill tooling full"
+                data-name="Datadog"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 2; --y: 10.5"
+              >
+                Datadog
+                <span class="sr-only">
+                  Daily use, 2 years experience, confidence 10.5 of 20.
+                </span>
+              </li>
+              <li
+                class="skill tooling half"
+                data-name="Contentful"
+                data-taught="true"
+                data-future="false"
+                data-collaborated="true"
+                style="--x: 3; --y: 15"
+              >
+                Contentful
+                <span class="sr-only">
+                  Weekly use, 3 years experience, confidence 15 of 20.
+                </span>
+              </li>
+              <li
+                class="skill tooling half"
+                data-name="Package management"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 5; --y: 13"
+              >
+                Package management
+                <span class="sr-only">
+                  Weekly use, 5 years experience, confidence 13 of 20.
                 </span>
               </li>
             </ul>
@@ -231,18 +403,16 @@
           <div class="legend" style="margin-top: 56px">
             <h3>Categories</h3>
             <dl>
-              <dt><span aria-label="">⁂</span></dt>
+              <dt><span aria-label="">-</span></dt>
               <dd>Languages</dd>
-              <dt><span aria-label="">⌘</span></dt>
+              <dt><span aria-label="">-</span></dt>
+              <dd>Frontend frameworks and libraries</dd>
+              <dt><span aria-label="">-</span></dt>
+              <dd>Backend and data</dd>
+              <dt><span aria-label="">-</span></dt>
               <dd>Testing</dd>
-              <dt><span aria-label="">⁒</span></dt>
-              <dd>CI/CD</dd>
-              <dt><span aria-label="">×</span></dt>
-              <dd>Tools</dd>
-              <dt><span aria-label="">◊</span></dt>
-              <dd>Frameworks/libraries</dd>
-              <dt><span aria-label="">⌑</span></dt>
-              <dd><span>Concepts</span></dd>
+              <dt><span aria-label="">-</span></dt>
+              <dd>Tooling</dd>
             </dl>
           </div>
         </figure>
