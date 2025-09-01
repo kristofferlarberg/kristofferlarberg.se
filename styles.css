@@ -219,32 +219,50 @@ li.skill::after {
   width: 100%;
 }
 
-li.skill.languages {
-  text-decoration: underline solid 1px var(--black);
-}
-li.skill.frameworks-libraries {
-  text-decoration: underline double 1px var(--black);
-}
-li.skill.backend-data {
-  text-decoration: underline dotted 1px var(--black);
-}
-li.skill.testing {
-  text-decoration: underline dashed 1px var(--black);
-}
-li.skill.tooling {
-  text-decoration: underline wavy 1px var(--black);
-}
-
 li.skill.full::after {
   content: "●";
+  font-size: 1.9rem;
 }
 
 li.skill.half::after {
   content: "◐";
+  font-size: 1.2rem;
 }
 
 li.skill.empty::after {
   content: "○";
+  font-size: 2.1rem;
+}
+
+.languages {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--black);
+}
+.frameworks-libraries {
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--black);
+}
+.backend-data {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--black);
+}
+.testing {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--black);
+}
+.tooling {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--black);
 }
 
 dd {
