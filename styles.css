@@ -213,12 +213,6 @@ li.skill {
   transform: translate(-100%, 100%);
 }
 
-li.skill::after {
-  content: "";
-  height: 20px;
-  width: 100%;
-}
-
 li.skill.full::after {
   content: "●";
   font-size: 1.9rem;
@@ -263,10 +257,6 @@ li.skill.empty::after {
   text-decoration-style: wavy;
   text-decoration-thickness: 1px;
   text-decoration-color: var(--black);
-}
-
-dd {
-  margin: 0;
 }
 
 section {
@@ -421,7 +411,6 @@ footer {
 }
 
 .legend {
-  display: flex;
   color: var(--black);
   background-color: var(--white);
   border: 1px solid var(--gray);
@@ -432,6 +421,39 @@ footer {
   @media (min-width: 1000px) {
     font-size: 1.7rem;
   }
+}
+
+.legend > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+dl {
+  display: flex;
+}
+
+dt {
+  margin: 0 5px 0 0;
+}
+
+dt.full {
+  font-size: 1.9rem;
+  line-height: 1.3;
+}
+
+dt.half {
+  font-size: 1.2rem;
+  line-height: 2.2;
+}
+
+dt.empty {
+  font-size: 2.1rem;
+  line-height: 1.1;
+}
+
+dd {
+  margin: 0 10px 0 0;
 }
 
 .sr-only {

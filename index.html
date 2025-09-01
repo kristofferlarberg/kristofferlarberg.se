@@ -379,28 +379,36 @@
           <div class="legend" style="margin-top: 112px">
             <h3>Estimated average frequency</h3>
             <dl>
-              <dt><span aria-label="Filled circle">●</span></dt>
+              <dt class="full">●</dt>
               <dd>Daily</dd>
-              <dt><span aria-label="Partially filled circle">◐</span></dt>
+              <dt class="half">◐</dt>
               <dd>Weekly</dd>
-              <dt><span aria-label="Empty circle">○</span></dt>
+              <dt class="empty">○</dt>
               <dd>Monthly</dd>
             </dl>
           </div>
           <div class="legend" style="margin-top: 56px">
             <h3>Categories</h3>
-            <dl>
-              <dt><span aria-label="">-</span></dt>
-              <dd>Languages</dd>
-              <dt><span aria-label="">-</span></dt>
-              <dd>Frontend frameworks and libraries</dd>
-              <dt><span aria-label="">-</span></dt>
-              <dd>Backend and data</dd>
-              <dt><span aria-label="">-</span></dt>
-              <dd>Testing</dd>
-              <dt><span aria-label="">-</span></dt>
-              <dd>Tooling</dd>
-            </dl>
+            <ul>
+              <li aria-label="Has a solid underline." class="languages">
+                Languages
+              </li>
+              <li
+                aria-label="Has a double underline."
+                class="frameworks-libraries"
+              >
+                Frontend frameworks and libraries
+              </li>
+              <li aria-label="Has a dotted underline." class="backend-data">
+                Backend and data
+              </li>
+              <li aria-label="Has a dashed underline." class="testing">
+                Testing
+              </li>
+              <li aria-label="Has a wavy underline." class="tooling">
+                Tooling
+              </li>
+            </ul>
           </div>
         </figure>
       </section>
