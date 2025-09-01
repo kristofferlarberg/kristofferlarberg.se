@@ -176,6 +176,10 @@ button:focus-visible {
   }
 }
 
+details {
+  cursor: pointer;
+}
+
 ul {
   line-height: 3.5rem;
   padding-left: 20px;
