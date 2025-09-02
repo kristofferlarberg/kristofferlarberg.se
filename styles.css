@@ -193,7 +193,7 @@ ul.skills {
 li.skill {
   position: absolute;
   left: calc(var(--x) / var(--x-max) * 100%);
-  bottom: calc(((var(--y) + 1) * 2) / (var(--y-max) + 1) * 100%);
+  bottom: calc((var(--y) + 1) / (var(--y-max) + 1) * 100%);
   z-index: 1;
   padding: 0;
   font-size: 1.4rem;
@@ -271,14 +271,14 @@ figure {
       display: flex;
       width: calc(100% - 50px);
       aspect-ratio: 1 / 1;
-      --y-max: 20;
+      --y-max: 50;
     }
     .y-label {
       width: 100%;
       left: calc(-50% - 27px);
     }
     li.skill {
-      bottom: calc((var(--y) + 1) / (var(--y-max) + 1) * 100%) !important;
+      bottom: calc(((var(--y) / 2) + 1) / (var(--y-max) + 1) * 100%) !important;
     }
   }
 
@@ -394,7 +394,7 @@ footer {
 /* Width is set in figure container queries */
 .graph-container {
   --x-max: 6;
-  --y-max: 40;
+  --y-max: 100;
   position: relative;
   width: calc(100% - 20px);
   aspect-ratio: 1 / 2;
