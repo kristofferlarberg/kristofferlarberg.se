@@ -315,7 +315,12 @@ figcaption {
 
 dl {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+}
+
+dl > div {
+  display: flex;
 }
 
 dt {
