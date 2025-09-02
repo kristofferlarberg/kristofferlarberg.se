@@ -266,7 +266,7 @@ li.skill.testing::after {
   border: 1px dashed var(--black);
 }
 li.skill.tooling::after {
-  border: 2px solid var(--black);
+  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 section {
