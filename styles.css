@@ -90,13 +90,6 @@ p {
   margin: 17px 0;
 }
 
-section > p {
-  width: 100%;
-  @media (min-width: 1000px) {
-    width: 60%;
-  }
-}
-
 a,
 a:active,
 a:visited {
@@ -189,14 +182,6 @@ ul {
   }
 }
 
-.graph-placeholder {
-  display: block;
-  width: auto;
-  @media (min-width: 250px) {
-    display: none;
-  }
-}
-
 ul.skills {
   list-style: none;
   padding: 0;
@@ -253,26 +238,17 @@ li.skill.monthly::after {
   }
 }
 
-.languages::after {
-  border: 1px solid var(--black);
-}
-.frameworks-libraries::after {
-  border: double var(--black);
-}
-.backend-data::after {
-  border: 1px dotted var(--black);
-}
-.testing::after {
-  border: 1px dashed var(--black);
-}
-.tooling::after {
-  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.4);
-}
-
 section {
   padding: 40px 20px 60px 20px;
   @media (min-width: 1000px) {
     padding: 50px 60px 60px 60px;
+  }
+}
+
+section > p {
+  width: 100%;
+  @media (min-width: 1000px) {
+    width: 60%;
   }
 }
 
@@ -332,6 +308,89 @@ figure {
   }
 }
 
+figcaption {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+dl {
+  display: flex;
+  align-items: center;
+}
+
+dt {
+  margin: 0 5px 0 0;
+}
+
+dt.daily {
+  border: 2px solid var(--black);
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+}
+
+dt.weekly {
+  border: 2px solid var(--black);
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+
+dt.monthly {
+  border: 2px solid var(--black);
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+}
+
+dt.languages {
+  border: 1px solid var(--black);
+}
+dt.frameworks-libraries {
+  border: double var(--black);
+}
+dt.backend-data {
+  border: 1px dotted var(--black);
+}
+dt.testing {
+  border: 1px dashed var(--black);
+}
+dt.tooling {
+  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+dd {
+  margin: 0 10px 0 0;
+}
+
+footer {
+  padding: 40px 20px 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  @media (min-width: 1000px) {
+    padding: 50px 60px 60px 60px;
+    align-items: flex-start;
+  }
+}
+
+.languages::after {
+  border: 1px solid var(--black);
+}
+.frameworks-libraries::after {
+  border: double var(--black);
+}
+.backend-data::after {
+  border: 1px dotted var(--black);
+}
+.testing::after {
+  border: 1px dashed var(--black);
+}
+.tooling::after {
+  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
 /* Width is set in figure container queries */
 .graph-container {
   --x-max: 6;
@@ -342,6 +401,14 @@ figure {
   border-left: 2px solid var(--black);
   border-bottom: 2px solid var(--black);
   margin: 56px 0 0 auto;
+}
+
+.graph-placeholder {
+  display: block;
+  width: auto;
+  @media (min-width: 250px) {
+    display: none;
+  }
 }
 
 .axis-label {
@@ -366,23 +433,6 @@ figure {
   top: calc(50% - 25px);
   transform: rotate(-90deg);
   width: calc(100% * 2);
-}
-
-figcaption {
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-footer {
-  padding: 40px 20px 60px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  @media (min-width: 1000px) {
-    padding: 50px 60px 60px 60px;
-    align-items: flex-start;
-  }
 }
 
 .container {
@@ -437,56 +487,6 @@ footer {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-dl {
-  display: flex;
-  align-items: center;
-}
-
-dt {
-  margin: 0 5px 0 0;
-}
-
-dt.daily {
-  border: 2px solid var(--black);
-  height: 60px;
-  width: 60px;
-  border-radius: 100%;
-}
-
-dt.weekly {
-  border: 2px solid var(--black);
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-}
-
-dt.monthly {
-  border: 2px solid var(--black);
-  height: 20px;
-  width: 20px;
-  border-radius: 100%;
-}
-
-dt.languages {
-  border: 1px solid var(--black);
-}
-dt.frameworks-libraries {
-  border: double var(--black);
-}
-dt.backend-data {
-  border: 1px dotted var(--black);
-}
-dt.testing {
-  border: 1px dashed var(--black);
-}
-dt.tooling {
-  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.4);
-}
-
-dd {
-  margin: 0 10px 0 0;
 }
 
 .sr-only {
