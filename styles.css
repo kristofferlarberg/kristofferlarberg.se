@@ -209,6 +209,7 @@ li.skill {
   position: absolute;
   left: calc(var(--x) / var(--x-max) * 100%);
   bottom: calc(((var(--y) + 1) * 2) / (var(--y-max) + 1) * 100%);
+  z-index: 1;
   padding: 0;
   font-size: 1.4rem;
   color: var(--black);
@@ -217,50 +218,55 @@ li.skill {
   transform: translate(-100%, 100%);
 }
 
-li.skill.full::after {
-  content: "●";
-  font-size: 1.9rem;
+li.skill::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: -1;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
 }
 
-li.skill.half::after {
-  content: "◐";
-  font-size: 1.2rem;
+li.skill.daily::after {
+  transform: translate(-50%, -67%);
+  width: 60px;
+  height: 60px;
+  @media (min-width: 1000px) {
+    transform: translate(-50%, -73%);
+  }
+}
+li.skill.weekly::after {
+  transform: translate(-50%, -75%);
+  width: 40px;
+  height: 40px;
+  @media (min-width: 1000px) {
+    transform: translate(-50%, -80%);
+  }
+}
+li.skill.monthly::after {
+  transform: translate(-50%, -88%);
+  width: 20px;
+  height: 20px;
+  @media (min-width: 1000px) {
+    transform: translate(-50%, -100%);
+  }
 }
 
-li.skill.empty::after {
-  content: "○";
-  font-size: 2.1rem;
+li.skill.languages::after {
+  border: 1px solid var(--black);
 }
-
-.languages {
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--black);
+li.skill.frameworks-libraries::after {
+  border: double var(--black);
 }
-.frameworks-libraries {
-  text-decoration: underline;
-  text-decoration-style: double;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--black);
+li.skill.backend-data::after {
+  border: 1px dotted var(--black);
 }
-.backend-data {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--black);
+li.skill.testing::after {
+  border: 1px dashed var(--black);
 }
-.testing {
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--black);
-}
-.tooling {
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--black);
+li.skill.tooling::after {
+  border: 2px solid var(--black);
 }
 
 section {
