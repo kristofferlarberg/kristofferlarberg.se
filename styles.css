@@ -253,19 +253,19 @@ li.skill.monthly::after {
   }
 }
 
-li.skill.languages::after {
+.languages::after {
   border: 1px solid var(--black);
 }
-li.skill.frameworks-libraries::after {
+.frameworks-libraries::after {
   border: double var(--black);
 }
-li.skill.backend-data::after {
+.backend-data::after {
   border: 1px dotted var(--black);
 }
-li.skill.testing::after {
+.testing::after {
   border: 1px dashed var(--black);
 }
-li.skill.tooling::after {
+.tooling::after {
   box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -441,25 +441,48 @@ footer {
 
 dl {
   display: flex;
+  align-items: center;
 }
 
 dt {
   margin: 0 5px 0 0;
 }
 
-dt.full {
-  font-size: 1.9rem;
-  line-height: 1.3;
+dt.daily {
+  border: 2px solid var(--black);
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
 }
 
-dt.half {
-  font-size: 1.2rem;
-  line-height: 2.2;
+dt.weekly {
+  border: 2px solid var(--black);
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
 }
 
-dt.empty {
-  font-size: 2.1rem;
-  line-height: 1.1;
+dt.monthly {
+  border: 2px solid var(--black);
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+}
+
+dt.languages {
+  border: 1px solid var(--black);
+}
+dt.frameworks-libraries {
+  border: double var(--black);
+}
+dt.backend-data {
+  border: 1px dotted var(--black);
+}
+dt.testing {
+  border: 1px dashed var(--black);
+}
+dt.tooling {
+  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 dd {
