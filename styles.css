@@ -199,8 +199,9 @@ li.skill {
   font-size: 1.4rem;
   color: var(--black);
   white-space: nowrap;
+  text-shadow: var(--white) 1px 0 10px;
   padding: 3.5px;
-  transform: translate(-100%, 100%);
+  transform: translate(-50%, 100%);
 }
 
 li.skill::after {
@@ -214,23 +215,23 @@ li.skill::after {
 }
 
 li.skill.daily::after {
-  transform: translate(-50%, -67%);
-  width: 60px;
-  height: 60px;
+  transform: translate(-50%, -73%);
+  width: 40px;
+  height: 40px;
   @media (min-width: 1000px) {
     transform: translate(-50%, -73%);
   }
 }
 li.skill.weekly::after {
-  transform: translate(-50%, -75%);
-  width: 40px;
-  height: 40px;
+  transform: translate(-50%, -80%);
+  width: 30px;
+  height: 30px;
   @media (min-width: 1000px) {
     transform: translate(-50%, -80%);
   }
 }
 li.skill.monthly::after {
-  transform: translate(-50%, -88%);
+  transform: translate(-50%, -90%);
   width: 20px;
   height: 20px;
   @media (min-width: 1000px) {
@@ -329,22 +330,22 @@ dt {
 
 dt.daily {
   border: 2px solid var(--black);
-  height: 60px;
-  width: 60px;
+  height: 38px;
+  width: 38px;
   border-radius: 100%;
 }
 
 dt.weekly {
   border: 2px solid var(--black);
-  height: 40px;
-  width: 40px;
+  height: 28px;
+  width: 28px;
   border-radius: 100%;
 }
 
 dt.monthly {
   border: 2px solid var(--black);
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   border-radius: 100%;
 }
 
@@ -398,7 +399,7 @@ footer {
 
 /* Width is set in figure container queries */
 .graph-container {
-  --x-max: 6;
+  --x-max: 5;
   --y-max: 100;
   position: relative;
   width: calc(100% - 20px);
