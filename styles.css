@@ -199,7 +199,8 @@ li.skill {
   font-size: 1.4rem;
   color: var(--black);
   white-space: nowrap;
-  text-shadow: var(--white) 1px 0 10px;
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white,
+    -1px 1px 0 white;
   padding: 3.5px;
   transform: translate(-50%, 100%);
 }
@@ -443,6 +444,8 @@ footer {
   text-align: center;
   font-size: 1.4rem;
   line-height: 1;
+  text-shadow: 1px 1px 0 #efefef, -1px -1px 0 #efefef, 1px -1px 0 #efefef,
+    -1px 1px 0 #efefef;
 }
 
 .x-label {
