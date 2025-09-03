@@ -470,11 +470,28 @@ footer {
 }
 
 /* diplay value is also set with javascript */
-.filters {
+.filters-container {
   display: none;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.main-filters {
+  display: flex;
   justify-content: left;
   flex-wrap: wrap;
   gap: 7px;
+}
+
+.category-filters {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.clear-filters {
+  width: fit-content;
 }
 
 .hidden {

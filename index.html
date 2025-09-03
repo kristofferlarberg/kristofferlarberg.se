@@ -77,18 +77,43 @@
           </figcaption>
 
           <!-- Skills filtering, if browser uses javacript and above 200px screen width -->
-          <div class="filters">
-            <button data-filter="all" class="active" aria-pressed="true">
-              All Skills
-            </button>
-            <button data-filter="taught" aria-pressed="false">
-              Skills I've Taught
-            </button>
-            <button data-filter="future" aria-pressed="false">
-              Extra interesting
-            </button>
-            <button data-filter="collaborated" aria-pressed="false">
-              Collaborative Skills
+          <div class="filters-container">
+            <div class="main-filters">
+              <button data-filter="taught" aria-pressed="false">
+                Skills I've Taught
+              </button>
+              <button data-filter="future" aria-pressed="false">
+                Extra interesting
+              </button>
+              <button data-filter="collaborated" aria-pressed="false">
+                Collaborative Skills
+              </button>
+            </div>
+
+            <div class="category-filters">
+              <button data-filter="languages" aria-pressed="false">
+                Languages
+              </button>
+              <button data-filter="frameworks-libraries" aria-pressed="false">
+                Frontend frameworks and libraries
+              </button>
+              <button data-filter="backend-data" aria-pressed="false">
+                Backend and data
+              </button>
+              <button data-filter="testing" aria-pressed="false">
+                Testing
+              </button>
+              <button data-filter="tooling" aria-pressed="false">
+                Tooling
+              </button>
+            </div>
+
+            <button
+              class="clear-filters"
+              data-filter="all"
+              aria-pressed="false"
+            >
+              Clear filters
             </button>
           </div>
 
@@ -134,6 +159,7 @@
               <li
                 class="skill"
                 data-name="HTML"
+                data-category="languages"
                 data-taught="true"
                 data-future="true"
                 data-collaborated="true"
@@ -148,6 +174,7 @@
               <li
                 class="skill"
                 data-name="CSS"
+                data-category="languages"
                 data-taught="true"
                 data-future="true"
                 data-collaborated="true"
@@ -162,6 +189,7 @@
               <li
                 class="skill"
                 data-name="JavaScript"
+                data-category="languages"
                 data-taught="true"
                 data-future="true"
                 data-collaborated="true"
@@ -176,6 +204,7 @@
               <li
                 class="skill"
                 data-name="TypeScript"
+                data-category="languages"
                 data-taught="true"
                 data-future="true"
                 data-collaborated="true"
@@ -190,6 +219,7 @@
               <li
                 class="skill"
                 data-name="React"
+                data-category="frameworks-libraries"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
@@ -204,6 +234,7 @@
               <li
                 class="skill"
                 data-name="React Native"
+                data-category="frameworks-libraries"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
@@ -218,6 +249,7 @@
               <li
                 class="skill"
                 data-name="Vue.js"
+                data-category="frameworks-libraries"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="false"
@@ -232,6 +264,7 @@
               <li
                 class="skill"
                 data-name="Next.js"
+                data-category="frameworks-libraries"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
@@ -246,6 +279,7 @@
               <li
                 class="skill"
                 data-name="Gatsby"
+                data-category="frameworks-libraries"
                 data-taught="false"
                 data-future="false"
                 data-collaborated="true"
@@ -260,6 +294,7 @@
               <li
                 class="skill"
                 data-name="Node.js"
+                data-category="backend-data"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="false"
@@ -274,6 +309,7 @@
               <li
                 class="skill"
                 data-name="REST API"
+                data-category="backend-data"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
@@ -288,6 +324,7 @@
               <li
                 class="skill"
                 data-name="TanStack Query"
+                data-category="backend-data"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
@@ -302,6 +339,7 @@
               <li
                 class="skill"
                 data-name="Cypress"
+                data-category="testing"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
@@ -316,6 +354,7 @@
               <li
                 class="skill"
                 data-name="Testing Library"
+                data-category="testing"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
@@ -330,6 +369,7 @@
               <li
                 class="skill"
                 data-name="git"
+                data-category="tooling"
                 data-taught="true"
                 data-future="true"
                 data-collaborated="true"
@@ -344,6 +384,7 @@
               <li
                 class="skill"
                 data-name="CircleCI"
+                data-category="tooling"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
@@ -358,6 +399,7 @@
               <li
                 class="skill"
                 data-name="GitHub Actions"
+                data-category="tooling"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
@@ -372,6 +414,7 @@
               <li
                 class="skill"
                 data-name="Datadog"
+                data-category="tooling"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
@@ -386,6 +429,7 @@
               <li
                 class="skill"
                 data-name="Contentful"
+                data-category="tooling"
                 data-taught="true"
                 data-future="false"
                 data-collaborated="true"
@@ -400,6 +444,7 @@
               <li
                 class="skill"
                 data-name="Package management"
+                data-category="tooling"
                 data-taught="false"
                 data-future="true"
                 data-collaborated="true"
@@ -427,47 +472,6 @@
               <div>
                 <dt class="monthly" aria-label="small circle"></dt>
                 <dd>Monthly</dd>
-              </div>
-            </dl>
-          </div>
-          <div class="legend" style="margin-top: 56px">
-            <h3>Categories</h3>
-            <dl>
-              <div>
-                <dt
-                  class="monthly languages"
-                  aria-label="circle with border"
-                ></dt>
-                <dd>Languages</dd>
-              </div>
-              <div>
-                <dt
-                  class="monthly frameworks-libraries"
-                  aria-label="circle with double border"
-                ></dt>
-                <dd>Frontend frameworks and libraries</dd>
-              </div>
-              <div>
-                <dt
-                  class="monthly backend-data"
-                  aria-label="circle with dotted border"
-                ></dt>
-                <dd>Backend and data</dd>
-              </div>
-              <div>
-                <dt
-                  class="monthly testing"
-                  aria-label="circle with dashed border"
-                ></dt>
-                <dd>Testing</dd>
-              </div>
-              <div>
-                <dt
-                  class="monthly tooling"
-                  style="border: none"
-                  aria-label="circle with inner shadow"
-                ></dt>
-                <dd>Tooling</dd>
               </div>
             </dl>
           </div>
