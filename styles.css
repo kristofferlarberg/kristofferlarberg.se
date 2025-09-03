@@ -318,10 +318,28 @@ dl {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 5px;
+}
+
+dl.frequency {
+  flex-direction: column;
+  justify-self: left;
+  @media (min-width: 640px) {
+    flex-direction: row;
+  }
+}
+
+dl.frequency > div {
+  flex-direction: column;
+  justify-self: center;
+  @media (min-width: 640px) {
+    flex-direction: row;
+  }
 }
 
 dl > div {
   display: flex;
+  align-items: center;
 }
 
 dt {
@@ -332,6 +350,7 @@ dt.daily {
   border: 2px solid var(--black);
   height: 38px;
   width: 38px;
+  aspect-ratio: 1 / 1;
   border-radius: 100%;
 }
 
@@ -339,6 +358,7 @@ dt.weekly {
   border: 2px solid var(--black);
   height: 28px;
   width: 28px;
+  aspect-ratio: 1 / 1;
   border-radius: 100%;
 }
 
@@ -346,6 +366,7 @@ dt.monthly {
   border: 2px solid var(--black);
   height: 18px;
   width: 18px;
+  aspect-ratio: 1 / 1;
   border-radius: 100%;
 }
 
@@ -487,12 +508,6 @@ footer {
   @media (min-width: 1000px) {
     font-size: 1.7rem;
   }
-}
-
-.legend > ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 .sr-only {
