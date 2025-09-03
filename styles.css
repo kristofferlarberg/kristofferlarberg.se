@@ -194,50 +194,50 @@ li.skill {
   position: absolute;
   left: calc(var(--x) / var(--x-max) * 100%);
   bottom: calc((var(--y) + 1) / (var(--y-max) + 1) * 100%);
-  z-index: 1;
   padding: 0;
   font-size: 1.4rem;
   color: var(--black);
   white-space: nowrap;
-  text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white,
-    -1px 1px 0 white;
+  text-shadow: 1px 1px 0 #fffafa, -1px -1px 0 #fffa, 1px -1px 0 #fffa,
+    -1px 1px 0 #fffafa;
   padding: 3.5px;
   transform: translate(-50%, 100%);
 }
 
-li.skill::after {
-  content: "";
+li.skill > div.daily {
   position: absolute;
-  top: 100%;
+  top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   z-index: -1;
-  background: rgba(255, 255, 255, 0.5);
+  height: 70px;
+  width: 70px;
   border-radius: 100%;
+  background-color: rgba(0, 0, 255, 0.25);
 }
 
-li.skill.daily::after {
-  transform: translate(-50%, -73%);
-  width: 40px;
-  height: 40px;
-  @media (min-width: 1000px) {
-    transform: translate(-50%, -73%);
-  }
+li.skill > div.weekly {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 255, 0.25);
 }
-li.skill.weekly::after {
-  transform: translate(-50%, -80%);
-  width: 30px;
+
+li.skill > div.monthly {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
   height: 30px;
-  @media (min-width: 1000px) {
-    transform: translate(-50%, -80%);
-  }
-}
-li.skill.monthly::after {
-  transform: translate(-50%, -90%);
-  width: 20px;
-  height: 20px;
-  @media (min-width: 1000px) {
-    transform: translate(-50%, -100%);
-  }
+  width: 30px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 255, 0.25);
 }
 
 section {
@@ -348,27 +348,24 @@ dt {
 }
 
 dt.daily {
-  border: 2px solid var(--black);
-  height: 38px;
-  width: 38px;
-  aspect-ratio: 1 / 1;
+  height: 70px;
+  width: 70px;
   border-radius: 100%;
+  background-color: rgba(0, 0, 255, 0.25);
 }
 
 dt.weekly {
-  border: 2px solid var(--black);
-  height: 28px;
-  width: 28px;
-  aspect-ratio: 1 / 1;
+  height: 50px;
+  width: 50px;
   border-radius: 100%;
+  background-color: rgba(0, 0, 255, 0.25);
 }
 
 dt.monthly {
-  border: 2px solid var(--black);
-  height: 18px;
-  width: 18px;
-  aspect-ratio: 1 / 1;
+  height: 30px;
+  width: 30px;
   border-radius: 100%;
+  background-color: rgba(0, 0, 255, 0.25);
 }
 
 dt.languages {
@@ -401,22 +398,6 @@ footer {
     padding: 50px 60px 60px 60px;
     align-items: flex-start;
   }
-}
-
-.languages::after {
-  border: 1px solid var(--black);
-}
-.frameworks-libraries::after {
-  border: double var(--black);
-}
-.backend-data::after {
-  border: 1px dotted var(--black);
-}
-.testing::after {
-  border: 1px dashed var(--black);
-}
-.tooling::after {
-  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 /* Width is set in figure container queries */
