@@ -1,11 +1,10 @@
-function createFilterButtons() {
+function filterButtons() {
   const mainFilters = document.querySelector(".main-filters");
   const categoryFilters = document.querySelector(".category-filters");
   const filtersContainer = document.querySelector(".filters-container");
   const buttons = document.querySelectorAll("button");
   const skills = document.querySelectorAll(".skill");
 
-  // Function to check width and show/hide filters
   function checkWidthAndShowFilters() {
     if (window.innerWidth >= 250) {
       filtersContainer.style.display = "flex";
@@ -14,72 +13,82 @@ function createFilterButtons() {
     }
   }
 
-  // Initial check
   checkWidthAndShowFilters();
 
-  // Add resize event listener
   window.addEventListener("resize", checkWidthAndShowFilters);
 
-  // Add click handlers
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      buttons.forEach((b) => {
-        b.classList.remove("active");
-        b.setAttribute("aria-pressed", "false");
-      });
+      const filter = button.dataset.filter;
 
-      if (button.dataset.filter !== "all") {
-        button.classList.add("active");
+      if (filter === "all") {
+        buttons.forEach((b) => {
+          b.classList.remove("active");
+          b.setAttribute("aria-pressed", "false");
+        });
+        skills.forEach((skill) => {
+          skill.classList.remove("hidden");
+        });
+        return;
       }
+
+      const isMainFilter = mainFilters.contains(button);
+      const isCategoryFilter = categoryFilters.contains(button);
+
+      if (isMainFilter) {
+        mainFilters.querySelectorAll("button").forEach((b) => {
+          b.classList.remove("active");
+          b.setAttribute("aria-pressed", "false");
+        });
+      } else if (isCategoryFilter) {
+        categoryFilters.querySelectorAll("button").forEach((b) => {
+          b.classList.remove("active");
+          b.setAttribute("aria-pressed", "false");
+        });
+      }
+
+      button.classList.add("active");
       button.setAttribute("aria-pressed", "true");
 
-      const filter = button.dataset.filter;
-      console.log(filter);
-
-      skills.forEach((skill) => {
-        console.log(skill.dataset.category);
-        if (filter === "all") {
-          skill.classList.remove("hidden");
-        } else if (filter === "taught" && skill.dataset.taught === "true") {
-          skill.classList.remove("hidden");
-        } else if (filter === "future" && skill.dataset.future === "true") {
-          skill.classList.remove("hidden");
-        } else if (
-          filter === "collaborated" &&
-          skill.dataset.collaborated === "true"
-        ) {
-          skill.classList.remove("hidden");
-        } else if (
-          filter === "languages" &&
-          skill.dataset.category === "languages"
-        ) {
-          skill.classList.remove("hidden");
-        } else if (
-          filter === "frameworks-libraries" &&
-          skill.dataset.category === "frameworks-libraries"
-        ) {
-          skill.classList.remove("hidden");
-        } else if (
-          filter === "backend-data" &&
-          skill.dataset.category === "backend-data"
-        ) {
-          skill.classList.remove("hidden");
-        } else if (
-          filter === "testing" &&
-          skill.dataset.category === "testing"
-        ) {
-          skill.classList.remove("hidden");
-        } else if (
-          filter === "tooling" &&
-          skill.dataset.category === "tooling"
-        ) {
-          skill.classList.remove("hidden");
-        } else {
-          skill.classList.add("hidden");
-        }
-      });
+      applyFilters();
     });
   });
+
+  function applyFilters() {
+    const activeMainFilter = mainFilters.querySelector("button.active");
+    const activeCategoryFilter = categoryFilters.querySelector("button.active");
+
+    skills.forEach((skill) => {
+      let shouldShow = true;
+
+      if (activeMainFilter) {
+        const mainFilter = activeMainFilter.dataset.filter;
+        if (mainFilter === "taught" && skill.dataset.taught !== "true") {
+          shouldShow = false;
+        } else if (mainFilter === "future" && skill.dataset.future !== "true") {
+          shouldShow = false;
+        } else if (
+          mainFilter === "collaborated" &&
+          skill.dataset.collaborated !== "true"
+        ) {
+          shouldShow = false;
+        }
+      }
+
+      if (activeCategoryFilter && shouldShow) {
+        const categoryFilter = activeCategoryFilter.dataset.filter;
+        if (skill.dataset.category !== categoryFilter) {
+          shouldShow = false;
+        }
+      }
+
+      if (shouldShow) {
+        skill.classList.remove("hidden");
+      } else {
+        skill.classList.add("hidden");
+      }
+    });
+  }
 }
 
-createFilterButtons();
+filterButtons();
