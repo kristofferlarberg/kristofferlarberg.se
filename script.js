@@ -34,21 +34,27 @@ function filterButtons() {
 
       const isMainFilter = mainFilters.contains(button);
       const isCategoryFilter = categoryFilters.contains(button);
+      const isCurrentlyActive = button.classList.contains("active");
 
-      if (isMainFilter) {
-        mainFilters.querySelectorAll("button").forEach((b) => {
-          b.classList.remove("active");
-          b.setAttribute("aria-pressed", "false");
-        });
-      } else if (isCategoryFilter) {
-        categoryFilters.querySelectorAll("button").forEach((b) => {
-          b.classList.remove("active");
-          b.setAttribute("aria-pressed", "false");
-        });
+      if (isCurrentlyActive) {
+        button.classList.remove("active");
+        button.setAttribute("aria-pressed", "false");
+      } else {
+        if (isMainFilter) {
+          mainFilters.querySelectorAll("button").forEach((b) => {
+            b.classList.remove("active");
+            b.setAttribute("aria-pressed", "false");
+          });
+        } else if (isCategoryFilter) {
+          categoryFilters.querySelectorAll("button").forEach((b) => {
+            b.classList.remove("active");
+            b.setAttribute("aria-pressed", "false");
+          });
+        }
+
+        button.classList.add("active");
+        button.setAttribute("aria-pressed", "true");
       }
-
-      button.classList.add("active");
-      button.setAttribute("aria-pressed", "true");
 
       applyFilters();
     });
