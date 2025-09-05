@@ -395,7 +395,7 @@ footer {
   }
 }
 
-/* Width is set in figure container queries */
+/* width is also set in figure container queries */
 .graph-container {
   --x-max: 5;
   --y-max: 100;
