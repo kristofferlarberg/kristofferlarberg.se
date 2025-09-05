@@ -262,8 +262,6 @@ li.skill > div.monthly {
 
 dl {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   gap: 5px;
 }
 
@@ -276,10 +274,12 @@ dl.frequency {
 }
 
 dl.frequency > div {
+  display: flex;
   flex-direction: column;
-  justify-self: center;
+  align-items: center;
   @media (min-width: 640px) {
     flex-direction: row;
+    align-items: center;
   }
 }
 
