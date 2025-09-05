@@ -31,7 +31,7 @@
         <h2>Experience</h2>
 
         <!-- Default skills content as list -->
-        <div class="graph-placeholder">
+        <div class="placeholder">
           <h3 style="margin-bottom: 14px">Process</h3>
           <h4>Practices</h4>
           <ul>
@@ -94,11 +94,14 @@
           </ul>
         </div>
 
-        <!-- Skills content as graph, above 200px screen width -->
+        <!-- Technical skills content as graph, above 200px screen width -->
         <figure>
           <figcaption>
-            Skills plotted by confidence level (vertical) and years of
-            experience (horizontal)
+            Technical skills
+            <span class="sr-only"
+              >Skills plotted by confidence level (vertical) and years of
+              experience (horizontal)</span
+            >
           </figcaption>
 
           <!-- Skills filtering, if browser uses javacript and above 200px screen width -->
@@ -475,7 +478,7 @@
                 data-collaborated="true"
                 style="--x: 4; --y: 57"
               >
-                PM
+                Package<br />management
                 <div class="weekly" aria-label="Medium sized circle"></div>
                 <span class="sr-only">
                   Weekly use, 5 years experience, confidence 57%.
@@ -496,6 +499,220 @@
               </div>
               <div>
                 <dt class="monthly" aria-label="small circle"></dt>
+                <dd>Monthly</dd>
+              </div>
+            </dl>
+          </div>
+        </figure>
+
+        <!-- Process skills content as graph, above 200px screen width -->
+        <figure>
+          <figcaption>
+            Process related skills
+            <span class="sr-only"
+              >Skills plotted by confidence level (vertical) and years of
+              experience (horizontal)</span
+            >
+          </figcaption>
+
+          <!-- Skills filtering, if browser uses javacript and above 200px screen width -->
+          <div class="filters-container process">
+            <div class="main-filters process">
+              <button data-filter="taught" aria-pressed="false">
+                Skills I've Taught
+              </button>
+              <button data-filter="future" aria-pressed="false">
+                Extra interesting
+              </button>
+              <button data-filter="collaborated" aria-pressed="false">
+                Collaborative Skills
+              </button>
+            </div>
+
+            <div class="category-filters process">
+              <button data-filter="practices" aria-pressed="false">
+                Practices
+              </button>
+              <button data-filter="process-tooling" aria-pressed="false">
+                Process Tooling
+              </button>
+            </div>
+
+            <button
+              class="clear-filters"
+              data-filter="all"
+              aria-pressed="false"
+            >
+              Clear filters
+            </button>
+          </div>
+
+          <div class="graph-container">
+            <span class="axis-label x-label">
+              <span class="sr-only">X axis:</span>
+              Years of experience
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 7px;
+                "
+                aria-label="Numbers 0-5"
+              >
+                <span aria-hidden="true">0</span>
+                <span aria-hidden="true">1</span>
+                <span aria-hidden="true">2</span>
+                <span aria-hidden="true">3</span>
+                <span aria-hidden="true">4</span>
+                <span aria-hidden="true">5</span>
+              </div>
+            </span>
+            <span class="axis-label y-label">
+              <span class="sr-only">Y axis:</span>
+              Confidence
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 7px;
+                "
+                aria-label="values 25%, 50%, 75% and 100%"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true">25%</span>
+                <span aria-hidden="true">50%</span>
+                <span aria-hidden="true">75%</span>
+                <span aria-hidden="true">100%</span>
+              </div>
+            </span>
+            <ul class="skills">
+              <li
+                class="skill process"
+                data-name="Test-Driven Development"
+                data-category="practices"
+                data-taught="true"
+                data-future="true"
+                data-collaborated="false"
+                style="--x: 0.25; --y: 20"
+              >
+                Test-Driven<br />Development
+                <div class="daily process" aria-label="Large circle"></div>
+                <span class="sr-only">
+                  Daily use, 0.5 years experience, confidence 20%.
+                </span>
+              </li>
+              <li
+                class="skill process"
+                data-name="Agile methods"
+                data-category="practices"
+                data-taught="true"
+                data-future="true"
+                data-collaborated="false"
+                style="--x: 4; --y: 60"
+              >
+                Agile methods
+                <div class="daily process" aria-label="Large circle"></div>
+                <span class="sr-only">
+                  Daily use, 4 years experience, confidence 60%.
+                </span>
+              </li>
+              <li
+                class="skill process"
+                data-name="A"
+                data-category="practices"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 1; --y: 45"
+              >
+                Pair and<br />
+                mob programming
+                <div
+                  class="weekly process"
+                  aria-label="Medium sized circle"
+                ></div>
+                <span class="sr-only">
+                  Weekly use, 1 years experience, confidence 45%.
+                </span>
+              </li>
+              <li
+                class="skill process"
+                data-name="Accessibility"
+                data-category="practices"
+                data-taught="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 4; --y: 70"
+              >
+                Accessibility
+                <div class="daily process" aria-label="Large circle"></div>
+                <span class="sr-only">
+                  Weekly use, 4 years experience, confidence 70%.
+                </span>
+              </li>
+              <li
+                class="skill process"
+                data-name="Git workflows"
+                data-category="process-tooling"
+                data-taught="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 4; --y: 80"
+              >
+                Git workflows
+                <div class="daily process" aria-label="Large circle"></div>
+                <span class="sr-only">
+                  Weekly use, 4 years experience, confidence 80%.
+                </span>
+              </li>
+              <li
+                class="skill process"
+                data-name="CI/CD"
+                data-category="process-tooling"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 2.5; --y: 50"
+              >
+                CI/CD
+                <div class="daily process" aria-label="Large circle"></div>
+                <span class="sr-only">
+                  Weekly use, 2.5 years experience, confidence 50%.
+                </span>
+              </li>
+              <li
+                class="skill process"
+                data-name="Observability and incident response"
+                data-category="process-tooling"
+                data-taught="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 2.5; --y: 40"
+              >
+                Observability<br />and incident response
+                <div
+                  class="weekly process"
+                  aria-label="Medium sized circle"
+                ></div>
+                <span class="sr-only">
+                  Weekly use, 2.5 years experience, confidence 40%.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="legend" style="margin-top: 112px">
+            <h3>Estimated average frequency</h3>
+            <dl class="frequency">
+              <div>
+                <dt class="daily process" aria-label="large circle"></dt>
+                <dd>Daily</dd>
+              </div>
+              <div>
+                <dt class="weekly process" aria-label="medium circle"></dt>
+                <dd>Weekly</dd>
+              </div>
+              <div>
+                <dt class="monthly process" aria-label="small circle"></dt>
                 <dd>Monthly</dd>
               </div>
             </dl>

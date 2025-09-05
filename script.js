@@ -1,9 +1,17 @@
-function filterButtons() {
-  const mainFilters = document.querySelector(".main-filters");
-  const categoryFilters = document.querySelector(".category-filters");
-  const filtersContainer = document.querySelector(".filters-container");
+function filterButtons(process = false) {
+  const mainFilters = document.querySelector(
+    process ? ".main-filters.process" : ".main-filters"
+  );
+  const categoryFilters = document.querySelector(
+    process ? ".category-filters.process" : ".category-filters"
+  );
+  const filtersContainer = document.querySelector(
+    process ? ".filters-container.process" : ".filters-container"
+  );
   const buttons = document.querySelectorAll("button");
-  const skills = document.querySelectorAll(".skill");
+  const skills = document.querySelectorAll(
+    process ? ".skill.process" : ".skill"
+  );
 
   function checkWidthAndShowFilters() {
     if (window.innerWidth >= 250) {
@@ -98,3 +106,4 @@ function filterButtons() {
 }
 
 filterButtons();
+filterButtons(true);
