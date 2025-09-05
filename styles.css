@@ -45,6 +45,26 @@ main {
   flex-direction: column;
 }
 
+section {
+  padding: 40px 20px 60px 20px;
+  @media (min-width: 1000px) {
+    padding: 50px 60px 60px 60px;
+  }
+}
+
+section > p {
+  width: 100%;
+  @media (min-width: 1000px) {
+    width: 60%;
+  }
+}
+
+section:nth-child(3) {
+  -webkit-box-shadow: -1px -7px 9px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -1px 3px 0 rgb(0 0 0 / 0.1), 0 -1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
 h1 {
   font-size: 2.2rem;
   letter-spacing: -0.02rem;
@@ -240,24 +260,72 @@ li.skill > div.monthly {
   background-color: rgba(0, 0, 255, 0.25);
 }
 
-section {
-  padding: 40px 20px 60px 20px;
-  @media (min-width: 1000px) {
-    padding: 50px 60px 60px 60px;
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+dl.frequency {
+  flex-direction: column;
+  justify-self: left;
+  @media (min-width: 640px) {
+    flex-direction: row;
   }
 }
 
-section > p {
-  width: 100%;
-  @media (min-width: 1000px) {
-    width: 60%;
+dl.frequency > div {
+  flex-direction: column;
+  justify-self: center;
+  @media (min-width: 640px) {
+    flex-direction: row;
   }
 }
 
-section:nth-child(3) {
-  -webkit-box-shadow: -1px -7px 9px 0px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 -1px 3px 0 rgb(0 0 0 / 0.1), 0 -1px 2px -1px rgb(0 0 0 / 0.1);
+dt {
+  margin: 0 5px 0 0;
+}
+
+dt.daily {
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 255, 0.25);
+}
+
+dt.weekly {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 255, 0.25);
+}
+
+dt.monthly {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 255, 0.25);
+}
+
+dt.languages {
+  border: 1px solid var(--black);
+}
+dt.frameworks-libraries {
+  border: double var(--black);
+}
+dt.backend-data {
+  border: 1px dotted var(--black);
+}
+dt.testing {
+  border: 1px dashed var(--black);
+}
+dt.tooling {
+  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+dd {
+  margin: 0 10px 0 0;
 }
 
 figure {
@@ -313,79 +381,6 @@ figure {
 figcaption {
   text-align: left;
   margin-bottom: 20px;
-}
-
-dl {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 5px;
-}
-
-dl.frequency {
-  flex-direction: column;
-  justify-self: left;
-  @media (min-width: 640px) {
-    flex-direction: row;
-  }
-}
-
-dl.frequency > div {
-  flex-direction: column;
-  justify-self: center;
-  @media (min-width: 640px) {
-    flex-direction: row;
-  }
-}
-
-dl > div {
-  display: flex;
-  align-items: center;
-}
-
-dt {
-  margin: 0 5px 0 0;
-}
-
-dt.daily {
-  height: 70px;
-  width: 70px;
-  border-radius: 100%;
-  background-color: rgba(0, 0, 255, 0.25);
-}
-
-dt.weekly {
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-  background-color: rgba(0, 0, 255, 0.25);
-}
-
-dt.monthly {
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
-  background-color: rgba(0, 0, 255, 0.25);
-}
-
-dt.languages {
-  border: 1px solid var(--black);
-}
-dt.frameworks-libraries {
-  border: double var(--black);
-}
-dt.backend-data {
-  border: 1px dotted var(--black);
-}
-dt.testing {
-  border: 1px dashed var(--black);
-}
-dt.tooling {
-  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.4);
-}
-
-dd {
-  margin: 0 10px 0 0;
 }
 
 footer {
