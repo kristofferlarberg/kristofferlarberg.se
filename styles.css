@@ -222,6 +222,7 @@ ul.skills {
 /* font-size is also set in figure container queries */
 li.skill {
   position: absolute;
+  max-width: 150px;
   left: calc(var(--x) / var(--x-max) * 100%);
   bottom: calc((var(--y) + 1) / (var(--y-max) + 1) * 100%);
   padding: 0;
