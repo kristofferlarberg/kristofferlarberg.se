@@ -494,6 +494,7 @@ footer {
 }
 
 .legend {
+  width: 100%;
   color: var(--black);
   background-color: var(--white);
   border: 1px solid var(--gray);
@@ -502,6 +503,7 @@ footer {
   padding: 5px 10px;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   @media (min-width: 1000px) {
+    width: max-content;
     font-size: 1.7rem;
   }
 }
