@@ -14,7 +14,6 @@ const processSkillsFilterButtons = document.querySelectorAll(
 );
 const technicalSkills = document.querySelectorAll(".skill.technical");
 const processSkills = document.querySelectorAll(".skill.process");
-const skills = document.querySelectorAll(".skill");
 
 function checkWidthAndShowFilters() {
   if (window.innerWidth >= 250) {
@@ -36,15 +35,10 @@ function buttonListener(buttons) {
     button.addEventListener("click", () => {
       const filter = button.dataset.filter;
 
-      if (filter === "all") {
-        buttons.forEach((b) => {
-          b.classList.remove("active");
-          b.setAttribute("aria-pressed", "false");
-        });
-        skills.forEach((skill) => {
-          skill.classList.remove("hidden");
-        });
-        return;
+      if (filter === "all-technical-skills") {
+        clearFilters(technicalSkillsFilterbuttons, technicalSkills);
+      } else if (filter === "all-process-skills") {
+        clearFilters(processSkillsFilterButtons, processSkills);
       }
 
       const isMainFilter =
@@ -161,36 +155,16 @@ function applyFilters(skillsType) {
   return;
 }
 
-// function applyFilters(skillsType) {
-//   let shouldShow = true;
-
-//   if (skillsType === "technical" && activeMainFilter) {
-//     const mainFilter = activeMainFilter.dataset.filter;
-//     if (mainFilter === "mentored" && skill.dataset.mentored !== "true") {
-//       shouldShow = false;
-//     } else if (mainFilter === "future" && skill.dataset.future !== "true") {
-//       shouldShow = false;
-//     } else if (
-//       mainFilter === "collaborated" &&
-//       skill.dataset.collaborated !== "true"
-//     ) {
-//       shouldShow = false;
-//     }
-//   }
-
-//   if (activeCategoryFilter && shouldShow) {
-//     const categoryFilter = activeCategoryFilter.dataset.filter;
-//     if (skill.dataset.category !== categoryFilter) {
-//       shouldShow = false;
-//     }
-//   }
-
-//   if (shouldShow) {
-//     skill.classList.remove("hidden");
-//   } else {
-//     skill.classList.add("hidden");
-//   }
-// }
+function clearFilters(buttons, skills) {
+  buttons.forEach((b) => {
+    b.classList.remove("active");
+    b.setAttribute("aria-pressed", "false");
+  });
+  skills.forEach((skill) => {
+    skill.classList.remove("hidden");
+  });
+  return;
+}
 
 buttonListener(technicalSkillsFilterbuttons);
 buttonListener(processSkillsFilterButtons);
