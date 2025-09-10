@@ -35,12 +35,6 @@ function buttonListener(buttons) {
     button.addEventListener("click", () => {
       const filter = button.dataset.filter;
 
-      if (filter === "all-technical-skills") {
-        clearFilters(technicalSkillsFilterbuttons, technicalSkills);
-      } else if (filter === "all-process-skills") {
-        clearFilters(processSkillsFilterButtons, processSkills);
-      }
-
       const isMainFilter =
         button.classList.contains("technical-skills-filter") &&
         mainFilters.contains(button);
@@ -54,7 +48,11 @@ function buttonListener(buttons) {
 
       const isCurrentlyActive = button.classList.contains("active");
 
-      if (isCurrentlyActive) {
+      if (filter === "all-technical-skills") {
+        clearFilters(technicalSkillsFilterbuttons, technicalSkills);
+      } else if (filter === "all-process-skills") {
+        clearFilters(processSkillsFilterButtons, processSkills);
+      } else if (isCurrentlyActive) {
         button.classList.remove("active");
         button.setAttribute("aria-pressed", "false");
       } else {
