@@ -28,28 +28,11 @@
       </section>
 
       <section style="background-color: #efefef">
-        <h2>Experience</h2>
+        <h2>Technical</h2>
 
         <!-- Default skills content as list -->
         <div class="placeholder">
-          <h3 style="margin-bottom: 14px">Process</h3>
-          <h4>Practices</h4>
-          <ul>
-            <li>Test-Driven Development</li>
-            <li>Agile</li>
-            <li>Pair- and mob programming</li>
-            <li>Progressive enhancement</li>
-            <li>Accessibility</li>
-          </ul>
-          <h4>Tooling</h4>
-          <ul>
-            <li>Git workflows</li>
-            <li>CI/CD</li>
-            <li>Observability and incident response</li>
-          </ul>
-
-          <h3 style="margin-bottom: 14px">Technical</h3>
-          <h4>Frameworks and libraries</h4>
+          <h3>Frameworks and libraries</h3>
           <ul>
             <li>Gatsby</li>
             <li>Next.js</li>
@@ -57,14 +40,14 @@
             <li>React Native</li>
             <li>Vue.js</li>
           </ul>
-          <h4>Languages</h4>
+          <h3>Languages</h3>
           <ul>
             <li>CSS</li>
             <li>HTML</li>
             <li>JavaScript</li>
             <li>TypeScript</li>
           </ul>
-          <h4>Frameworks and libraries</h4>
+          <h3>Frameworks and libraries</h3>
           <ul>
             <li>Gatsby</li>
             <li>Next.js</li>
@@ -72,18 +55,18 @@
             <li>React Native</li>
             <li>Vue.js</li>
           </ul>
-          <h4>Backend and data</h4>
+          <h3>Backend and data</h3>
           <ul>
             <li>Node.js</li>
             <li>REST API</li>
             <li>TanStack Query</li>
           </ul>
-          <h4>Testing</h4>
+          <h3>Testing</h3>
           <ul>
             <li>Cypress</li>
             <li>Testing Library</li>
           </ul>
-          <h4>Tooling</h4>
+          <h3>Tooling</h3>
           <ul>
             <li>git</li>
             <li>CircleCI</li>
@@ -92,12 +75,27 @@
             <li>GitHub Actions</li>
             <li>Package management (npm, yarn, pnpm)</li>
           </ul>
+
+          <h3>Practices</h3>
+          <ul>
+            <li>Test-Driven Development</li>
+            <li>Agile</li>
+            <li>Pair- and mob programming</li>
+            <li>Progressive enhancement</li>
+            <li>Accessibility</li>
+          </ul>
+          <h3>Tooling</h3>
+          <ul>
+            <li>Git workflows</li>
+            <li>CI/CD</li>
+            <li>Observability and incident response</li>
+          </ul>
         </div>
 
         <!-- Technical skills content as graph, above 200px screen width -->
         <figure>
           <figcaption>
-            Technical skills
+            Practical skills
             <span class="sr-only">
               Skills plotted by confidence level (vertical) and years of
               experience (horizontal)
@@ -166,11 +164,25 @@
               >
                 Tooling
               </button>
+              <div class="process-category-filters">
+                <button
+                  class="process-skills-filter"
+                  data-filter="practices"
+                  aria-pressed="false"
+                >
+                  Practices
+                </button>
+                <button
+                  class="process-skills-filter"
+                  data-filter="process-tooling"
+                  aria-pressed="false"
+                >
+                  Process Tooling
+                </button>
             </div>
 
             <button
-              class="technical-skills-filter"
-              data-filter="all-technical-skills"
+              class="clear-filters"
               aria-pressed="false"
             >
               Clear filters
@@ -516,104 +528,6 @@
                   Weekly use, 5 years experience, confidence 57%.
                 </span>
               </li>
-            </ul>
-          </div>
-          <div class="legend" style="margin-top: 112px">
-            <h3>Estimated average frequency</h3>
-            <dl class="frequency">
-              <div>
-                <dt class="daily" aria-label="large circle"></dt>
-                <dd>Daily</dd>
-              </div>
-              <div>
-                <dt class="weekly" aria-label="medium circle"></dt>
-                <dd>Weekly</dd>
-              </div>
-              <div>
-                <dt class="monthly" aria-label="small circle"></dt>
-                <dd>Monthly</dd>
-              </div>
-            </dl>
-          </div>
-        </figure>
-
-        <!-- Process skills content as graph, above 200px screen width -->
-        <figure>
-          <figcaption>
-            Process related skills
-            <span class="sr-only">
-              Skills plotted by confidence level (vertical) and years of
-              experience (horizontal)
-            </span>
-          </figcaption>
-
-          <!-- Skills filtering, if browser uses javacript and above 200px screen width -->
-          <div class="filters-container">
-            <div class="process-category-filters">
-              <button
-                class="process-skills-filter"
-                data-filter="practices"
-                aria-pressed="false"
-              >
-                Practices
-              </button>
-              <button
-                class="process-skills-filter"
-                data-filter="process-tooling"
-                aria-pressed="false"
-              >
-                Process Tooling
-              </button>
-            </div>
-
-            <button
-              class="process-skills-filter"
-              data-filter="all-process-skills"
-              aria-pressed="false"
-            >
-              Clear filters
-            </button>
-          </div>
-
-          <div class="graph-container">
-            <span class="axis-label x-label">
-              <span class="sr-only">X axis:</span>
-              Years of experience
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  margin-top: 7px;
-                "
-                aria-label="Numbers 0-5"
-              >
-                <span aria-hidden="true">0</span>
-                <span aria-hidden="true">1</span>
-                <span aria-hidden="true">2</span>
-                <span aria-hidden="true">3</span>
-                <span aria-hidden="true">4</span>
-                <span aria-hidden="true">5</span>
-              </div>
-            </span>
-            <span class="axis-label y-label">
-              <span class="sr-only">Y axis:</span>
-              Confidence
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  margin-top: 7px;
-                "
-                aria-label="values 25%, 50%, 75% and 100%"
-              >
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true">25%</span>
-                <span aria-hidden="true">50%</span>
-                <span aria-hidden="true">75%</span>
-                <span aria-hidden="true">100%</span>
-              </div>
-            </span>
-            <ul class="skills">
               <li
                 class="skill process"
                 data-name="Test-Driven Development"
@@ -724,22 +638,21 @@
             <h3>Estimated average frequency</h3>
             <dl class="frequency">
               <div>
-                <dt class="daily process" aria-label="large circle"></dt>
+                <dt class="daily" aria-label="large circle"></dt>
                 <dd>Daily</dd>
               </div>
               <div>
-                <dt class="weekly process" aria-label="medium circle"></dt>
+                <dt class="weekly" aria-label="medium circle"></dt>
                 <dd>Weekly</dd>
               </div>
               <div>
-                <dt class="monthly process" aria-label="small circle"></dt>
+                <dt class="monthly" aria-label="small circle"></dt>
                 <dd>Monthly</dd>
               </div>
             </dl>
           </div>
         </figure>
       </section>
-      <section style="background-color: #e5dbff"></section>
       <footer>
         <h2 class="sr-only">Contact</h2>
         <a href="mailto:kristoffer.larberg@icloud.com" rel="noreferrer">

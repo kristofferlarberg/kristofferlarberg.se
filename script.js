@@ -12,6 +12,8 @@ const technicalSkillsFilterbuttons = document.querySelectorAll(
 const processSkillsFilterButtons = document.querySelectorAll(
   ".process-skills-filter"
 );
+const buttons = document.querySelectorAll("button");
+const clearFiltersButton = document.querySelector(".clear-filters");
 const technicalSkills = document.querySelectorAll(".skill.technical");
 const processSkills = document.querySelectorAll(".skill.process");
 
@@ -30,7 +32,8 @@ function checkWidthAndShowFilters() {
 checkWidthAndShowFilters();
 
 window.addEventListener("resize", checkWidthAndShowFilters);
-function buttonListener(buttons) {
+
+function buttonListener() {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const filter = button.dataset.filter;
@@ -45,12 +48,12 @@ function buttonListener(buttons) {
       const isTechnicalCategoryFilter = technicalCategoryFilters.some(
         (filter) => filter.contains(button)
       );
+      const isClearFiltersButton = button === clearFiltersButton;
 
       const isCurrentlyActive = button.classList.contains("active");
 
-      if (filter === "all-technical-skills") {
+      if (isClearFiltersButton) {
         clearFilters(technicalSkillsFilterbuttons, technicalSkills);
-      } else if (filter === "all-process-skills") {
         clearFilters(processSkillsFilterButtons, processSkills);
       } else if (isCurrentlyActive) {
         button.classList.remove("active");
@@ -164,5 +167,4 @@ function clearFilters(buttons, skills) {
   return;
 }
 
-buttonListener(technicalSkillsFilterbuttons);
-buttonListener(processSkillsFilterButtons);
+buttonListener();
