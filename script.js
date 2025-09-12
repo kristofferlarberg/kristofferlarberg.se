@@ -36,8 +36,6 @@ window.addEventListener("resize", checkWidthAndShowFilters);
 function buttonListener() {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      const filter = button.dataset.filter;
-
       const isMainFilter =
         button.classList.contains("technical-skills-filter") &&
         mainFilters.contains(button);
@@ -84,75 +82,58 @@ function buttonListener() {
         button.setAttribute("aria-pressed", "true");
       }
 
-      applyFilters(
-        button.classList.contains("technical-skills-filter")
-          ? "technical"
-          : "process"
-      );
+      const activeMainFilter = mainFilters.querySelector("button.active");
+
+      if (activeMainFilter) {
+        applyFilters(technicalSkills);
+        applyFilters(processSkills);
+      } else {
+        applyFilters(
+          button.classList.contains("technical-skills-filter")
+            ? technicalSkills
+            : processSkills
+        );
+      }
     });
   });
 }
 
 function applyFilters(skillsType) {
-  if (skillsType === "process") {
-    const activeCategoryFilter = processCategoryFilters
-      .find((filter) => filter.querySelector("button.active"))
-      ?.querySelector("button.active");
+  const activeCategoryFilter = technicalCategoryFilters
+    .find((filter) => filter.querySelector("button.active"))
+    ?.querySelector("button.active");
 
-    processSkills.forEach((skill) => {
-      let shouldShow = true;
+  skillsType.forEach((skill) => {
+    let shouldShow = true;
 
-      if (activeCategoryFilter && shouldShow) {
-        const categoryFilter = activeCategoryFilter.dataset.filter;
-        if (skill.dataset.category !== categoryFilter) {
-          shouldShow = false;
-        }
+    if (activeMainFilter) {
+      const mainFilter = activeMainFilter.dataset.filter;
+      if (mainFilter === "mentored" && skill.dataset.mentored !== "true") {
+        shouldShow = false;
+      } else if (mainFilter === "future" && skill.dataset.future !== "true") {
+        shouldShow = false;
+      } else if (
+        mainFilter === "collaborated" &&
+        skill.dataset.collaborated !== "true"
+      ) {
+        shouldShow = false;
       }
+    }
 
-      if (shouldShow) {
-        skill.classList.remove("hidden");
-      } else {
-        skill.classList.add("hidden");
+    if (activeCategoryFilter && shouldShow) {
+      const categoryFilter = activeCategoryFilter.dataset.filter;
+      if (skill.dataset.category !== categoryFilter) {
+        shouldShow = false;
       }
-    });
-  } else if (skillsType === "technical") {
-    const activeMainFilter = mainFilters.querySelector("button.active");
+    }
 
-    const activeCategoryFilter = technicalCategoryFilters
-      .find((filter) => filter.querySelector("button.active"))
-      ?.querySelector("button.active");
+    if (shouldShow) {
+      skill.classList.remove("hidden");
+    } else {
+      skill.classList.add("hidden");
+    }
+  });
 
-    technicalSkills.forEach((skill) => {
-      let shouldShow = true;
-
-      if (skillsType === "technical" && activeMainFilter) {
-        const mainFilter = activeMainFilter.dataset.filter;
-        if (mainFilter === "mentored" && skill.dataset.mentored !== "true") {
-          shouldShow = false;
-        } else if (mainFilter === "future" && skill.dataset.future !== "true") {
-          shouldShow = false;
-        } else if (
-          mainFilter === "collaborated" &&
-          skill.dataset.collaborated !== "true"
-        ) {
-          shouldShow = false;
-        }
-      }
-
-      if (activeCategoryFilter && shouldShow) {
-        const categoryFilter = activeCategoryFilter.dataset.filter;
-        if (skill.dataset.category !== categoryFilter) {
-          shouldShow = false;
-        }
-      }
-
-      if (shouldShow) {
-        skill.classList.remove("hidden");
-      } else {
-        skill.classList.add("hidden");
-      }
-    });
-  }
   return;
 }
 
