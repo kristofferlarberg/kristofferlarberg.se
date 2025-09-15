@@ -1,10 +1,11 @@
-const mainFilters = document.querySelector(".main-filters");
+const mainFilters = Array.from(document.querySelectorAll(".filter.main"));
 const technicalCategoryFilters = Array.from(
-  document.querySelectorAll(".technical-category-filters")
+  Array.from(document.querySelectorAll(".filter.technical"))
 );
 const processCategoryFilters = Array.from(
-  document.querySelectorAll(".process-category-filters")
+  document.querySelectorAll(".filter.process")
 );
+
 const filtersContainer = document.querySelectorAll(".filters-container");
 const technicalSkillsFilterbuttons = document.querySelectorAll(
   ".technical-skills-filter"
@@ -13,9 +14,11 @@ const processSkillsFilterButtons = document.querySelectorAll(
   ".process-skills-filter"
 );
 const buttons = document.querySelectorAll("button");
-const clearFiltersButton = document.querySelector(".clear-filters");
+
 const technicalSkills = document.querySelectorAll(".skill.technical");
 const processSkills = document.querySelectorAll(".skill.process");
+
+const allSkills = document.querySelectorAll(".skill");
 
 function checkWidthAndShowFilters() {
   if (window.innerWidth >= 250) {
@@ -36,113 +39,112 @@ window.addEventListener("resize", checkWidthAndShowFilters);
 function buttonListener() {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      const isMainFilter =
-        button.classList.contains("technical-skills-filter") &&
-        mainFilters.contains(button);
-
+      const isClearFiltersButton =
+        button === document.querySelector(".clear-filters");
+      const isMainFilter = mainFilters.some((filter) =>
+        filter.contains(button)
+      );
       const isProcessCategoryFilter = processCategoryFilters.some((filter) =>
         filter.contains(button)
       );
       const isTechnicalCategoryFilter = technicalCategoryFilters.some(
         (filter) => filter.contains(button)
       );
-      const isClearFiltersButton = button === clearFiltersButton;
-
-      const isCurrentlyActive = button.classList.contains("active");
 
       if (isClearFiltersButton) {
-        clearFilters(technicalSkillsFilterbuttons, technicalSkills);
-        clearFilters(processSkillsFilterButtons, processSkills);
-      } else if (isCurrentlyActive) {
-        button.classList.remove("active");
-        button.setAttribute("aria-pressed", "false");
-      } else {
-        if (isMainFilter) {
-          mainFilters.querySelectorAll("button").forEach((b) => {
+        clearFilters();
+      } else if (isMainFilter) {
+        mainFilters.forEach((b) => {
+          b.classList.remove("active");
+          b.setAttribute("aria-pressed", "false");
+        });
+      } else if (isTechnicalCategoryFilter) {
+        technicalCategoryFilters.forEach((filter) => {
+          filter.querySelectorAll("button").forEach((b) => {
             b.classList.remove("active");
             b.setAttribute("aria-pressed", "false");
           });
-        } else if (isTechnicalCategoryFilter) {
-          technicalCategoryFilters.forEach((filter) => {
-            filter.querySelectorAll("button").forEach((b) => {
-              b.classList.remove("active");
-              b.setAttribute("aria-pressed", "false");
-            });
+        });
+      } else if (isProcessCategoryFilter) {
+        processCategoryFilters.forEach((filter) => {
+          filter.querySelectorAll("button").forEach((b) => {
+            b.classList.remove("active");
+            b.setAttribute("aria-pressed", "false");
           });
-        } else if (isProcessCategoryFilter) {
-          processCategoryFilters.forEach((filter) => {
-            filter.querySelectorAll("button").forEach((b) => {
-              b.classList.remove("active");
-              b.setAttribute("aria-pressed", "false");
-            });
-          });
-        }
-
-        button.classList.add("active");
-        button.setAttribute("aria-pressed", "true");
+        });
       }
+      button.classList.add("active");
+      button.setAttribute("aria-pressed", "true");
 
-      const activeMainFilter = mainFilters.querySelector("button.active");
-
-      if (activeMainFilter) {
-        applyFilters(technicalSkills);
-        applyFilters(processSkills);
-      } else {
-        applyFilters(
-          button.classList.contains("technical-skills-filter")
-            ? technicalSkills
-            : processSkills
-        );
-      }
+      applyMainFilter();
+      applyCategoryFilter(technicalSkills);
+      applyCategoryFilter(processSkills);
     });
   });
 }
 
-function applyFilters(skillsType) {
-  const activeCategoryFilter = technicalCategoryFilters
-    .find((filter) => filter.querySelector("button.active"))
-    ?.querySelector("button.active");
+function applyMainFilter() {
+  const activeMainFilter = mainFilters.find((filter) =>
+    filter.classList.contains("active")
+  )?.dataset.filter;
 
-  skillsType.forEach((skill) => {
-    let shouldShow = true;
+  console.log(activeMainFilter);
 
-    if (activeMainFilter) {
-      const mainFilter = activeMainFilter.dataset.filter;
-      if (mainFilter === "mentored" && skill.dataset.mentored !== "true") {
-        shouldShow = false;
-      } else if (mainFilter === "future" && skill.dataset.future !== "true") {
-        shouldShow = false;
-      } else if (
-        mainFilter === "collaborated" &&
-        skill.dataset.collaborated !== "true"
-      ) {
-        shouldShow = false;
-      }
-    }
+  if (!activeMainFilter) {
+    return;
+  }
 
-    if (activeCategoryFilter && shouldShow) {
-      const categoryFilter = activeCategoryFilter.dataset.filter;
-      if (skill.dataset.category !== categoryFilter) {
-        shouldShow = false;
-      }
-    }
-
-    if (shouldShow) {
-      skill.classList.remove("hidden");
-    } else {
+  allSkills.forEach((skill) => {
+    if (activeMainFilter === "mentored" && skill.dataset.mentored !== "true") {
       skill.classList.add("hidden");
+    } else if (
+      activeMainFilter === "future" &&
+      skill.dataset.future !== "true"
+    ) {
+      skill.classList.add("hidden");
+    } else if (
+      activeMainFilter === "collaborated" &&
+      skill.dataset.collaborated !== "true"
+    ) {
+      skill.classList.add("hidden");
+    } else {
+      skill.classList.remove("hidden");
     }
   });
 
   return;
 }
 
-function clearFilters(buttons, skills) {
+function applyCategoryFilter(skills) {
+  const categoryFilters = Array.from(
+    document.querySelectorAll(".filter")
+  ).filter(
+    (filter) =>
+      filter.classList.contains("technical") ||
+      filter.classList.contains("process")
+  );
+
+  const activeCategoryFilter = categoryFilters.find((filter) =>
+    filter.classList.contains("active")
+  )?.dataset.filter;
+
+  skills.forEach((skill) => {
+    if (skill.dataset.category !== activeCategoryFilter) {
+      skill.classList.add("hidden");
+    } else {
+      skill.classList.remove("hidden");
+    }
+  });
+
+  return;
+}
+
+function clearFilters() {
   buttons.forEach((b) => {
     b.classList.remove("active");
     b.setAttribute("aria-pressed", "false");
   });
-  skills.forEach((skill) => {
+  allSkills.forEach((skill) => {
     skill.classList.remove("hidden");
   });
   return;
