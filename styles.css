@@ -287,9 +287,6 @@ li.skill > div.monthly.process {
 dl {
   display: flex;
   gap: 5px;
-}
-
-dl.frequency {
   flex-direction: column;
   justify-self: left;
   @media (min-width: 640px) {
@@ -297,7 +294,7 @@ dl.frequency {
   }
 }
 
-dl.frequency > div {
+dl > div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -315,49 +312,21 @@ dt.daily {
   height: 70px;
   width: 70px;
   border-radius: 100%;
-  background-color: rgba(0, 0, 255, 0.25);
-}
-
-dt.daily.process {
-  background-color: rgba(255, 0, 0, 0.25);
+  border: 1px solid var(--black);
 }
 
 dt.weekly {
   height: 50px;
   width: 50px;
   border-radius: 100%;
-  background-color: rgba(0, 0, 255, 0.25);
-}
-
-dt.weekly.process {
-  background-color: rgba(255, 0, 0, 0.25);
+  border: 1px solid var(--black);
 }
 
 dt.monthly {
   height: 30px;
   width: 30px;
   border-radius: 100%;
-  background-color: rgba(0, 0, 255, 0.25);
-}
-
-dt.monthly.process {
-  background-color: rgba(255, 0, 0, 0.25);
-}
-
-dt.languages {
   border: 1px solid var(--black);
-}
-dt.frameworks-libraries {
-  border: double var(--black);
-}
-dt.backend-data {
-  border: 1px dotted var(--black);
-}
-dt.testing {
-  border: 1px dashed var(--black);
-}
-dt.tooling {
-  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 dd {
