@@ -44,16 +44,12 @@ function buttonListener() {
         return;
       }
 
-      const isMainFilterButton = mainFilters.some((filter) =>
-        filter.contains(button)
-      );
+      const isMainFilterButton = mainFilters.includes(button);
 
-      const isProcessCategoryFilterButton = processCategoryFilters.some(
-        (filter) => filter.contains(button)
-      );
-      const isTechnicalCategoryFilter = technicalCategoryFilters.some(
-        (filter) => filter.contains(button)
-      );
+      const isProcessCategoryFilterButton =
+        processCategoryFilters.includes(button);
+      const isTechnicalCategoryFilter =
+        technicalCategoryFilters.includes(button);
 
       const isCurrentlyActive = button.classList.contains("active");
 
@@ -66,27 +62,20 @@ function buttonListener() {
             b.classList.remove("active");
             b.setAttribute("aria-pressed", "false");
           });
-        } else if (isTechnicalCategoryFilter) {
+        } else if (isTechnicalCategoryFilter || isProcessCategoryFilterButton) {
           technicalCategoryFilters.forEach((filter) => {
-            filter.querySelectorAll("button").forEach((b) => {
-              b.classList.remove("active");
-              b.setAttribute("aria-pressed", "false");
-            });
+            filter.classList.remove("active");
+            filter.setAttribute("aria-pressed", "false");
           });
-        } else if (isProcessCategoryFilterButton) {
           processCategoryFilters.forEach((filter) => {
-            filter.querySelectorAll("button").forEach((b) => {
-              b.classList.remove("active");
-              b.setAttribute("aria-pressed", "false");
-            });
+            filter.classList.remove("active");
+            filter.setAttribute("aria-pressed", "false");
           });
         }
-
         button.classList.add("active");
         button.setAttribute("aria-pressed", "true");
       }
       applyFilters();
-      console.log(button);
     });
   });
 }
@@ -96,16 +85,12 @@ function applyFilters() {
     filter.classList.contains("active")
   )?.dataset.filter;
 
-  console.log(activeMainFilter);
-
   const activeCategoryFilter =
     processCategoryFilters.find((filter) => filter.classList.contains("active"))
       ?.dataset.filter ||
     technicalCategoryFilters.find((filter) =>
       filter.classList.contains("active")
     )?.dataset.filter;
-
-  console.log("activeCategoryFilter", activeCategoryFilter);
 
   skills.forEach((skill) => {
     let shouldShow = true;
