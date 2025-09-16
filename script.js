@@ -39,12 +39,17 @@ function buttonListener() {
       const isClearFiltersButton =
         button === document.querySelector(".clear-filters");
 
-      const isMainFilter = mainFilters.some((filter) =>
+      if (isClearFiltersButton) {
+        clearFilters();
+        return;
+      }
+
+      const isMainFilterButton = mainFilters.some((filter) =>
         filter.contains(button)
       );
 
-      const isProcessCategoryFilter = processCategoryFilters.some((filter) =>
-        filter.contains(button)
+      const isProcessCategoryFilterButton = processCategoryFilters.some(
+        (filter) => filter.contains(button)
       );
       const isTechnicalCategoryFilter = technicalCategoryFilters.some(
         (filter) => filter.contains(button)
@@ -56,9 +61,7 @@ function buttonListener() {
         button.classList.remove("active");
         button.setAttribute("aria-pressed", "false");
       } else {
-        if (isClearFiltersButton) {
-          clearFilters();
-        } else if (isMainFilter) {
+        if (isMainFilterButton) {
           mainFilters.forEach((b) => {
             b.classList.remove("active");
             b.setAttribute("aria-pressed", "false");
@@ -70,7 +73,7 @@ function buttonListener() {
               b.setAttribute("aria-pressed", "false");
             });
           });
-        } else if (isProcessCategoryFilter) {
+        } else if (isProcessCategoryFilterButton) {
           processCategoryFilters.forEach((filter) => {
             filter.querySelectorAll("button").forEach((b) => {
               b.classList.remove("active");
@@ -83,6 +86,7 @@ function buttonListener() {
         button.setAttribute("aria-pressed", "true");
       }
       applyFilters();
+      console.log(button);
     });
   });
 }
