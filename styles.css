@@ -190,6 +190,27 @@ button.active {
   border: 1px solid var(--black);
 }
 
+button.filter.technical {
+  background-color: rgba(0, 0, 255, 0.25);
+  color: var(--black);
+}
+
+button.filter.process {
+  background-color: rgba(255, 0, 0, 0.25);
+  color: var(--black);
+}
+
+button.filter.technical.active {
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+}
+button.filter.process.active {
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+}
+
 button:focus-visible {
   outline: 4px solid var(--black);
   outline-offset: 4px;
