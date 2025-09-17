@@ -572,31 +572,49 @@
 
         <!-- Skills filtering, if browser uses javacript and above 200px screen width -->
         <div class="filters-container">
-          <h3>Filters</h3>
           <div style="display: flex; justify-content: space-between">
-            <h4>Main</h4>
+            <h3>Filters</h3>
             <button class="clear-filters" aria-pressed="false">
               Clear filters
             </button>
           </div>
 
-          <div class="main-filters">
+          <h4>Main</h4>
+          <div class="filter-container">
             <button
               class="filter main"
+              data-filter="technical"
+              aria-pressed="false"
+            >
+              Technical
+            </button>
+            <button
+              class="filter main"
+              data-filter="process"
+              aria-pressed="false"
+            >
+              Process
+            </button>
+          </div>
+
+          <h4>Context</h4>
+          <div class="filter-container">
+            <button
+              class="filter context"
               data-filter="mentored"
               aria-pressed="false"
             >
               Skills I've Taught
             </button>
             <button
-              class="filter main"
+              class="filter context"
               data-filter="future"
               aria-pressed="false"
             >
               Extra interesting
             </button>
             <button
-              class="filter main"
+              class="filter context"
               data-filter="collaborated"
               aria-pressed="false"
             >
@@ -605,7 +623,7 @@
           </div>
 
           <h4>Technical</h4>
-          <div class="category-filters">
+          <div class="filter-container">
             <button
               class="filter technical"
               data-filter="languages"

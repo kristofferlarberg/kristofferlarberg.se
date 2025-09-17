@@ -1,19 +1,16 @@
-const mainFilters = Array.from(document.querySelectorAll(".filter.main"));
-// const categoryFilters = Array.from(document.querySelectorAll(".filter"));
-
+const mainFilters = Array.from(
+  Array.from(document.querySelectorAll(".filter.main"))
+);
 const technicalCategoryFilters = Array.from(
   Array.from(document.querySelectorAll(".filter.technical"))
 );
 const processCategoryFilters = Array.from(
   document.querySelectorAll(".filter.process")
 );
+const contextFilters = Array.from(document.querySelectorAll(".filter.context"));
+
 const filtersContainer = document.querySelectorAll(".filters-container");
-const technicalSkillsFilterbuttons = document.querySelectorAll(
-  ".technical-skills-filter"
-);
-const processSkillsFilterButtons = document.querySelectorAll(
-  ".process-skills-filter"
-);
+
 const buttons = document.querySelectorAll("button");
 const skills = document.querySelectorAll(".skill");
 
@@ -44,6 +41,8 @@ function buttonListener() {
         return;
       }
 
+      const isContextFilterButton = contextFilters.includes(button);
+
       const isMainFilterButton = mainFilters.includes(button);
 
       const isProcessCategoryFilterButton =
@@ -59,6 +58,11 @@ function buttonListener() {
       } else {
         if (isMainFilterButton) {
           mainFilters.forEach((b) => {
+            b.classList.remove("active");
+            b.setAttribute("aria-pressed", "false");
+          });
+        } else if (isContextFilterButton) {
+          contextFilters.forEach((b) => {
             b.classList.remove("active");
             b.setAttribute("aria-pressed", "false");
           });
@@ -85,6 +89,10 @@ function applyFilters() {
     filter.classList.contains("active")
   )?.dataset.filter;
 
+  const activeContextFilter = contextFilters.find((filter) =>
+    filter.classList.contains("active")
+  )?.dataset.filter;
+
   const activeCategoryFilter =
     processCategoryFilters.find((filter) => filter.classList.contains("active"))
       ?.dataset.filter ||
@@ -97,17 +105,31 @@ function applyFilters() {
 
     if (!!activeMainFilter) {
       if (
-        activeMainFilter === "mentored" &&
+        activeMainFilter === "technical" &&
+        skill.classList.contains("technical") !== true
+      ) {
+        shouldShow = false;
+      } else if (
+        activeMainFilter === "process" &&
+        skill.classList.contains("process") !== true
+      ) {
+        shouldShow = false;
+      }
+    }
+
+    if (!!activeContextFilter) {
+      if (
+        activeContextFilter === "mentored" &&
         skill.dataset.mentored !== "true"
       ) {
         shouldShow = false;
       } else if (
-        activeMainFilter === "future" &&
+        activeContextFilter === "future" &&
         skill.dataset.future !== "true"
       ) {
         shouldShow = false;
       } else if (
-        activeMainFilter === "collaborated" &&
+        activeContextFilter === "collaborated" &&
         skill.dataset.collaborated !== "true"
       ) {
         shouldShow = false;
