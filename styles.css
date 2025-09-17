@@ -171,9 +171,6 @@ li.circle > a:hover {
 
 button {
   font-size: 1.4rem;
-  border: none;
-  color: var(--black);
-  border: 1px solid var(--gray);
   border-radius: 2px;
   cursor: pointer;
   padding: 5px 10px;
@@ -183,14 +180,20 @@ button {
   }
 }
 
-button.active {
-  background-color: var(--black);
-  color: var(--white);
-  border: 1px solid var(--black);
+.filter.main:nth-child(1) {
+  background-color: rgba(0, 0, 255, 0.25);
 }
 
-.filter.main {
-  background-color: rgba(255 0, 0, 0.25);
+.filter.main:nth-child(2) {
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+.filter.main:nth-child(1).active {
+  background-color: var(--black);
+}
+
+.filter.main:nth-child(2).active {
+  background-color: var(--black);
 }
 
 .filter.context {
@@ -198,7 +201,7 @@ button.active {
 }
 
 .filter.technical {
-  background-color: rgba(0, 0, 255, 0.25);
+  background-color: rgba(255, 0, 0, 0.25);
 }
 
 .filter.process {
