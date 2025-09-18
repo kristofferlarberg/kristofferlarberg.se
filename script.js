@@ -65,6 +65,15 @@ function buttonListener() {
             b.classList.remove("active");
             b.setAttribute("aria-pressed", "false");
           });
+          // Clear any active category filters when main filter is clicked
+          technicalCategoryFilters.forEach((filter) => {
+            filter.classList.remove("active");
+            filter.setAttribute("aria-pressed", "false");
+          });
+          processCategoryFilters.forEach((filter) => {
+            filter.classList.remove("active");
+            filter.setAttribute("aria-pressed", "false");
+          });
         } else if (isContextFilterButton) {
           contextFilters.forEach((b) => {
             b.classList.remove("active");
@@ -142,7 +151,7 @@ function applyFilters() {
       }
     }
 
-    // If there is an active category filter and shouldShow has not been set to false, check if the skill matches the filter
+    // Apply category filter if active and shouldShow hasn't been set to false
     if (!!activeCategoryFilter && shouldShow) {
       if (skill.dataset.category !== activeCategoryFilter) {
         shouldShow = false;
