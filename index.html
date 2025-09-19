@@ -16,15 +16,12 @@
     <main>
       <section class="container" style="gap: 3rem; padding-top: 3rem">
         <h2 class="sr-only">Introduction</h2>
-        <details>
-          <summary>What is this?</summary>
-          <div class="introduction">
-            I’m a Stockholm based developer who likes building services that
-            help people. I’m interested in the structures of things and would
-            like to teach. This site is a way for me to make sense of my
-            developer practice, maybe you'll find it interesting as well.
-          </div>
-        </details>
+        <div class="introduction">
+          I’m a Stockholm based developer who likes building services that help
+          people. I’m interested in the structures of things and would like to
+          teach. This site is a way for me to make sense of my developer
+          practice, maybe you'll find it interesting as well.
+        </div>
       </section>
 
       <section style="background-color: #efefef">
@@ -551,7 +548,7 @@
               </li>
             </ul>
           </div>
-          <div class="legend" style="margin-top: 112px">
+          <div class="legend">
             <h3>Estimated average frequency</h3>
             <dl>
               <div>
@@ -579,7 +576,7 @@
             </button>
           </div>
 
-          <ul class="filter-container">
+          <ul class="filter-container" aria-label="Main filters">
             <li>
               <button
                 class="filter main"
@@ -600,7 +597,7 @@
             </li>
           </ul>
 
-          <ul class="filter-container">
+          <ul class="filter-container" aria-label="Context filters">
             <li>
               <button
                 class="filter context"
@@ -630,7 +627,7 @@
             </li>
           </ul>
 
-          <ul class="filter-container">
+          <ul class="filter-container" aria-label="Category filters">
             <li>
               <button
                 class="filter process"
