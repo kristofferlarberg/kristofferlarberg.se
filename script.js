@@ -54,6 +54,15 @@ function buttonListener() {
       if (isCurrentlyActive) {
         if (isMainFilterButton) {
           hideCategoryFilters(button, false);
+          // Clear any active category filters when main filter is clicked
+          technicalCategoryFilters.forEach((filter) => {
+            filter.classList.remove("active");
+            filter.setAttribute("aria-pressed", "false");
+          });
+          processCategoryFilters.forEach((filter) => {
+            filter.classList.remove("active");
+            filter.setAttribute("aria-pressed", "false");
+          });
         }
         button.classList.remove("active");
         button.setAttribute("aria-pressed", "false");
