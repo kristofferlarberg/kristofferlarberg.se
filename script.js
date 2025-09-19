@@ -8,19 +8,17 @@ const processCategoryFilters = Array.from(
   document.querySelectorAll(".filter.process")
 );
 const contextFilters = Array.from(document.querySelectorAll(".filter.context"));
-
-const filtersContainer = document.querySelectorAll(".filters-container");
-
+const filterButtonsContainer = document.querySelectorAll(".filters-container");
 const buttons = document.querySelectorAll("button");
 const skills = document.querySelectorAll(".skill");
 
 function checkWidthAndShowFilters() {
   if (window.innerWidth >= 250) {
-    filtersContainer.forEach((element) => {
+    filterButtonsContainer.forEach((element) => {
       element.style.display = "flex";
     });
   } else {
-    filtersContainer.forEach((element) => {
+    filterButtonsContainer.forEach((element) => {
       element.style.display = "none";
     });
   }
@@ -47,7 +45,8 @@ function buttonListener() {
 
       const isProcessCategoryFilterButton =
         processCategoryFilters.includes(button);
-      const isTechnicalCategoryFilter =
+
+      const isTechnicalCategoryFilterButton =
         technicalCategoryFilters.includes(button);
 
       const isCurrentlyActive = button.classList.contains("active");
@@ -79,7 +78,10 @@ function buttonListener() {
             b.classList.remove("active");
             b.setAttribute("aria-pressed", "false");
           });
-        } else if (isTechnicalCategoryFilter || isProcessCategoryFilterButton) {
+        } else if (
+          isTechnicalCategoryFilterButton ||
+          isProcessCategoryFilterButton
+        ) {
           technicalCategoryFilters.forEach((filter) => {
             filter.classList.remove("active");
             filter.setAttribute("aria-pressed", "false");
@@ -116,7 +118,6 @@ function applyFilters() {
   skills.forEach((skill) => {
     let shouldShow = true;
 
-    // If there is an active main filter, check if the skill matches the filter
     if (!!activeMainFilter) {
       if (
         activeMainFilter === "technical" &&
@@ -131,7 +132,6 @@ function applyFilters() {
       }
     }
 
-    // If there is an active main filter, check if the skill matches the filter
     if (!!activeContextFilter) {
       if (
         activeContextFilter === "mentored" &&
@@ -170,7 +170,6 @@ function applyFilters() {
 function hideCategoryFilters(button, hideFilters) {
   if (hideFilters) {
     if (button.dataset.filter === "technical") {
-      // Hide process filters when technical is active
       processCategoryFilters.forEach((filter) => {
         filter.classList.add("hidden");
       });
@@ -179,7 +178,6 @@ function hideCategoryFilters(button, hideFilters) {
         filter.classList.remove("hidden");
       });
     } else if (button.dataset.filter === "process") {
-      // Hide technical filters when process is active
       technicalCategoryFilters.forEach((filter) => {
         filter.classList.add("hidden");
       });
