@@ -377,6 +377,7 @@ figure {
   width: 100%;
   justify-content: right;
   margin: 30px 0 0 0;
+  border: 1px solid var(--black);
 
   @container (min-width: 500px) {
     .graph-container {

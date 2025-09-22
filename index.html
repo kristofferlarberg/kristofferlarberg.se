@@ -24,7 +24,7 @@
         </div>
       </section>
 
-      <section style="background-color: #efefef">
+      <section>
         <h2>Experience</h2>
 
         <!-- Default skills content as list -->
@@ -571,127 +571,106 @@
         <div class="filters-container">
           <div style="display: flex; justify-content: space-between">
             <h3>Filters</h3>
+            <fieldset>
+              <legend>Main</legend>
+              <label
+                ><input
+                  type="checkbox"
+                  name="main-category"
+                  value="process"
+                />Process</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="main-category"
+                  value="technical"
+                />Technical</label
+              >
+            </fieldset>
+
+            <fieldset>
+              <legend>Contextual</legend>
+              <label
+                ><input
+                  type="checkbox"
+                  name="contextual-category"
+                  value="future"
+                />Extra interesting</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="contextual-category"
+                  value="collaborated"
+                />Collaborated</label
+              >
+            </fieldset>
+
+            <fieldset>
+              <legend>Specific</legend>
+              <label
+                ><input
+                  class="filter process"
+                  type="checkbox"
+                  name="sub-category"
+                  value="practices"
+                />Practices</label
+              >
+              <label
+                ><input
+                  class="filter process"
+                  type="checkbox"
+                  name="sub-category"
+                  value="process-tooling"
+                />Tooling</label
+              >
+              <label
+                ><input
+                  class="filter technical"
+                  type="checkbox"
+                  name="sub-category"
+                  value="languages"
+                />Languages</label
+              >
+              <label
+                ><input
+                  class="filter technical"
+                  type="checkbox"
+                  name="sub-category"
+                  value="frameworks-libraries"
+                />Frameworks and libraries</label
+              >
+              <label
+                ><input
+                  class="filter technical"
+                  type="checkbox"
+                  name="sub-category"
+                  value="backend-data"
+                />Backend and data</label
+              >
+              <label
+                ><input
+                  class="filter technical"
+                  type="checkbox"
+                  name="sub-category"
+                  value="testing"
+                />Testing</label
+              >
+              <label
+                ><input
+                  class="filter technical"
+                  type="checkbox"
+                  name="sub-category"
+                  value="tooling"
+                />Tooling</label
+              >
+            </fieldset>
+
             <button class="clear-filters" aria-pressed="false">
               Clear filters
             </button>
           </div>
-
-          <ul class="filter-container" aria-label="Main filters">
-            <li>
-              <button
-                class="filter main"
-                data-filter="process"
-                aria-pressed="false"
-              >
-                Process
-              </button>
-            </li>
-            <li>
-              <button
-                class="filter main"
-                data-filter="technical"
-                aria-pressed="false"
-              >
-                Technical
-              </button>
-            </li>
-          </ul>
-
-          <ul class="filter-container" aria-label="Context filters">
-            <li>
-              <button
-                class="filter context"
-                data-filter="mentored"
-                aria-pressed="false"
-              >
-                Skills I've Taught
-              </button>
-            </li>
-            <li>
-              <button
-                class="filter context"
-                data-filter="future"
-                aria-pressed="false"
-              >
-                Extra interesting
-              </button>
-            </li>
-            <li>
-              <button
-                class="filter context"
-                data-filter="collaborated"
-                aria-pressed="false"
-              >
-                Collaborative Skills
-              </button>
-            </li>
-          </ul>
-
-          <ul class="filter-container" aria-label="Category filters">
-            <li>
-              <button
-                class="filter process"
-                data-filter="practices"
-                aria-pressed="false"
-              >
-                Practices
-              </button>
-            </li>
-            <li>
-              <button
-                class="filter process"
-                data-filter="process-tooling"
-                aria-pressed="false"
-              >
-                Tooling
-              </button>
-            </li>
-            <li>
-              <button
-                class="filter technical"
-                data-filter="languages"
-                aria-pressed="false"
-              >
-                Languages
-              </button>
-            </li>
-            <li>
-              <button
-                class="filter technical"
-                data-filter="frameworks-libraries"
-                aria-pressed="false"
-              >
-                Frontend frameworks and libraries
-              </button>
-            </li>
-            <li>
-              <button
-                class="filter technical"
-                data-filter="backend-data"
-                aria-pressed="false"
-              >
-                Backend and data
-              </button>
-            </li>
-            <li>
-              <button
-                class="filter technical"
-                data-filter="testing"
-                aria-pressed="false"
-              >
-                Testing
-              </button>
-            </li>
-            <li>
-              <button
-                class="filter technical"
-                data-filter="tooling"
-                aria-pressed="false"
-              >
-                Tooling
-              </button>
-            </li>
-          </ul>
         </div>
       </section>
       <footer>

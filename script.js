@@ -7,10 +7,10 @@ const technicalCategoryFilters = Array.from(
 const processCategoryFilters = Array.from(
   document.querySelectorAll(".filter.process")
 );
+
 const contextFilters = Array.from(document.querySelectorAll(".filter.context"));
 const filterButtonsContainer = document.querySelectorAll(".filters-container");
 const buttons = document.querySelectorAll("button");
-const skills = document.querySelectorAll(".skill");
 
 function checkWidthAndShowFilters() {
   if (window.innerWidth >= 250) {
@@ -25,149 +25,108 @@ function checkWidthAndShowFilters() {
 }
 
 checkWidthAndShowFilters();
+// todo: set random checkboxes to checked
+hideAllSkills();
 
 window.addEventListener("resize", checkWidthAndShowFilters);
 
-function buttonListener() {
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const isClearFiltersButton =
-        button === document.querySelector(".clear-filters");
+function filterListener() {
+  const filtersContainer = document.querySelector(".filters-container");
+  const filters = document.querySelectorAll(".filter");
 
-      if (isClearFiltersButton) {
-        clearFilters();
-        return;
+  console.log(filtersContainer);
+  console.log(filters);
+
+  filtersContainer.addEventListener("change", (e) => {
+    if (e.target.matches('input[type="checkbox"]')) {
+      const filterType = e.target.name;
+      const value = e.target.value;
+      const isChecked = e.target.checked;
+
+      const activeMainCategoryFilter =
+        filterType === "main-category" && isChecked ? value : null;
+
+      if (!!activeMainCategoryFilter) {
+        // todo: Add logic to hide sub-category filters options when main filter is clicked
+        // hideCategoryFilters(button, true);
+
+        // Clear sub-category filter based on main filter
+        filters.forEach((checkbox) => {
+          if (
+            activeMainCategoryFilter === "technical" &&
+            checkbox.classList.contains("technical") === false
+          ) {
+            checkbox.checked = false;
+            checkbox.dispatchEvent(new Event("change", { bubbles: false }));
+          } else if (
+            activeMainCategoryFilter === "process" &&
+            checkbox.classList.contains("process") === false
+          ) {
+            checkbox.checked = false;
+            checkbox.dispatchEvent(new Event("change", { bubbles: false }));
+          }
+          return;
+        });
       }
 
-      const isContextFilterButton = contextFilters.includes(button);
-
-      const isMainFilterButton = mainFilters.includes(button);
-
-      const isProcessCategoryFilterButton =
-        processCategoryFilters.includes(button);
-
-      const isTechnicalCategoryFilterButton =
-        technicalCategoryFilters.includes(button);
-
-      const isCurrentlyActive = button.classList.contains("active");
-
-      if (isCurrentlyActive) {
-        if (isMainFilterButton) {
-          hideCategoryFilters(button, false);
-          // Clear any active category filters when main filter is clicked
-          technicalCategoryFilters.forEach((filter) => {
-            filter.classList.remove("active");
-            filter.setAttribute("aria-pressed", "false");
-          });
-          processCategoryFilters.forEach((filter) => {
-            filter.classList.remove("active");
-            filter.setAttribute("aria-pressed", "false");
-          });
-        }
-        button.classList.remove("active");
-        button.setAttribute("aria-pressed", "false");
-      } else {
-        if (isMainFilterButton) {
-          hideCategoryFilters(button, true);
-          mainFilters.forEach((b) => {
-            b.classList.remove("active");
-            b.setAttribute("aria-pressed", "false");
-          });
-          // Clear any active category filters when main filter is clicked
-          technicalCategoryFilters.forEach((filter) => {
-            filter.classList.remove("active");
-            filter.setAttribute("aria-pressed", "false");
-          });
-          processCategoryFilters.forEach((filter) => {
-            filter.classList.remove("active");
-            filter.setAttribute("aria-pressed", "false");
-          });
-        } else if (isContextFilterButton) {
-          contextFilters.forEach((b) => {
-            b.classList.remove("active");
-            b.setAttribute("aria-pressed", "false");
-          });
-        } else if (
-          isTechnicalCategoryFilterButton ||
-          isProcessCategoryFilterButton
-        ) {
-          technicalCategoryFilters.forEach((filter) => {
-            filter.classList.remove("active");
-            filter.setAttribute("aria-pressed", "false");
-          });
-          processCategoryFilters.forEach((filter) => {
-            filter.classList.remove("active");
-            filter.setAttribute("aria-pressed", "false");
-          });
-        }
-        button.classList.add("active");
-        button.setAttribute("aria-pressed", "true");
-      }
       applyFilters();
-    });
+    }
   });
 }
 
 function applyFilters() {
-  const activeMainFilter = mainFilters.find((filter) =>
-    filter.classList.contains("active")
-  )?.dataset.filter;
+  const skills = Array.from(document.querySelectorAll(".skill"));
+  const filters = Array.from(
+    document.querySelectorAll("input[type='checkbox']")
+  );
 
-  const activeContextFilter = contextFilters.find((filter) =>
-    filter.classList.contains("active")
-  )?.dataset.filter;
+  const activeMainCategoryFilters = filters.filter(
+    (filter) => filter.checked === true
+  );
 
-  const activeCategoryFilter =
-    processCategoryFilters.find((filter) => filter.classList.contains("active"))
-      ?.dataset.filter ||
-    technicalCategoryFilters.find((filter) =>
-      filter.classList.contains("active")
-    )?.dataset.filter;
+  const activeSubCategoryFilters = filters.filter(
+    (filter) => filter.checked === true && filter.name === "sub-category"
+  );
+
+  const activeContextualCategoryFilters = filters.filter(
+    (filter) => filter.checked === true && filter.name === "contextual-category"
+  );
 
   skills.forEach((skill) => {
-    let shouldShow = true;
+    let shouldShow = false;
 
-    if (!!activeMainFilter) {
-      if (
-        activeMainFilter === "technical" &&
-        skill.classList.contains("technical") !== true
-      ) {
-        shouldShow = false;
-      } else if (
-        activeMainFilter === "process" &&
-        skill.classList.contains("process") !== true
-      ) {
-        shouldShow = false;
-      }
+    if (activeMainCategoryFilters.length > 0) {
+      activeMainCategoryFilters.forEach((filter) => {
+        if (
+          (filter.value === "technical" &&
+            skill.classList.contains("technical")) ||
+          (filter.value === "process" && skill.classList.contains("process"))
+        ) {
+          shouldShow = true;
+        }
+      });
     }
 
-    if (!!activeContextFilter) {
-      if (
-        activeContextFilter === "mentored" &&
-        skill.dataset.mentored !== "true"
-      ) {
-        shouldShow = false;
-      } else if (
-        activeContextFilter === "future" &&
-        skill.dataset.future !== "true"
-      ) {
-        shouldShow = false;
-      } else if (
-        activeContextFilter === "collaborated" &&
-        skill.dataset.collaborated !== "true"
-      ) {
-        shouldShow = false;
-      }
+    if (activeSubCategoryFilters.length > 0) {
+      const skillCategory = skill.dataset.category;
+      const matchesSubCategory = activeSubCategoryFilters.some(
+        (filter) => filter.value === skillCategory
+      );
+      shouldShow = matchesSubCategory;
     }
 
-    // Apply category filter if active and shouldShow hasn't been set to false
-    if (!!activeCategoryFilter && shouldShow) {
-      if (skill.dataset.category !== activeCategoryFilter) {
-        shouldShow = false;
-      }
+    if (shouldShow && activeContextualCategoryFilters.length > 0) {
+      const matchesContextualCategoryFilters =
+        activeContextualCategoryFilters.every((filter) => {
+          return (
+            (filter.value === "future" && skill.dataset.future === "true") ||
+            (filter.value === "collaborated" &&
+              skill.dataset.collaborated === "true")
+          );
+        });
+      shouldShow = matchesContextualCategoryFilters;
     }
 
-    // If the skill should be shown, remove the hidden class, otherwise add it
     if (shouldShow) {
       skill.classList.remove("hidden");
     } else {
@@ -207,6 +166,8 @@ function hideCategoryFilters(button, hideFilters) {
 }
 
 function clearFilters() {
+  const skills = document.querySelectorAll(".skill");
+
   buttons.forEach((b) => {
     b.classList.remove("active");
     b.setAttribute("aria-pressed", "false");
@@ -218,4 +179,11 @@ function clearFilters() {
   return;
 }
 
-buttonListener();
+function hideAllSkills() {
+  const skills = document.querySelectorAll(".skill");
+  skills.forEach((skill) => {
+    skill.classList.add("hidden");
+  });
+}
+
+filterListener();
