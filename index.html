@@ -348,7 +348,7 @@
               <li
                 class="skill technical"
                 data-name="git"
-                data-category="tooling"
+                data-category="technical-tooling"
                 data-mentored="true"
                 data-future="true"
                 data-collaborated="true"
@@ -363,7 +363,7 @@
               <li
                 class="skill technical"
                 data-name="CircleCI"
-                data-category="tooling"
+                data-category="technical-tooling"
                 data-mentored="false"
                 data-future="true"
                 data-collaborated="true"
@@ -378,7 +378,7 @@
               <li
                 class="skill technical"
                 data-name="GitHub Actions"
-                data-category="tooling"
+                data-category="technical-tooling"
                 data-mentored="false"
                 data-future="true"
                 data-collaborated="true"
@@ -393,7 +393,7 @@
               <li
                 class="skill technical"
                 data-name="Datadog"
-                data-category="tooling"
+                data-category="technical-tooling"
                 data-mentored="false"
                 data-future="true"
                 data-collaborated="true"
@@ -408,7 +408,7 @@
               <li
                 class="skill technical"
                 data-name="Contentful"
-                data-category="tooling"
+                data-category="technical-tooling"
                 data-mentored="true"
                 data-future="false"
                 data-collaborated="true"
@@ -423,7 +423,7 @@
               <li
                 class="skill technical"
                 data-name="Package management"
-                data-category="tooling"
+                data-category="technical-tooling"
                 data-mentored="false"
                 data-future="true"
                 data-collaborated="true"
@@ -572,24 +572,6 @@
           <div style="display: flex; justify-content: space-between">
             <h3>Filters</h3>
             <fieldset>
-              <legend>Main</legend>
-              <label
-                ><input
-                  type="checkbox"
-                  name="main-category"
-                  value="process"
-                />Process</label
-              >
-              <label
-                ><input
-                  type="checkbox"
-                  name="main-category"
-                  value="technical"
-                />Technical</label
-              >
-            </fieldset>
-
-            <fieldset>
               <legend>Contextual</legend>
               <label
                 ><input
@@ -608,12 +590,12 @@
             </fieldset>
 
             <fieldset>
-              <legend>Specific</legend>
+              <legend>Process</legend>
               <label
                 ><input
                   class="filter process"
                   type="checkbox"
-                  name="sub-category"
+                  name="process-category"
                   value="practices"
                 />Practices</label
               >
@@ -621,15 +603,19 @@
                 ><input
                   class="filter process"
                   type="checkbox"
-                  name="sub-category"
+                  name="process-category"
                   value="process-tooling"
                 />Tooling</label
               >
+            </fieldset>
+
+            <fieldset>
+              <legend>Technical</legend>
               <label
                 ><input
                   class="filter technical"
                   type="checkbox"
-                  name="sub-category"
+                  name="technical-category"
                   value="languages"
                 />Languages</label
               >
@@ -637,7 +623,7 @@
                 ><input
                   class="filter technical"
                   type="checkbox"
-                  name="sub-category"
+                  name="technical-category"
                   value="frameworks-libraries"
                 />Frameworks and libraries</label
               >
@@ -645,7 +631,7 @@
                 ><input
                   class="filter technical"
                   type="checkbox"
-                  name="sub-category"
+                  name="technical-category"
                   value="backend-data"
                 />Backend and data</label
               >
@@ -653,7 +639,7 @@
                 ><input
                   class="filter technical"
                   type="checkbox"
-                  name="sub-category"
+                  name="technical-category"
                   value="testing"
                 />Testing</label
               >
@@ -661,8 +647,8 @@
                 ><input
                   class="filter technical"
                   type="checkbox"
-                  name="sub-category"
-                  value="tooling"
+                  name="technical-category"
+                  value="technical-tooling"
                 />Tooling</label
               >
             </fieldset>

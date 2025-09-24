@@ -32,7 +32,9 @@ window.addEventListener("resize", checkWidthAndShowFilters);
 
 function filterListener() {
   const filtersContainer = document.querySelector(".filters-container");
-  const filters = document.querySelectorAll(".filter");
+  const filters = Array.from(
+    document.querySelectorAll("input[type='checkbox']")
+  );
 
   console.log(filtersContainer);
   console.log(filters);
@@ -68,9 +70,15 @@ function filterListener() {
           return;
         });
       }
-
       applyFilters();
     }
+  });
+
+  filtersContainer.addEventListener("click", (e) => {
+    if (e.target.classList.contains("clear-filters")) {
+      clearFilters();
+    }
+    applyFilters();
   });
 }
 
@@ -80,39 +88,34 @@ function applyFilters() {
     document.querySelectorAll("input[type='checkbox']")
   );
 
-  const activeMainCategoryFilters = filters.filter(
-    (filter) => filter.checked === true
+  const activeProcessCategoryFilters = filters.filter(
+    (filter) => filter.checked === true && filter.name === "process-category"
   );
 
-  const activeSubCategoryFilters = filters.filter(
-    (filter) => filter.checked === true && filter.name === "sub-category"
+  const activeTechnicalCategoryFilters = filters.filter(
+    (filter) => filter.checked === true && filter.name === "technical-category"
+  );
+
+  const activeSkillCategoryFilters = filters.filter(
+    (filter) =>
+      (filter.checked === true && filter.name === "process-category") ||
+      (filter.checked === true && filter.name === "technical-category")
   );
 
   const activeContextualCategoryFilters = filters.filter(
     (filter) => filter.checked === true && filter.name === "contextual-category"
   );
 
+  console.log(activeSkillCategoryFilters);
+
   skills.forEach((skill) => {
     let shouldShow = false;
 
-    if (activeMainCategoryFilters.length > 0) {
-      activeMainCategoryFilters.forEach((filter) => {
-        if (
-          (filter.value === "technical" &&
-            skill.classList.contains("technical")) ||
-          (filter.value === "process" && skill.classList.contains("process"))
-        ) {
-          shouldShow = true;
-        }
-      });
-    }
-
-    if (activeSubCategoryFilters.length > 0) {
-      const skillCategory = skill.dataset.category;
-      const matchesSubCategory = activeSubCategoryFilters.some(
-        (filter) => filter.value === skillCategory
+    if (activeSkillCategoryFilters.length > 0) {
+      const matchesCategory = activeSkillCategoryFilters.some(
+        (filter) => filter.value === skill.dataset.category
       );
-      shouldShow = matchesSubCategory;
+      shouldShow = matchesCategory;
     }
 
     if (shouldShow && activeContextualCategoryFilters.length > 0) {
@@ -166,17 +169,14 @@ function hideCategoryFilters(button, hideFilters) {
 }
 
 function clearFilters() {
-  const skills = document.querySelectorAll(".skill");
+  const filters = Array.from(
+    document.querySelectorAll("input[type='checkbox']")
+  );
 
-  buttons.forEach((b) => {
-    b.classList.remove("active");
-    b.setAttribute("aria-pressed", "false");
-    b.classList.remove("hidden");
+  filters.forEach((checkbox) => {
+    checkbox.checked = false;
+    checkbox.dispatchEvent(new Event("change", { bubbles: false }));
   });
-  skills.forEach((skill) => {
-    skill.classList.remove("hidden");
-  });
-  return;
 }
 
 function hideAllSkills() {
