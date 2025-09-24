@@ -571,23 +571,6 @@
         <div class="filters-container">
           <div style="display: flex; justify-content: space-between">
             <h3>Filters</h3>
-            <fieldset>
-              <legend>Contextual</legend>
-              <label
-                ><input
-                  type="checkbox"
-                  name="contextual-category"
-                  value="future"
-                />Extra interesting</label
-              >
-              <label
-                ><input
-                  type="checkbox"
-                  name="contextual-category"
-                  value="collaborated"
-                />Collaborated</label
-              >
-            </fieldset>
 
             <fieldset>
               <legend>Process</legend>
@@ -650,6 +633,24 @@
                   name="technical-category"
                   value="technical-tooling"
                 />Tooling</label
+              >
+            </fieldset>
+
+            <fieldset class="hidden" id="contextual-filters">
+              <legend>Contextual</legend>
+              <label
+                ><input
+                  type="checkbox"
+                  name="contextual-category"
+                  value="future"
+                />Extra interesting</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="contextual-category"
+                  value="collaborated"
+                />Collaborated</label
               >
             </fieldset>
 

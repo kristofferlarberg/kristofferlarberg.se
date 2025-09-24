@@ -1,16 +1,4 @@
-const mainFilters = Array.from(
-  Array.from(document.querySelectorAll(".filter.main"))
-);
-const technicalCategoryFilters = Array.from(
-  Array.from(document.querySelectorAll(".filter.technical"))
-);
-const processCategoryFilters = Array.from(
-  document.querySelectorAll(".filter.process")
-);
-
-const contextFilters = Array.from(document.querySelectorAll(".filter.context"));
 const filterButtonsContainer = document.querySelectorAll(".filters-container");
-const buttons = document.querySelectorAll("button");
 
 function checkWidthAndShowFilters() {
   if (window.innerWidth >= 250) {
@@ -36,40 +24,36 @@ function filterListener() {
     document.querySelectorAll("input[type='checkbox']")
   );
 
-  console.log(filtersContainer);
-  console.log(filters);
-
   filtersContainer.addEventListener("change", (e) => {
     if (e.target.matches('input[type="checkbox"]')) {
-      const filterType = e.target.name;
-      const value = e.target.value;
-      const isChecked = e.target.checked;
+      const activeSkillCategoryFilters = filters.some(
+        (filter) =>
+          (filter.checked === true && filter.name === "process-category") ||
+          (filter.checked === true && filter.name === "technical-category")
+      );
 
-      const activeMainCategoryFilter =
-        filterType === "main-category" && isChecked ? value : null;
+      const contextualCategoryFilters = filters.filter(
+        (filter) => filter.name === "contextual-category"
+      );
 
-      if (!!activeMainCategoryFilter) {
-        // todo: Add logic to hide sub-category filters options when main filter is clicked
-        // hideCategoryFilters(button, true);
+      const hiddenContextualCategoryFilters = contextualCategoryFilters.some(
+        (filter) => filter.classList.contains("hidden")
+      );
 
-        // Clear sub-category filter based on main filter
-        filters.forEach((checkbox) => {
-          if (
-            activeMainCategoryFilter === "technical" &&
-            checkbox.classList.contains("technical") === false
-          ) {
-            checkbox.checked = false;
-            checkbox.dispatchEvent(new Event("change", { bubbles: false }));
-          } else if (
-            activeMainCategoryFilter === "process" &&
-            checkbox.classList.contains("process") === false
-          ) {
-            checkbox.checked = false;
-            checkbox.dispatchEvent(new Event("change", { bubbles: false }));
-          }
-          return;
-        });
+      const contextualCategoryFiltersContainer = document.querySelector(
+        "#contextual-filters"
+      );
+
+      if (!!activeSkillCategoryFilters) {
+        // toggle visibility of contextual categories if skill categories are selected
+        contextualCategoryFiltersContainer.classList.remove("hidden");
+      } else if (
+        !activeSkillCategoryFilters &&
+        !hiddenContextualCategoryFilters
+      ) {
+        contextualCategoryFiltersContainer.classList.add("hidden");
       }
+
       applyFilters();
     }
   });
@@ -88,13 +72,13 @@ function applyFilters() {
     document.querySelectorAll("input[type='checkbox']")
   );
 
-  const activeProcessCategoryFilters = filters.filter(
-    (filter) => filter.checked === true && filter.name === "process-category"
-  );
+  // const activeProcessCategoryFilters = filters.filter(
+  //   (filter) => filter.checked === true && filter.name === "process-category"
+  // );
 
-  const activeTechnicalCategoryFilters = filters.filter(
-    (filter) => filter.checked === true && filter.name === "technical-category"
-  );
+  // const activeTechnicalCategoryFilters = filters.filter(
+  //   (filter) => filter.checked === true && filter.name === "technical-category"
+  // );
 
   const activeSkillCategoryFilters = filters.filter(
     (filter) =>
@@ -105,8 +89,6 @@ function applyFilters() {
   const activeContextualCategoryFilters = filters.filter(
     (filter) => filter.checked === true && filter.name === "contextual-category"
   );
-
-  console.log(activeSkillCategoryFilters);
 
   skills.forEach((skill) => {
     let shouldShow = false;
@@ -136,36 +118,6 @@ function applyFilters() {
       skill.classList.add("hidden");
     }
   });
-}
-
-function hideCategoryFilters(button, hideFilters) {
-  if (hideFilters) {
-    if (button.dataset.filter === "technical") {
-      processCategoryFilters.forEach((filter) => {
-        filter.classList.add("hidden");
-      });
-      // Make sure technical filters are visible
-      technicalCategoryFilters.forEach((filter) => {
-        filter.classList.remove("hidden");
-      });
-    } else if (button.dataset.filter === "process") {
-      technicalCategoryFilters.forEach((filter) => {
-        filter.classList.add("hidden");
-      });
-      // Make sure process filters are visible
-      processCategoryFilters.forEach((filter) => {
-        filter.classList.remove("hidden");
-      });
-    }
-  } else {
-    // Show all category filters when no main filter is active
-    technicalCategoryFilters.forEach((filter) => {
-      filter.classList.remove("hidden");
-    });
-    processCategoryFilters.forEach((filter) => {
-      filter.classList.remove("hidden");
-    });
-  }
 }
 
 function clearFilters() {
