@@ -58,9 +58,23 @@ function filterListener() {
     }
   });
 
+  const inactiveTechnicalCategoryFilters = filters.filter(
+    (filter) => filter.checked !== true && filter.name === "technical-category"
+  );
+  const inactiveProcessCategoryFilters = filters.filter(
+    (filter) => filter.checked !== true && filter.name === "process-category"
+  );
+
   filtersContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("clear-filters")) {
       clearFilters();
+    } else if (e.target.classList.contains("all-filters")) {
+      if (e.target.classList.contains("technical")) {
+        selectAllFilters(inactiveTechnicalCategoryFilters);
+      }
+      if (e.target.classList.contains("process")) {
+        selectAllFilters(inactiveProcessCategoryFilters);
+      }
     }
     applyFilters();
   });
@@ -71,14 +85,6 @@ function applyFilters() {
   const filters = Array.from(
     document.querySelectorAll("input[type='checkbox']")
   );
-
-  // const activeProcessCategoryFilters = filters.filter(
-  //   (filter) => filter.checked === true && filter.name === "process-category"
-  // );
-
-  // const activeTechnicalCategoryFilters = filters.filter(
-  //   (filter) => filter.checked === true && filter.name === "technical-category"
-  // );
 
   const activeSkillCategoryFilters = filters.filter(
     (filter) =>
@@ -128,6 +134,13 @@ function clearFilters() {
   filters.forEach((checkbox) => {
     checkbox.checked = false;
     checkbox.dispatchEvent(new Event("change", { bubbles: false }));
+  });
+}
+
+function selectAllFilters(filters) {
+  filters.forEach((checkbox) => {
+    checkbox.checked = true;
+    checkbox.dispatchEvent(new Event("change", { bubbles: true }));
   });
 }
 
