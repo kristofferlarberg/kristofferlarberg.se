@@ -254,8 +254,8 @@ ul.skills {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
+  list-style: none;
   @media (min-width: 375px) {
-    list-style: none;
     line-height: 1;
   }
 }
@@ -264,7 +264,6 @@ ul.skills {
 li.skill {
   font-size: 1.4rem;
   color: var(--black);
-  display: flex;
   flex-direction: row;
   align-items: center;
   gap: 5px;
@@ -590,6 +589,10 @@ figcaption {
   flex-wrap: wrap;
   gap: 7px;
   list-style: none;
+}
+
+.filter-details-container {
+  display: flex;
 }
 
 .hidden {
