@@ -14,7 +14,7 @@
       <h1>kristofferlarberg.se</h1>
     </header>
     <main>
-      <section class="container" style="gap: 3rem; padding-top: 3rem">
+      <section class="header">
         <h2 class="sr-only">Introduction</h2>
         <div class="introduction">
           I’m a Stockholm based developer who likes building services that help
@@ -25,7 +25,7 @@
       </section>
 
       <section>
-        <h2>Experience</h2>
+        <h2>Skills</h2>
 
         <!-- Default skills content as list -->
         <div class="placeholder">
@@ -92,8 +92,25 @@
         <!-- Technical skills content as graph, above 200px screen width -->
         <figure>
           <figcaption>
-            Skills plotted by confidence level (vertical) and years of
-            experience (horizontal)
+            <p>
+              Skills plotted by confidence level (vertical) and years of
+              experience (horizontal).
+            </p>
+            <p>Estimated average frequency:</p>
+            <dl>
+              <div>
+                <dt class="daily" aria-label="large circle"></dt>
+                <dd>Daily</dd>
+              </div>
+              <div>
+                <dt class="weekly" aria-label="medium circle"></dt>
+                <dd>Weekly</dd>
+              </div>
+              <div>
+                <dt class="monthly" aria-label="small circle"></dt>
+                <dd>Monthly</dd>
+              </div>
+            </dl>
           </figcaption>
 
           <div class="graph-container">
@@ -548,129 +565,119 @@
               </li>
             </ul>
           </div>
-          <div class="legend">
-            <h3>Estimated average frequency</h3>
-            <dl>
-              <div>
-                <dt class="daily" aria-label="large circle"></dt>
-                <dd>Daily</dd>
-              </div>
-              <div>
-                <dt class="weekly" aria-label="medium circle"></dt>
-                <dd>Weekly</dd>
-              </div>
-              <div>
-                <dt class="monthly" aria-label="small circle"></dt>
-                <dd>Monthly</dd>
-              </div>
-            </dl>
-          </div>
         </figure>
 
         <!-- Skills filtering, if browser uses javacript and above 200px screen width -->
         <div class="filters-container">
-          <div style="display: flex; justify-content: space-between">
-            <h3>Filters</h3>
-
-            <button class="all-filters">Apply all</button>
-
-            <fieldset>
-              <legend>Process</legend>
-              <label>
-                <input
-                  class="filter process"
-                  type="checkbox"
-                  name="process-category"
-                  value="practices"
-                />
-                Practices
-              </label>
-              <label>
-                <input
-                  class="filter process"
-                  type="checkbox"
-                  name="process-category"
-                  value="process-tooling"
-                />
-                Tooling
-              </label>
-            </fieldset>
-
-            <fieldset>
-              <legend>Technical</legend>
-              <label>
-                <input
-                  class="filter technical"
-                  type="checkbox"
-                  name="technical-category"
-                  value="languages"
-                />
-                Languages
-              </label>
-              <label>
-                <input
-                  class="filter technical"
-                  type="checkbox"
-                  name="technical-category"
-                  value="frameworks-libraries"
-                />
-                Frameworks and libraries
-              </label>
-              <label>
-                <input
-                  class="filter technical"
-                  type="checkbox"
-                  name="technical-category"
-                  value="backend-data"
-                />
-                Backend and data
-              </label>
-              <label>
-                <input
-                  class="filter technical"
-                  type="checkbox"
-                  name="technical-category"
-                  value="testing"
-                />
-                Testing
-              </label>
-              <label>
-                <input
-                  class="filter technical"
-                  type="checkbox"
-                  name="technical-category"
-                  value="technical-tooling"
-                />
-                Tooling
-              </label>
-            </fieldset>
-
-            <fieldset id="contextual-filters">
-              <legend>Contextual</legend>
-              <label>
-                <input
-                  type="checkbox"
-                  name="contextual-category"
-                  value="future"
-                  disabled
-                />
-                Extra interesting
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  name="contextual-category"
-                  value="collaborated"
-                  disabled
-                />
-                Collaborated
-              </label>
-            </fieldset>
-
-            <button class="clear-filters" aria-pressed="false">
-              Clear filters
-            </button>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 10px;
+            "
+          >
+            <h3 style="margin: 0">Filters</h3>
+            <div style="display: flex; gap: 10px">
+              <button class="all-filters">Apply all</button>
+              <button class="clear-filters" aria-pressed="false">
+                Clear filters
+              </button>
+            </div>
           </div>
+
+          <fieldset>
+            <legend class="process">Process</legend>
+            <label>
+              <input
+                class="filter process"
+                type="checkbox"
+                name="process-category"
+                value="practices"
+              />
+              Practices
+            </label>
+            <label>
+              <input
+                class="filter process"
+                type="checkbox"
+                name="process-category"
+                value="process-tooling"
+              />
+              Tooling
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend class="technical">Technical</legend>
+            <label>
+              <input
+                class="filter technical"
+                type="checkbox"
+                name="technical-category"
+                value="languages"
+              />
+              Languages
+            </label>
+            <label>
+              <input
+                class="filter technical"
+                type="checkbox"
+                name="technical-category"
+                value="frameworks-libraries"
+              />
+              Frameworks and libraries
+            </label>
+            <label>
+              <input
+                class="filter technical"
+                type="checkbox"
+                name="technical-category"
+                value="backend-data"
+              />
+              Backend and data
+            </label>
+            <label>
+              <input
+                class="filter technical"
+                type="checkbox"
+                name="technical-category"
+                value="testing"
+              />
+              Testing
+            </label>
+            <label>
+              <input
+                class="filter technical"
+                type="checkbox"
+                name="technical-category"
+                value="technical-tooling"
+              />
+              Tooling
+            </label>
+          </fieldset>
+
+          <fieldset id="contextual-filters">
+            <legend class="contextual">Contextual</legend>
+            <label>
+              <input
+                type="checkbox"
+                name="contextual-category"
+                value="future"
+                disabled
+              />
+              Extra interesting
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="contextual-category"
+                value="collaborated"
+                disabled
+              />
+              Collaborated
+            </label>
+          </fieldset>
         </div>
       </section>
       <footer>

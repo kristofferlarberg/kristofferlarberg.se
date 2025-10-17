@@ -15,6 +15,7 @@ function checkWidthAndShowFilters() {
 checkWidthAndShowFilters();
 // todo: set random checkboxes to checked
 selectAllFilters();
+applyFilters();
 
 window.addEventListener("resize", checkWidthAndShowFilters);
 
