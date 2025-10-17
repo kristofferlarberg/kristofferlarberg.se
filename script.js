@@ -14,7 +14,7 @@ function checkWidthAndShowFilters() {
 
 checkWidthAndShowFilters();
 // todo: set random checkboxes to checked
-hideAllSkills();
+selectAllFilters();
 
 window.addEventListener("resize", checkWidthAndShowFilters);
 
@@ -23,7 +23,6 @@ function filterListener() {
 
   filtersContainer.addEventListener("change", (e) => {
     if (e.target.matches('input[type="checkbox"]')) {
-      toggleContextualCategoryFilters();
       applyFilters();
     }
   });
@@ -31,7 +30,6 @@ function filterListener() {
   filtersContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("clear-filters")) {
       clearFilters();
-      toggleContextualCategoryFilters();
     } else if (e.target.classList.contains("all-filters")) {
       selectAllFilters();
     }
@@ -84,6 +82,34 @@ function applyFilters() {
       skill.classList.add("hidden");
     }
   });
+
+  toggleContextualCategoryFilters();
+}
+
+function clearFilters() {
+  const filters = Array.from(
+    document.querySelectorAll("input[type='checkbox']")
+  );
+
+  filters.forEach((checkbox) => {
+    checkbox.checked = false;
+    checkbox.dispatchEvent(new Event("change", { bubbles: false }));
+  });
+
+  toggleContextualCategoryFilters();
+}
+
+function selectAllFilters() {
+  const filters = Array.from(
+    document.querySelectorAll("input[type='checkbox']")
+  );
+
+  filters.forEach((checkbox) => {
+    checkbox.checked = true;
+    checkbox.dispatchEvent(new Event("change", { bubbles: true }));
+  });
+
+  toggleContextualCategoryFilters();
 }
 
 function toggleContextualCategoryFilters() {
@@ -111,35 +137,6 @@ function toggleContextualCategoryFilters() {
       filter.disabled = true;
     });
   }
-}
-
-function clearFilters() {
-  const filters = Array.from(
-    document.querySelectorAll("input[type='checkbox']")
-  );
-
-  filters.forEach((checkbox) => {
-    checkbox.checked = false;
-    checkbox.dispatchEvent(new Event("change", { bubbles: false }));
-  });
-}
-
-function selectAllFilters() {
-  const filters = Array.from(
-    document.querySelectorAll("input[type='checkbox']")
-  );
-
-  filters.forEach((checkbox) => {
-    checkbox.checked = true;
-    checkbox.dispatchEvent(new Event("change", { bubbles: true }));
-  });
-}
-
-function hideAllSkills() {
-  const skills = document.querySelectorAll(".skill");
-  skills.forEach((skill) => {
-    skill.classList.add("hidden");
-  });
 }
 
 filterListener();
