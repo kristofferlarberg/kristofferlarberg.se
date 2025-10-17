@@ -484,7 +484,7 @@ figcaption {
 /* width is also set in figure container queries */
 .graph-container {
   border: 1px solid var(--black);
-  background-color: var(--white);
+  background-color: var(--gray);
   margin: 0;
 
   @media (min-width: 375px) {
