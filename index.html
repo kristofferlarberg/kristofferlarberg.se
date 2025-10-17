@@ -572,7 +572,8 @@
           <div style="display: flex; justify-content: space-between">
             <h3>Filters</h3>
 
-            <button class="all-filters process">Apply all</button>
+            <button class="all-filters">Apply all</button>
+
             <fieldset>
               <legend>Process</legend>
               <label>
@@ -595,7 +596,6 @@
               </label>
             </fieldset>
 
-            <button class="all-filters technical">Apply all</button>
             <fieldset>
               <legend>Technical</legend>
               <label>
@@ -645,13 +645,14 @@
               </label>
             </fieldset>
 
-            <fieldset class="hidden" id="contextual-filters">
+            <fieldset id="contextual-filters">
               <legend>Contextual</legend>
               <label>
                 <input
                   type="checkbox"
                   name="contextual-category"
                   value="future"
+                  disabled
                 />
                 Extra interesting
               </label>
@@ -660,6 +661,7 @@
                   type="checkbox"
                   name="contextual-category"
                   value="collaborated"
+                  disabled
                 />
                 Collaborated
               </label>
