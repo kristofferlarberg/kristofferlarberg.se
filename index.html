@@ -27,68 +27,6 @@
       <section>
         <h2>Skills</h2>
 
-        <!-- Default skills content as list -->
-        <div class="placeholder">
-          <h3>Frameworks and libraries</h3>
-          <ul>
-            <li>Gatsby</li>
-            <li>Next.js</li>
-            <li>React</li>
-            <li>React Native</li>
-            <li>Vue.js</li>
-          </ul>
-          <h3>Languages</h3>
-          <ul>
-            <li>CSS</li>
-            <li>HTML</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-          </ul>
-          <h3>Frameworks and libraries</h3>
-          <ul>
-            <li>Gatsby</li>
-            <li>Next.js</li>
-            <li>React</li>
-            <li>React Native</li>
-            <li>Vue.js</li>
-          </ul>
-          <h3>Backend and data</h3>
-          <ul>
-            <li>Node.js</li>
-            <li>REST API</li>
-            <li>TanStack Query</li>
-          </ul>
-          <h3>Testing</h3>
-          <ul>
-            <li>Cypress</li>
-            <li>Testing Library</li>
-          </ul>
-          <h3>Tooling</h3>
-          <ul>
-            <li>git</li>
-            <li>CircleCI</li>
-            <li>Datadog</li>
-            <li>Contentful</li>
-            <li>GitHub Actions</li>
-            <li>Package management (npm, yarn, pnpm)</li>
-          </ul>
-
-          <h3>Practices</h3>
-          <ul>
-            <li>Test-Driven Development</li>
-            <li>Agile</li>
-            <li>Pair- and mob programming</li>
-            <li>Progressive enhancement</li>
-            <li>Accessibility</li>
-          </ul>
-          <h3>Tooling</h3>
-          <ul>
-            <li>Git workflows</li>
-            <li>CI/CD</li>
-            <li>Observability and incident response</li>
-          </ul>
-        </div>
-
         <!-- Technical skills content as graph, above 200px screen width -->
         <figure>
           <figcaption>
@@ -96,21 +34,23 @@
               Skills plotted by confidence level (vertical) and years of
               experience (horizontal).
             </p>
-            <p>Estimated average frequency:</p>
-            <dl>
-              <div>
-                <dt class="daily" aria-label="large circle"></dt>
-                <dd>Daily</dd>
-              </div>
-              <div>
-                <dt class="weekly" aria-label="medium circle"></dt>
-                <dd>Weekly</dd>
-              </div>
-              <div>
-                <dt class="monthly" aria-label="small circle"></dt>
-                <dd>Monthly</dd>
-              </div>
-            </dl>
+            <div class="legend">
+              <p>Estimated average frequency:</p>
+              <dl>
+                <div>
+                  <dt class="daily technical" aria-label="large circle"></dt>
+                  <dd>Daily</dd>
+                </div>
+                <div>
+                  <dt class="weekly technical" aria-label="medium circle"></dt>
+                  <dd>Weekly</dd>
+                </div>
+                <div>
+                  <dt class="monthly technical" aria-label="small circle"></dt>
+                  <dd>Monthly</dd>
+                </div>
+              </dl>
+            </div>
           </figcaption>
 
           <div class="graph-container">
@@ -162,10 +102,13 @@
                 style="--x: 4.75; --y: 92.5"
               >
                 HTML
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 5 years experience, confidence 90%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 93%</span>
               </li>
               <li
                 class="skill technical"
@@ -174,13 +117,16 @@
                 data-mentored="true"
                 data-future="true"
                 data-collaborated="true"
-                style="--x: 4.75; --y: 80"
+                style="--x: 4.75; --y: 85"
               >
                 CSS
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 5 years experience, confidence 80%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 85%</span>
               </li>
               <li
                 class="skill technical"
@@ -192,10 +138,13 @@
                 style="--x: 4.25; --y: 70"
               >
                 JavaScript
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 5 years experience, confidence 70%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 70%</span>
               </li>
               <li
                 class="skill technical"
@@ -207,10 +156,13 @@
                 style="--x: 3; --y: 60"
               >
                 TypeScript
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 4 years experience, confidence 55%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">4 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 60%</span>
               </li>
               <li
                 class="skill technical"
@@ -222,10 +174,13 @@
                 style="--x: 4; --y: 80"
               >
                 React
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 5 years experience, confidence 80%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 80%</span>
               </li>
               <li
                 class="skill technical"
@@ -237,10 +192,13 @@
                 style="--x: 1; --y: 43"
               >
                 React Native
-                <div class="weekly" aria-label="Medium sized circle"></div>
-                <span class="sr-only">
-                  Weekly use, 1 years experience, confidence 40%.
-                </span>
+                <div class="weekly technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Weekly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">1 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 43%</span>
               </li>
               <li
                 class="skill technical"
@@ -252,10 +210,13 @@
                 style="--x: 0.5; --y: 30"
               >
                 Vue.js
-                <div class="monthly" aria-label="Medium sized circle"></div>
-                <span class="sr-only">
-                  Monthly use, 0.5 years experience, confidence 30%.
-                </span>
+                <div class="monthly technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Monthly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">0.5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 30%</span>
               </li>
               <li
                 class="skill technical"
@@ -267,10 +228,13 @@
                 style="--x: 3; --y: 70"
               >
                 Next.js
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 3 years experience, confidence 65%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">3 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 70%</span>
               </li>
               <li
                 class="skill technical"
@@ -282,10 +246,13 @@
                 style="--x: 2; --y: 75"
               >
                 Gatsby
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 2 years experience, confidence 75%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">2 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 75%</span>
               </li>
               <li
                 class="skill technical"
@@ -297,10 +264,13 @@
                 style="--x: 1; --y: 20"
               >
                 Node.js
-                <div class="monthly" aria-label="Small circle"></div>
-                <span class="sr-only">
-                  Monthly use, 1 years experience, confidence 20%.
-                </span>
+                <div class="monthly technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Monthly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">1 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 20%</span>
               </li>
               <li
                 class="skill technical"
@@ -312,10 +282,13 @@
                 style="--x: 3; --y: 40"
               >
                 REST API
-                <div class="weekly" aria-label="Medium sized circle"></div>
-                <span class="sr-only">
-                  Weekly use, 4 years experience, confidence 45%.
-                </span>
+                <div class="weekly technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Weekly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">4 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 40%</span>
               </li>
               <li
                 class="skill technical"
@@ -327,10 +300,13 @@
                 style="--x: 3.5; --y: 48"
               >
                 TanStack Query
-                <div class="weekly" aria-label="Medium sized circle"></div>
-                <span class="sr-only">
-                  Weekly use, 5 years experience, confidence 55%.
-                </span>
+                <div class="weekly technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Weekly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 48%</span>
               </li>
               <li
                 class="skill technical"
@@ -342,10 +318,13 @@
                 style="--x: 1; --y: 35"
               >
                 Cypress
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 1 years experience, confidence 40%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">1 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 35%</span>
               </li>
               <li
                 class="skill technical"
@@ -357,10 +336,13 @@
                 style="--x: 2; --y: 52.5"
               >
                 Testing Library
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 2 years experience, confidence 45%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">2 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 53%</span>
               </li>
               <li
                 class="skill technical"
@@ -372,10 +354,13 @@
                 style="--x: 4.5; --y: 85"
               >
                 git
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 5 years experience, confidence 85%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 85%</span>
               </li>
               <li
                 class="skill technical"
@@ -387,10 +372,13 @@
                 style="--x: 2; --y: 45"
               >
                 CircleCI
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 2 years experience, confidence 45%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">2 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 45%</span>
               </li>
               <li
                 class="skill technical"
@@ -399,13 +387,16 @@
                 data-mentored="false"
                 data-future="true"
                 data-collaborated="true"
-                style="--x: 1; --y: 25"
+                style="--x: 0.5; --y: 10"
               >
                 GitHub Actions
-                <div class="monthly" aria-label="Small circle"></div>
-                <span class="sr-only">
-                  Monthly use, 1 years experience, confidence 25%.
-                </span>
+                <div class="monthly technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Monthly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">0,5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 10%</span>
               </li>
               <li
                 class="skill technical"
@@ -417,10 +408,13 @@
                 style="--x: 2; --y: 35"
               >
                 Datadog
-                <div class="daily" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 2 years experience, confidence 35%.
-                </span>
+                <div class="daily technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">2 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 35%</span>
               </li>
               <li
                 class="skill technical"
@@ -432,10 +426,13 @@
                 style="--x: 2.5; --y: 82.5"
               >
                 Contentful
-                <div class="weekly" aria-label="Medium sized circle"></div>
-                <span class="sr-only">
-                  Weekly use, 3 years experience, confidence 80%.
-                </span>
+                <div class="weekly technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Weekly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">3 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 83%</span>
               </li>
               <li
                 class="skill technical"
@@ -447,10 +444,13 @@
                 style="--x: 4; --y: 57"
               >
                 Package management
-                <div class="weekly" aria-label="Medium sized circle"></div>
-                <span class="sr-only">
-                  Weekly use, 5 years experience, confidence 57%.
-                </span>
+                <div class="weekly technical" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Weekly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 57%</span>
               </li>
               <li
                 class="skill process"
@@ -462,10 +462,13 @@
                 style="--x: 0.25; --y: 20"
               >
                 Test-Driven Development
-                <div class="daily process" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 0.5 years experience, confidence 20%.
-                </span>
+                <div class="daily process" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">0.5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 20%</span>
               </li>
               <li
                 class="skill process"
@@ -477,10 +480,13 @@
                 style="--x: 4; --y: 60"
               >
                 Agile methods
-                <div class="daily process" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Daily use, 4 years experience, confidence 60%.
-                </span>
+                <div class="daily process" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Daily use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">4 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 60%</span>
               </li>
               <li
                 class="skill process"
@@ -492,13 +498,13 @@
                 style="--x: 1; --y: 45"
               >
                 Pair and mob programming
-                <div
-                  class="weekly process"
-                  aria-label="Medium sized circle"
-                ></div>
-                <span class="sr-only">
-                  Weekly use, 1 years experience, confidence 45%.
-                </span>
+                <div class="weekly process" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Weekly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">1 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 45%</span>
               </li>
               <li
                 class="skill process"
@@ -510,10 +516,13 @@
                 style="--x: 4; --y: 70"
               >
                 Accessibility
-                <div class="daily process" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Weekly use, 4 years experience, confidence 70%.
-                </span>
+                <div class="daily process" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Weekly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">4 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 70%</span>
               </li>
               <li
                 class="skill process"
@@ -525,10 +534,13 @@
                 style="--x: 4; --y: 80"
               >
                 Git workflows
-                <div class="daily process" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Weekly use, 4 years experience, confidence 80%.
-                </span>
+                <div class="daily process" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Weekly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">4 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 80%</span>
               </li>
               <li
                 class="skill process"
@@ -540,10 +552,13 @@
                 style="--x: 2.5; --y: 50"
               >
                 CI/CD
-                <div class="daily process" aria-label="Large circle"></div>
-                <span class="sr-only">
-                  Weekly use, 2.5 years experience, confidence 50%.
-                </span>
+                <div class="daily process" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Weekly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">2.5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 50%</span>
               </li>
               <li
                 class="skill process"
@@ -555,13 +570,13 @@
                 style="--x: 2.5; --y: 40"
               >
                 Observability and incident response
-                <div
-                  class="weekly process"
-                  aria-label="Medium sized circle"
-                ></div>
-                <span class="sr-only">
-                  Weekly use, 2.5 years experience, confidence 40%.
-                </span>
+                <div class="weekly process" aria-hidden="true"></div>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Weekly use</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">2.5 years experience</span>
+                <span class="sr-only">, </span>
+                <span class="narrow-only">Confidence 40%</span>
               </li>
             </ul>
           </div>
