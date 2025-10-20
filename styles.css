@@ -198,32 +198,41 @@ button:focus-visible {
 }
 
 fieldset {
-  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--black);
   padding: 0;
-  border: none;
+  background-color: var(--white);
 }
 
 fieldset > legend {
-  margin: 0 0 10px 0;
-  padding: 0;
+  margin: 5px;
+  padding: 5px 10px;
+  line-height: 1;
+  float: left;
   border-radius: 4px;
-  padding: 2.5px 8px;
-}
-
-fieldset > legend.process {
-  background-color: var(--red);
 }
 
 fieldset > legend.technical {
   background-color: var(--blue);
 }
 
+fieldset > legend.process {
+  background-color: var(--red);
+}
+
 fieldset > legend.contextual {
   background-color: var(--green);
 }
 
-fieldset > label {
-  padding-left: 5px;
+fieldset > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+fieldset > div > label {
   white-space: nowrap;
 }
 
@@ -261,7 +270,7 @@ li.skill {
   flex-direction: row;
   align-items: center;
   gap: 5px;
-  border-bottom: 2px solid var(--gray);
+  border-bottom: 2px solid var(--black);
 
   @media (min-width: 375px) {
     position: absolute;
@@ -278,19 +287,11 @@ li.skill {
   }
 }
 
-li.skill:nth-child(even) {
-  background-color: var(--gray);
-
-  @media (min-width: 375px) {
-    background-color: transparent;
-  }
-}
-
 li.skill:last-of-type {
   border-bottom: none;
 }
 
-li.skill.technical {
+li.skill.technical > div.filter-details-container > span:first-of-type {
   background-color: var(--blue);
 
   @media (min-width: 375px) {
@@ -298,7 +299,7 @@ li.skill.technical {
   }
 }
 
-li.skill.process {
+li.skill.process > div.filter-details-container > span:first-of-type {
   background-color: var(--red);
 
   @media (min-width: 375px) {
@@ -503,6 +504,7 @@ figcaption {
 .graph-container {
   background-color: white;
   margin: 0;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 
   @media (min-width: 375px) {
     --x-max: 5;
@@ -514,7 +516,6 @@ figcaption {
     border-left: 2px solid var(--black);
     border-bottom: 2px solid var(--black);
     margin: 56px 0 0 auto;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   }
 }
 
@@ -610,8 +611,12 @@ figcaption {
 .filter-details-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   padding: 10px;
+}
+
+.filter-details-container > span {
+  margin-right: 5px;
+  line-height: 2;
 }
 
 .filter-details-container > span:first-of-type {
