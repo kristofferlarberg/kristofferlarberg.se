@@ -448,6 +448,17 @@ footer {
   }
 }
 
+footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  @media (min-width: 375px) {
+    flex-wrap: nowrap;
+  }
+}
+
 figure {
   container-type: inline-size;
   flex-direction: column;
@@ -561,7 +572,20 @@ figcaption {
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
+
   @media (min-width: 375px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.filter-buttons > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  @media (min-width: 375px) {
+    flex-direction: row;
     flex-wrap: nowrap;
   }
 }
@@ -574,6 +598,17 @@ figcaption {
 .clear-filters {
   width: max-content;
   align-self: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  @media (min-width: 1000px) {
+    flex-direction: row;
+    gap: 10px;
+  }
 }
 
 .header {
