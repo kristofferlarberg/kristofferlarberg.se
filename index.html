@@ -637,16 +637,9 @@
 
         <!-- Skills filtering, if browser uses javacript and above 200px screen width -->
         <div class="filters-container">
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              gap: 10px;
-            "
-          >
+          <div class="filter-buttons">
             <h3 style="margin: 0">Filters</h3>
-            <div style="display: flex; gap: 10px">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap">
               <button class="all-filters">Apply all</button>
               <button class="clear-filters" aria-pressed="false">
                 Clear filters
@@ -759,7 +752,14 @@
         <a href="mailto:kristoffer.larberg@icloud.com" rel="noreferrer">
           kristoffer.larberg@icloud.com
         </a>
-        <div class="container">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-wrap: wrap;
+          "
+        >
           <a
             href="https://github.com/kristofferlarberg"
             rel="noreferrer"
