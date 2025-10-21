@@ -1,23 +1,25 @@
 const filterButtonsContainer = document.querySelectorAll(".filters-container");
 
-function checkWidthAndShowFilters() {
-  if (window.innerWidth >= 250) {
-    filterButtonsContainer.forEach((element) => {
-      element.style.display = "flex";
-    });
-  } else {
-    filterButtonsContainer.forEach((element) => {
-      element.style.display = "none";
-    });
+function handleVisibility() {
+  if (window.innerWidth <= 375) {
+    const skills = document.querySelectorAll(".skill");
+    let skillsContainer = document.querySelectorAll(".skills");
+    const sortedSkills = Array.from(skills).sort(
+      (a, b) =>
+        parseFloat(b.style.getPropertyValue("--x")) +
+        parseFloat(b.style.getPropertyValue("--y")) -
+        (parseFloat(a.style.getPropertyValue("--x")) +
+          parseFloat(a.style.getPropertyValue("--y")))
+    );
+    skillsContainer[0].replaceChildren(...sortedSkills);
   }
 }
 
-checkWidthAndShowFilters();
-// todo: set random checkboxes to checked
+handleVisibility();
 selectAllFilters();
 applyFilters();
 
-window.addEventListener("resize", checkWidthAndShowFilters);
+window.addEventListener("resize", handleVisibility);
 
 function filterListener() {
   const filtersContainer = document.querySelector(".filters-container");
