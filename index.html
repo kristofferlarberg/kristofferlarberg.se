@@ -28,632 +28,625 @@
         <h2>Skills</h2>
 
         <!-- Technical skills content as graph, above 200px screen width -->
-        <div class="flex-container">
-          <figure>
-            <figcaption>
-              <p>
-                Skills listed based on confidence level and years of experience.
-              </p>
-              <div class="legend">
-                <p>Estimated average frequency:</p>
-                <dl>
-                  <div>
-                    <dt class="daily technical" aria-label="large circle"></dt>
-                    <dd>Daily</dd>
-                  </div>
-                  <div>
-                    <dt
-                      class="weekly technical"
-                      aria-label="medium circle"
-                    ></dt>
-                    <dd>Weekly</dd>
-                  </div>
-                  <div>
-                    <dt
-                      class="monthly technical"
-                      aria-label="small circle"
-                    ></dt>
-                    <dd>Monthly</dd>
-                  </div>
-                </dl>
+        <figure>
+          <div class="graph-container">
+            <span class="axis-label x-label">
+              <span class="sr-only">X axis:</span>
+              Years of experience
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 7px;
+                "
+                aria-label="Numbers 0-5"
+              >
+                <span aria-hidden="true">0</span>
+                <span aria-hidden="true">1</span>
+                <span aria-hidden="true">2</span>
+                <span aria-hidden="true">3</span>
+                <span aria-hidden="true">4</span>
+                <span aria-hidden="true">5</span>
               </div>
-            </figcaption>
-
-            <div class="graph-container">
-              <span class="axis-label x-label">
-                <span class="sr-only">X axis:</span>
-                Years of experience
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 7px;
-                  "
-                  aria-label="Numbers 0-5"
-                >
-                  <span aria-hidden="true">0</span>
-                  <span aria-hidden="true">1</span>
-                  <span aria-hidden="true">2</span>
-                  <span aria-hidden="true">3</span>
-                  <span aria-hidden="true">4</span>
-                  <span aria-hidden="true">5</span>
-                </div>
-              </span>
-              <span class="axis-label y-label">
-                <span class="sr-only">Y axis:</span>
-                Confidence
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 7px;
-                  "
-                  aria-label="values 25%, 50%, 75% and 100%"
-                >
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true">25%</span>
-                  <span aria-hidden="true">50%</span>
-                  <span aria-hidden="true">75%</span>
-                  <span aria-hidden="true">100%</span>
-                </div>
-              </span>
-              <ul class="skills">
-                <li
-                  class="skill technical"
-                  data-name="HTML"
-                  data-category="languages"
-                  data-mentored="true"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 4.75; --y: 92.5"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>HTML</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 93%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="CSS"
-                  data-category="languages"
-                  data-mentored="true"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 4.75; --y: 85"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>CSS</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 85%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="JavaScript"
-                  data-category="languages"
-                  data-mentored="true"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 4.25; --y: 70"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>JavaScript</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 70%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="TypeScript"
-                  data-category="languages"
-                  data-mentored="true"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 3; --y: 60"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>TypeScript</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">4 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 60%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="React"
-                  data-category="frameworks-libraries"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 4; --y: 80"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>React</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 80%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="React Native"
-                  data-category="frameworks-libraries"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 1; --y: 43"
-                >
-                  <div class="weekly technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>React Native</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Weekly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">1 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 43%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="Vue.js"
-                  data-category="frameworks-libraries"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="false"
-                  style="--x: 0.5; --y: 30"
-                >
-                  <div class="monthly technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Vue.js</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Monthly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">0.5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 30%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="Next.js"
-                  data-category="frameworks-libraries"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 3; --y: 70"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Next.js</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">3 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 70%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="Gatsby"
-                  data-category="frameworks-libraries"
-                  data-mentored="false"
-                  data-future="false"
-                  data-collaborated="true"
-                  style="--x: 2; --y: 75"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Gatsby</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">2 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 75%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="Node.js"
-                  data-category="backend-data"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="false"
-                  style="--x: 1; --y: 20"
-                >
-                  <div class="monthly technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Node.js</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Monthly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">1 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 20%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="REST API"
-                  data-category="backend-data"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 3; --y: 40"
-                >
-                  <div class="weekly technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>REST API</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Weekly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">4 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 40%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="TanStack Query"
-                  data-category="backend-data"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 3.5; --y: 48"
-                >
-                  <div class="weekly technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>TanStack Query</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Weekly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 48%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="Cypress"
-                  data-category="testing"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 1; --y: 35"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Cypress</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">1 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 35%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="Testing Library"
-                  data-category="testing"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 2; --y: 52.5"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Testing Library</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">2 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 53%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="git"
-                  data-category="technical-tooling"
-                  data-mentored="true"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 4.5; --y: 85"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>git</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 85%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="CircleCI"
-                  data-category="technical-tooling"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 2; --y: 45"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>CircleCI</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">2 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 45%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="GitHub Actions"
-                  data-category="technical-tooling"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 0.5; --y: 10"
-                >
-                  <div class="monthly technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>GitHub Actions</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Monthly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">0,5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 10%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="Datadog"
-                  data-category="technical-tooling"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 2; --y: 35"
-                >
-                  <div class="daily technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Datadog</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">2 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 35%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="Contentful"
-                  data-category="technical-tooling"
-                  data-mentored="true"
-                  data-future="false"
-                  data-collaborated="true"
-                  style="--x: 2.5; --y: 82.5"
-                >
-                  <div class="weekly technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Contentful</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Weekly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">3 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 83%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill technical"
-                  data-name="Package management"
-                  data-category="technical-tooling"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 4; --y: 57"
-                >
-                  <div class="weekly technical" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Package management</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Weekly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 57%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill process"
-                  data-name="Test-Driven Development"
-                  data-category="practices"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="false"
-                  style="--x: 0.25; --y: 20"
-                >
-                  <div class="daily process" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Test-Driven Development</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">0.5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 20%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill process"
-                  data-name="Agile methods"
-                  data-category="practices"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="false"
-                  style="--x: 4; --y: 60"
-                >
-                  <div class="daily process" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Agile methods</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Daily use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">4 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 60%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill process"
-                  data-name="A"
-                  data-category="practices"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 1; --y: 45"
-                >
-                  <div class="weekly process" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Pair and mob programming</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Weekly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">1 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 45%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill process"
-                  data-name="Accessibility"
-                  data-category="practices"
-                  data-mentored="true"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 4; --y: 70"
-                >
-                  <div class="daily process" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Accessibility</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Weekly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">4 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 70%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill process"
-                  data-name="Git workflows"
-                  data-category="process-tooling"
-                  data-mentored="true"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 4; --y: 80"
-                >
-                  <div class="daily process" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Git workflows</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Weekly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">4 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 80%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill process"
-                  data-name="CI/CD"
-                  data-category="process-tooling"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 2.5; --y: 50"
-                >
-                  <div class="daily process" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>CI/CD</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Weekly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">2.5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 50%</span>
-                  </div>
-                </li>
-                <li
-                  class="skill process"
-                  data-name="Observability and incident response"
-                  data-category="process-tooling"
-                  data-mentored="false"
-                  data-future="true"
-                  data-collaborated="true"
-                  style="--x: 2.5; --y: 40"
-                >
-                  <div class="weekly process" aria-hidden="true"></div>
-                  <div class="filter-details-container">
-                    <span>Observability and incident response</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Weekly use</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">2.5 years experience</span>
-                    <span class="sr-only">, </span>
-                    <span class="narrow-only">Confidence 40%</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </figure>
-
-          <!-- Skills filtering, if browser uses javacript and above 200px screen width -->
-          <div class="filters-container">
-            <div class="filter-buttons">
-              <h3 style="margin: 0">Filters</h3>
-              <div style="display: flex; gap: 10px; flex-wrap: wrap">
-                <button class="all-filters">Apply all</button>
-                <button class="clear-filters" aria-pressed="false">
-                  Clear filters
-                </button>
+            </span>
+            <span class="axis-label y-label">
+              <span class="sr-only">Y axis:</span>
+              Confidence
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 7px;
+                "
+                aria-label="values 25%, 50%, 75% and 100%"
+              >
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true">25%</span>
+                <span aria-hidden="true">50%</span>
+                <span aria-hidden="true">75%</span>
+                <span aria-hidden="true">100%</span>
               </div>
+            </span>
+            <ul class="skills">
+              <li
+                class="skill technical"
+                data-name="HTML"
+                data-category="languages"
+                data-mentored="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 4.75; --y: 92.5"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>HTML</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 93%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="CSS"
+                data-category="languages"
+                data-mentored="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 4.75; --y: 85"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>CSS</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 85%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="JavaScript"
+                data-category="languages"
+                data-mentored="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 4.25; --y: 70"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>JavaScript</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 70%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="TypeScript"
+                data-category="languages"
+                data-mentored="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 3; --y: 60"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>TypeScript</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">4 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 60%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="React"
+                data-category="frameworks-libraries"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 4; --y: 80"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>React</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 80%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="React Native"
+                data-category="frameworks-libraries"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 1; --y: 43"
+              >
+                <div class="weekly technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>React Native</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Weekly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">1 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 43%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="Vue.js"
+                data-category="frameworks-libraries"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="false"
+                style="--x: 0.5; --y: 30"
+              >
+                <div class="monthly technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Vue.js</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Monthly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">0.5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 30%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="Next.js"
+                data-category="frameworks-libraries"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 3; --y: 70"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Next.js</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">3 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 70%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="Gatsby"
+                data-category="frameworks-libraries"
+                data-mentored="false"
+                data-future="false"
+                data-collaborated="true"
+                style="--x: 2; --y: 75"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Gatsby</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">2 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 75%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="Node.js"
+                data-category="backend-data"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="false"
+                style="--x: 1; --y: 20"
+              >
+                <div class="monthly technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Node.js</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Monthly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">1 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 20%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="REST API"
+                data-category="backend-data"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 3; --y: 40"
+              >
+                <div class="weekly technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>REST API</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Weekly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">4 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 40%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="TanStack Query"
+                data-category="backend-data"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 3.5; --y: 48"
+              >
+                <div class="weekly technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>TanStack Query</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Weekly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 48%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="Cypress"
+                data-category="testing"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 1; --y: 35"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Cypress</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">1 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 35%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="Testing Library"
+                data-category="testing"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 2; --y: 52.5"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Testing Library</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">2 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 53%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="git"
+                data-category="technical-tooling"
+                data-mentored="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 4.5; --y: 85"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>git</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 85%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="CircleCI"
+                data-category="technical-tooling"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 2; --y: 45"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>CircleCI</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">2 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 45%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="GitHub Actions"
+                data-category="technical-tooling"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 0.5; --y: 10"
+              >
+                <div class="monthly technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>GitHub Actions</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Monthly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">0,5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 10%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="Datadog"
+                data-category="technical-tooling"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 2; --y: 35"
+              >
+                <div class="daily technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Datadog</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">2 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 35%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="Contentful"
+                data-category="technical-tooling"
+                data-mentored="true"
+                data-future="false"
+                data-collaborated="true"
+                style="--x: 2.5; --y: 82.5"
+              >
+                <div class="weekly technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Contentful</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Weekly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">3 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 83%</span>
+                </div>
+              </li>
+              <li
+                class="skill technical"
+                data-name="Package management"
+                data-category="technical-tooling"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 4; --y: 57"
+              >
+                <div class="weekly technical" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Package management</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Weekly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 57%</span>
+                </div>
+              </li>
+              <li
+                class="skill process"
+                data-name="Test-Driven Development"
+                data-category="practices"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="false"
+                style="--x: 0.25; --y: 20"
+              >
+                <div class="daily process" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Test-Driven Development</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">0.5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 20%</span>
+                </div>
+              </li>
+              <li
+                class="skill process"
+                data-name="Agile methods"
+                data-category="practices"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="false"
+                style="--x: 4; --y: 60"
+              >
+                <div class="daily process" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Agile methods</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Daily use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">4 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 60%</span>
+                </div>
+              </li>
+              <li
+                class="skill process"
+                data-name="A"
+                data-category="practices"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 1; --y: 45"
+              >
+                <div class="weekly process" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Pair and mob programming</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Weekly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">1 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 45%</span>
+                </div>
+              </li>
+              <li
+                class="skill process"
+                data-name="Accessibility"
+                data-category="practices"
+                data-mentored="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 4; --y: 70"
+              >
+                <div class="daily process" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Accessibility</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Weekly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">4 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 70%</span>
+                </div>
+              </li>
+              <li
+                class="skill process"
+                data-name="Git workflows"
+                data-category="process-tooling"
+                data-mentored="true"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 4; --y: 80"
+              >
+                <div class="daily process" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Git workflows</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Weekly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">4 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 80%</span>
+                </div>
+              </li>
+              <li
+                class="skill process"
+                data-name="CI/CD"
+                data-category="process-tooling"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 2.5; --y: 50"
+              >
+                <div class="daily process" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>CI/CD</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Weekly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">2.5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 50%</span>
+                </div>
+              </li>
+              <li
+                class="skill process"
+                data-name="Observability and incident response"
+                data-category="process-tooling"
+                data-mentored="false"
+                data-future="true"
+                data-collaborated="true"
+                style="--x: 2.5; --y: 40"
+              >
+                <div class="weekly process" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>Observability and incident response</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Weekly use</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">2.5 years experience</span>
+                  <span class="sr-only">, </span>
+                  <span class="narrow-only">Confidence 40%</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <figcaption>
+            <p>
+              Skills listed based on confidence level and years of experience.
+            </p>
+            <div class="legend">
+              <p>Estimated average frequency:</p>
+              <dl>
+                <div>
+                  <dt class="daily technical" aria-label="large circle"></dt>
+                  <dd>Daily</dd>
+                </div>
+                <div>
+                  <dt class="weekly technical" aria-label="medium circle"></dt>
+                  <dd>Weekly</dd>
+                </div>
+                <div>
+                  <dt class="monthly technical" aria-label="small circle"></dt>
+                  <dd>Monthly</dd>
+                </div>
+              </dl>
             </div>
+          </figcaption>
+        </figure>
 
+        <!-- Skills filtering, if browser uses javacript and above 200px screen width -->
+        <div class="filters-container">
+          <div class="filter-buttons">
+            <h3 style="margin: 0">Filters</h3>
+            <div>
+              <button class="all-filters">Apply all</button>
+              <button class="clear-filters" aria-pressed="false">
+                Clear filters
+              </button>
+            </div>
+          </div>
+
+          <div class="fieldsets-container">
             <fieldset>
               <legend class="process">Process</legend>
               <div>
