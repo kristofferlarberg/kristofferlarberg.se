@@ -500,9 +500,13 @@ figure {
 
   @container (min-width: 1280px) {
     .graph-container {
-      width: calc(100% - 50px);
       aspect-ratio: 2 / 1;
       --y-max: 25;
+    }
+
+    .y-label {
+      width: 50%;
+      left: calc(-25% - 14px - 7px - 2px);
     }
 
     li.skill {
