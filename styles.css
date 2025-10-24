@@ -300,10 +300,6 @@ li.skill {
   }
 }
 
-li.skill:last-of-type {
-  border-bottom: none;
-}
-
 li.skill.technical > div.skill-details-container > span:first-of-type {
   background-color: var(--blue);
 
@@ -521,6 +517,7 @@ figure {
   background-color: white;
   margin: 0 0 28px 0;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  min-height: 28px;
 
   @media (min-width: 640px) {
     --x-max: 5;
