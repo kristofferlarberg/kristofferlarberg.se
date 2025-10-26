@@ -657,99 +657,95 @@
             <fieldset>
               <legend class="process">Process</legend>
               <div>
-                <label>
-                  <input
-                    class="filter process"
-                    type="checkbox"
-                    name="process-category"
-                    value="practices"
-                  />
-                  Practices
-                </label>
-                <label>
-                  <input
-                    class="filter process"
-                    type="checkbox"
-                    name="process-category"
-                    value="process-tooling"
-                  />
-                  Tooling
-                </label>
+                <input
+                  id="practices"
+                  class="sr-only"
+                  type="checkbox"
+                  name="process-category"
+                  value="practices"
+                />
+                <label for="practices">Practices</label>
+                <input
+                  id="process-tooling"
+                  class="sr-only"
+                  type="checkbox"
+                  name="process-category"
+                  value="process-tooling"
+                />
+                <label for="process-tooling">Tooling</label>
               </div>
             </fieldset>
 
             <fieldset>
               <legend class="technical">Technical</legend>
               <div>
-                <label>
-                  <input
-                    class="filter technical"
-                    type="checkbox"
-                    name="technical-category"
-                    value="languages"
-                  />
-                  Languages
-                </label>
-                <label>
-                  <input
-                    class="filter technical"
-                    type="checkbox"
-                    name="technical-category"
-                    value="frameworks-libraries"
-                  />
+                <input
+                  id="languages"
+                  class="sr-only"
+                  type="checkbox"
+                  name="technical-category"
+                  value="languages"
+                />
+                <label for="languages">Languages</label>
+                <input
+                  id="frameworks-libraries"
+                  class="sr-only"
+                  type="checkbox"
+                  name="technical-category"
+                  value="frameworks-libraries"
+                />
+                <label for="frameworks-libraries">
                   Frameworks and libraries
                 </label>
-                <label>
-                  <input
-                    class="filter technical"
-                    type="checkbox"
-                    name="technical-category"
-                    value="backend-data"
-                  />
-                  Backend and data
-                </label>
-                <label>
-                  <input
-                    class="filter technical"
-                    type="checkbox"
-                    name="technical-category"
-                    value="testing"
-                  />
-                  Testing
-                </label>
-                <label>
-                  <input
-                    class="filter technical"
-                    type="checkbox"
-                    name="technical-category"
-                    value="technical-tooling"
-                  />
-                  Tooling
-                </label>
+                <input
+                  id="backend-data"
+                  class="sr-only"
+                  type="checkbox"
+                  name="technical-category"
+                  value="backend-data"
+                />
+                <label for="backend-data">Backend and data</label>
+                <input
+                  id="testing"
+                  class="sr-only"
+                  type="checkbox"
+                  name="technical-category"
+                  value="testing"
+                />
+
+                <label for="testing">Testing</label>
+                <input
+                  id="technical-tooling"
+                  class="sr-only"
+                  type="checkbox"
+                  name="technical-category"
+                  value="technical-tooling"
+                />
+                <label for="technical-tooling">Tooling</label>
               </div>
             </fieldset>
 
             <fieldset id="contextual-filters">
               <legend class="contextual">Contextual</legend>
               <div>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contextual-category"
-                    value="future"
-                    disabled
-                  />
-                  Extra interesting
-                </label>
-                <label>
-                  <input
-                    type="checkbox"
-                    name="contextual-category"
-                    value="collaborated"
-                    disabled
-                  />
-                  Collaborated
-                </label>
+                <input
+                  id="future"
+                  class="sr-only"
+                  type="checkbox"
+                  name="contextual-category"
+                  value="future"
+                  disabled
+                />
+                <label for="future">Extra interesting</label>
+                <input
+                  id="collaborated"
+                  class="sr-only"
+                  type="checkbox"
+                  name="contextual-category"
+                  value="collaborated"
+                  disabled
+                />
+                <label for="collaborated">Collaborated</label>
               </div>
             </fieldset>
           </div>

@@ -223,10 +223,24 @@ fieldset > div {
   padding: 3.5px;
 }
 
-fieldset > div > label {
+label {
   @media (min-width: 640px) {
     white-space: nowrap;
   }
+}
+
+label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--black);
+  margin-right: 8px;
+}
+
+input:checked + label::before {
+  background: /* lägg till bild här */ ;
 }
 
 .fieldsets-container {
@@ -237,14 +251,6 @@ fieldset > div > label {
   @media (min-width: 640px) {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-details {
-  cursor: pointer;
-}
-
-input[type="checkbox"] {
-  padding: 50px;
 }
 
 ul {
