@@ -252,7 +252,7 @@ input:checked + label::before {
 }
 
 input:disabled + label::before {
-  border: 1px solid oklch(55.1% 0.027 264.364);
+  border: 1px solid #6a7282;
   background-color: var(--gray);
 }
 
