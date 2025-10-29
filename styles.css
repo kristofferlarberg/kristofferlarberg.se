@@ -246,7 +246,9 @@ input:focus-visible + label::before {
 }
 
 input:checked + label::before {
-  background: url("/img/x.svg") center/12px no-repeat;
+  background-image: url("data:image/svg+xml,<svg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'><path d='M0 0L12 12M0 12L12 0' stroke='black' stroke-width='1' shape-rendering='crispEdges'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 input:disabled + label::before {
