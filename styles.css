@@ -684,6 +684,10 @@ figcaption {
 .skill-details-container > span {
   margin-right: 3.5px;
   line-height: 2;
+
+  @media (min-width: 640px) {
+    margin-right: 0;
+  }
 }
 
 .skill-details-container > span:first-of-type {
