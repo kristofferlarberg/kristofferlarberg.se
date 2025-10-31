@@ -12,9 +12,11 @@ body {
   --black: #0c0c0c;
   --white: white;
   --gray: #f9fafb;
-  --red: rgba(255, 0, 0, 0.25);
-  --green: rgba(0, 255, 0, 0.25);
-  --blue: rgba(0, 0, 255, 0.25);
+  --violet: oklch(81.1% 0.111 293.571 / 0.5);
+  --yellow: oklch(92.4% 0.12 95.746 /0.7);
+  --green: oklch(69.6% 0.17 162.48);
+  --blue: oklch(80.9% 0.105 251.813 / 0.5);
+  --red: oklch(70.4% 0.191 22.216 / 0.5);
 
   width: 100%;
   margin: 0;
@@ -162,13 +164,8 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: 2px solid var(--black);
+  outline: 3.5px solid var(--green);
   box-shadow: inset 0 0 0 0 var(--black);
-
-  @media (min-width: 1024px) {
-    outline: 2px solid var(--black);
-    box-shadow: inset 0 0 0 0 var(--black);
-  }
 }
 
 button {
@@ -186,13 +183,9 @@ button {
 }
 
 button:focus-visible {
-  outline: 2px solid var(--black);
+  outline: 3.5px solid var(--green);
   outline-offset: 2px;
   box-shadow: inset 0 0 0 0 var(--black);
-
-  @media (min-width: 1024px) {
-    outline: 0.3rem solid var(--black);
-  }
 }
 
 fieldset {
@@ -210,7 +203,7 @@ legend {
   padding: 3.5px 7px;
   margin-bottom: 3.5px;
   border-radius: 4px;
-  background-color: var(--green);
+  background-color: var(--yellow);
 }
 
 fieldset > div {
@@ -235,10 +228,11 @@ label::before {
   border: 1px solid var(--black);
   margin-right: 8px;
   color: var(--black);
+  border-radius: 1px;
 }
 
 input:focus-visible + label::before {
-  outline: 2px solid var(--black);
+  outline: 3.5px solid var(--green);
   outline-offset: 2px;
   box-shadow: inset 0 0 0 0 var(--black);
 }
@@ -478,11 +472,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 7px;
   background-color: var(--white);
   border-top: 1px solid var(--black);
-  -webkit-box-shadow: -1px -7px 9px 0px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -7px 9px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0 -1px 3px 0 rgb(0 0 0 / 0.1), 0 -1px 2px -1px rgb(0 0 0 / 0.1);
 
   @media (min-width: 1024px) {
@@ -667,7 +659,7 @@ figcaption {
   display: flex;
   overflow: auto;
   color: var(--black);
-  background-color: var(--green);
+  background-color: var(--yellow);
   border-radius: 4px;
 
   @media (min-width: 1024px) {
