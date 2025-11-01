@@ -11,12 +11,11 @@
 body {
   --black: #0c0c0c;
   --white: white;
-  --gray: #f9fafb;
-  --violet: oklch(81.1% 0.111 293.571 / 0.5);
-  --yellow: oklch(92.4% 0.12 95.746 /0.7);
-  --green: oklch(69.6% 0.17 162.48);
-  --blue: oklch(80.9% 0.105 251.813 / 0.5);
-  --red: oklch(70.4% 0.191 22.216 / 0.5);
+  --gray: oklch(98.5% 0.002 247.839);
+  --dark-gray: oklch(92.8% 0.006 264.531);
+  --green: rgba(0, 255, 0, 0.5);
+  --blue: rgb(50, 50, 255);
+  --red: rgba(255, 0, 0, 0.4);
 
   width: 100%;
   margin: 0;
@@ -164,7 +163,8 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: 3.5px solid var(--green);
+  outline: 4px solid var(--blue);
+  outline-offset: 2px;
   box-shadow: inset 0 0 0 0 var(--black);
 }
 
@@ -183,7 +183,7 @@ button {
 }
 
 button:focus-visible {
-  outline: 3.5px solid var(--green);
+  outline: 4px solid var(--blue);
   outline-offset: 2px;
   box-shadow: inset 0 0 0 0 var(--black);
 }
@@ -203,7 +203,15 @@ legend {
   padding: 3.5px 7px;
   margin-bottom: 3.5px;
   border-radius: 4px;
-  background-color: var(--yellow);
+  background-color: var(--dark-gray);
+}
+
+legend.process {
+  background-color: var(--red);
+}
+
+legend.technical {
+  background-color: var(--green);
 }
 
 fieldset > div {
@@ -232,13 +240,13 @@ label::before {
 }
 
 input:focus-visible + label::before {
-  outline: 3.5px solid var(--green);
+  outline: 4px solid var(--blue);
   outline-offset: 2px;
   box-shadow: inset 0 0 0 0 var(--black);
 }
 
 input:checked + label::before {
-  background-image: url("data:image/svg+xml,<svg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'><path d='M0 0L12 12M0 12L12 0' stroke='black' stroke-width='1' shape-rendering='crispEdges'/></svg>");
+  background-image: url("data:image/svg+xml,<svg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'><path d='M0 0L12 12M0 12L12 0' stroke='black' stroke-width='1' /></svg>");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -305,7 +313,7 @@ li.skill {
 }
 
 li.skill.technical > div.skill-details-container > span:first-of-type {
-  background-color: var(--blue);
+  background-color: var(--green);
 
   @media (min-width: 640px) {
     background-color: transparent;
@@ -342,7 +350,7 @@ li.skill > div.daily {
 }
 
 li.skill > div.daily.technical {
-  background-color: var(--blue);
+  background-color: var(--green);
 }
 
 li.skill > div.daily.process {
@@ -366,7 +374,7 @@ li.skill > div.weekly {
 }
 
 li.skill > div.weekly.technical {
-  background-color: var(--blue);
+  background-color: var(--green);
 }
 
 li.skill > div.weekly.process {
@@ -390,7 +398,7 @@ li.skill > div.monthly {
 }
 
 li.skill > div.monthly.technical {
-  background-color: var(--blue);
+  background-color: var(--green);
 }
 
 li.skill > div.monthly.process {
@@ -460,7 +468,7 @@ li.legend-item > div.process {
 li.legend-item > div.technical {
   height: 14px;
   width: 14px;
-  background-color: var(--blue);
+  background-color: var(--green);
 }
 
 dd {
@@ -659,7 +667,7 @@ figcaption {
   display: flex;
   overflow: auto;
   color: var(--black);
-  background-color: var(--yellow);
+  background-color: var(--dark-gray);
   border-radius: 4px;
 
   @media (min-width: 1024px) {
