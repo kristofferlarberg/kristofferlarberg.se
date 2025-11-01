@@ -691,7 +691,7 @@ figcaption {
 }
 
 .skill-details-container > span {
-  margin-right: 3.5px;
+  margin-right: 7px;
   line-height: 2;
 
   @media (min-width: 640px) {
