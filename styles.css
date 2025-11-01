@@ -312,6 +312,19 @@ li.skill {
   }
 }
 
+@container figure (width > 768px) {
+  li.skill {
+    bottom: calc(((var(--y) / 2) + 1) / (var(--y-max) + 1) * 100%) !important;
+    font-size: 1.7rem;
+  }
+}
+
+@container figure (width > 1280px) {
+  li.skill {
+    bottom: calc(((var(--y) / 4) + 1) / (var(--y-max) + 1) * 100%) !important;
+  }
+}
+
 li.skill.technical > div.skill-details-container > span:first-of-type {
   background-color: var(--green);
 
@@ -504,45 +517,12 @@ footer > div {
 
 figure {
   container-type: inline-size;
+  container-name: figure;
   flex-direction: column;
   width: 100%;
   justify-content: right;
   margin: 0;
   display: flex;
-
-  @container (min-width: 768px) {
-    .graph-container {
-      width: calc(100% - 50px);
-      aspect-ratio: 1 / 1;
-      --y-max: 50;
-    }
-
-    .y-label {
-      width: 100%;
-      left: calc(-50% - 14px - 7px - 2px);
-    }
-
-    li.skill {
-      bottom: calc(((var(--y) / 2) + 1) / (var(--y-max) + 1) * 100%) !important;
-      font-size: 1.7rem;
-    }
-  }
-
-  @container (min-width: 1280px) {
-    .graph-container {
-      aspect-ratio: 2 / 1;
-      --y-max: 25;
-    }
-
-    .y-label {
-      width: 50%;
-      left: calc(-25% - 14px - 7px - 2px);
-    }
-
-    li.skill {
-      bottom: calc(((var(--y) / 4) + 1) / (var(--y-max) + 1) * 100%) !important;
-    }
-  }
 
   @media (min-width: 250px) {
     display: flex;
@@ -565,6 +545,21 @@ figure {
     border-left: 2px solid var(--black);
     border-bottom: 2px solid var(--black);
     margin: 0 0 68px auto;
+  }
+}
+
+@container figure (width > 768px) {
+  .graph-container {
+    width: calc(100% - 50px);
+    aspect-ratio: 1 / 1;
+    --y-max: 50;
+  }
+}
+
+@container figure (width > 1280px) {
+  .graph-container {
+    aspect-ratio: 2 / 1;
+    --y-max: 25;
   }
 }
 
@@ -598,6 +593,20 @@ figure {
     top: calc(50% - 25px);
     transform: rotate(-90deg);
     width: calc(100% * 2);
+  }
+}
+
+@container figure (width > 768px) {
+  .y-label {
+    width: 100%;
+    left: calc(-50% - 14px - 7px - 2px);
+  }
+}
+
+@container figure (width > 1280px) {
+  .y-label {
+    width: 50%;
+    left: calc(-25% - 14px - 7px - 2px);
   }
 }
 
