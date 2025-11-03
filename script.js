@@ -71,7 +71,8 @@ function applyFilters() {
       const matchesContextualCategoryFilters =
         activeContextualCategoryFilters.every((filter) => {
           return (
-            (filter.value === "future" && skill.dataset.future === "true") ||
+            (filter.value === "interesting" &&
+              skill.dataset.interesting === "true") ||
             (filter.value === "collaborated" &&
               skill.dataset.collaborated === "true")
           );
