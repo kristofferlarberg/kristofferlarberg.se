@@ -263,9 +263,9 @@ input:disabled + label {
 .fieldsets-container {
   display: grid;
   gap: 14px;
-  grid-template-columns: 1;
+  grid-template-columns: 100%;
 
-  @media (min-width: 640px) {
+  @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -312,7 +312,7 @@ li.skill {
   }
 }
 
-@container figure (width > 768px) {
+@container figure (width > 640px) {
   li.skill {
     bottom: calc(((var(--y) / 2) + 1) / (var(--y-max) + 1) * 100%) !important;
     font-size: 1.7rem;
@@ -548,7 +548,7 @@ figure {
   }
 }
 
-@container figure (width > 768px) {
+@container figure (width > 640px) {
   .graph-container {
     width: calc(100% - 50px);
     aspect-ratio: 1 / 1;
@@ -596,7 +596,7 @@ figure {
   }
 }
 
-@container figure (width > 768px) {
+@container figure (width > 640px) {
   .y-label {
     width: 100%;
     left: calc(-50% - 14px - 7px - 2px);
