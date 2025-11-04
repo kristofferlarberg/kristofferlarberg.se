@@ -590,7 +590,7 @@ figure {
   @media (min-width: 640px) {
     display: block;
     left: calc(-100% - 14px - 7px - 2px);
-    top: calc(50% - 25px);
+    top: calc(50% - 17px);
     transform: rotate(-90deg);
     width: calc(100% * 2);
   }
