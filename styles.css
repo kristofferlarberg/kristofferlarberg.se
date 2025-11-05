@@ -315,12 +315,12 @@ li.skill {
 @container figure (width > 640px) {
   li.skill {
     bottom: calc(((var(--y) / 2) + 1) / (var(--y-max) + 1) * 100%) !important;
-    font-size: 1.7rem;
   }
 }
 
 @container figure (width > 1280px) {
   li.skill {
+    font-size: 1.7rem;
     bottom: calc(((var(--y) / 4) + 1) / (var(--y-max) + 1) * 100%) !important;
   }
 }
@@ -539,7 +539,7 @@ figure {
     --x-max: 5;
     --y-max: 100;
     position: relative;
-    width: calc(100% - 50px);
+    width: calc(100% - 42px);
     aspect-ratio: 1 / 2;
     border: none;
     border-left: 2px solid var(--black);
@@ -550,7 +550,6 @@ figure {
 
 @container figure (width > 640px) {
   .graph-container {
-    width: calc(100% - 50px);
     aspect-ratio: 1 / 1;
     --y-max: 50;
   }
@@ -582,14 +581,12 @@ figure {
   }
 }
 
-/* left: minus value of height of container - height of numbers row - margin - 2px for border */
-/* top: height of container / 2  - space for empty initial span */
 .y-label {
   display: none;
 
   @media (min-width: 640px) {
     display: block;
-    left: calc(-100% - 14px - 7px - 2px);
+    left: calc(-100% - 21px - 7px);
     top: calc(50% - 17px);
     transform: rotate(-90deg);
     width: calc(100% * 2);
@@ -599,14 +596,14 @@ figure {
 @container figure (width > 640px) {
   .y-label {
     width: 100%;
-    left: calc(-50% - 14px - 7px - 2px);
+    left: calc(-50% - 21px - 7px);
   }
 }
 
 @container figure (width > 1280px) {
   .y-label {
     width: 50%;
-    left: calc(-25% - 14px - 7px - 2px);
+    left: calc(-25% - 21px - 7px);
   }
 }
 
