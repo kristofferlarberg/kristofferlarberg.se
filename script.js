@@ -20,6 +20,7 @@ selectAllFilters();
 applyFilters();
 
 window.addEventListener("resize", handleVisibility);
+document.querySelector(".filters-container").style.display = "flex";
 
 function filterListener() {
   const filtersContainer = document.querySelector(".filters-container");
