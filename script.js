@@ -1,5 +1,3 @@
-const filterButtonsContainer = document.querySelectorAll(".filters-container");
-
 function sortList() {
   if (window.innerWidth <= 640) {
     const skills = document.querySelectorAll(".skill");
@@ -16,14 +14,6 @@ function sortList() {
     skillsContainer[0].replaceChildren(...sortedSkills);
   }
 }
-
-sortList();
-selectAllFilters();
-applyFilters();
-
-window.addEventListener("resize", sortList);
-window.addEventListener("resize", applyFilters);
-document.querySelector(".filters-container").style.display = "flex";
 
 function filterListener() {
   const filtersContainer = document.querySelector(".filters-container");
@@ -62,37 +52,47 @@ function applyFilters() {
     (filter) => filter.checked === true && filter.name === "contextual-category"
   );
 
-  skills.forEach((skill) => {
-    let shouldShow = false;
-
-    if (activeSkillCategoryFilters.length > 0) {
-      const matchesCategory = activeSkillCategoryFilters.some(
-        (filter) => filter.value === skill.dataset.category
-      );
-      shouldShow = matchesCategory;
-    }
-
-    if (shouldShow && activeContextualCategoryFilters.length > 0) {
-      const matchesContextualCategoryFilters =
-        activeContextualCategoryFilters.every((filter) => {
-          return (
-            (filter.value === "interesting" &&
-              skill.dataset.interesting === "true") ||
-            (filter.value === "collaborated" &&
-              skill.dataset.collaborated === "true")
-          );
-        });
-      shouldShow = matchesContextualCategoryFilters;
-    }
-
-    if (shouldShow) {
+  if (activeSkillCategoryFilters.length <= 0) {
+    skills.forEach((skill) => {
       skill.classList.remove("hidden");
-    } else {
-      skill.classList.add("hidden");
-    }
-  });
+    });
+  } else {
+    skills.forEach((skill) => {
+      let shouldShow = false;
 
-  if (activeSkillCategoryFilters.length <= 0 && window.innerWidth <= 640) {
+      if (activeSkillCategoryFilters.length > 0) {
+        const matchesCategory = activeSkillCategoryFilters.some(
+          (filter) => filter.value === skill.dataset.category
+        );
+        shouldShow = matchesCategory;
+      }
+
+      if (shouldShow && activeContextualCategoryFilters.length > 0) {
+        const matchesContextualCategoryFilters =
+          activeContextualCategoryFilters.every((filter) => {
+            return (
+              (filter.value === "interesting" &&
+                skill.dataset.interesting === "true") ||
+              (filter.value === "collaborated" &&
+                skill.dataset.collaborated === "true")
+            );
+          });
+        shouldShow = matchesContextualCategoryFilters;
+      }
+
+      if (shouldShow) {
+        skill.classList.remove("hidden");
+      } else {
+        skill.classList.add("hidden");
+      }
+    });
+  }
+
+  const hasNoVisibleSkills = skills.every((skill) =>
+    skill.classList.contains("hidden")
+  );
+
+  if (hasNoVisibleSkills && window.innerWidth <= 640) {
     skillsPlaceholder.classList.remove("hidden");
   } else {
     skillsPlaceholder.classList.add("hidden");
@@ -154,4 +154,8 @@ function toggleContextualCategoryFilters() {
   }
 }
 
+sortList();
+window.addEventListener("resize", sortList);
+window.addEventListener("resize", applyFilters);
 filterListener();
+document.querySelector(".filters-container").style.display = "flex";
