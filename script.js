@@ -1,9 +1,10 @@
 const filterButtonsContainer = document.querySelectorAll(".filters-container");
 
-function handleVisibility() {
-  if (window.innerWidth <= 375) {
+function sortList() {
+  if (window.innerWidth <= 640) {
     const skills = document.querySelectorAll(".skill");
     let skillsContainer = document.querySelectorAll(".skills");
+
     const sortedSkills = Array.from(skills).sort(
       (a, b) =>
         parseFloat(b.style.getPropertyValue("--x")) +
@@ -11,15 +12,17 @@ function handleVisibility() {
         (parseFloat(a.style.getPropertyValue("--x")) +
           parseFloat(a.style.getPropertyValue("--y")))
     );
+
     skillsContainer[0].replaceChildren(...sortedSkills);
   }
 }
 
-handleVisibility();
+sortList();
 selectAllFilters();
 applyFilters();
 
-window.addEventListener("resize", handleVisibility);
+window.addEventListener("resize", sortList);
+window.addEventListener("resize", applyFilters);
 document.querySelector(".filters-container").style.display = "flex";
 
 function filterListener() {
@@ -47,6 +50,7 @@ function applyFilters() {
   const filters = Array.from(
     document.querySelectorAll("input[type='checkbox']")
   );
+  const skillsPlaceholder = document.querySelector("#skills-placeholder");
 
   const activeSkillCategoryFilters = filters.filter(
     (filter) =>
@@ -87,6 +91,12 @@ function applyFilters() {
       skill.classList.add("hidden");
     }
   });
+
+  if (activeSkillCategoryFilters.length <= 0 && window.innerWidth <= 640) {
+    skillsPlaceholder.classList.remove("hidden");
+  } else {
+    skillsPlaceholder.classList.add("hidden");
+  }
 
   toggleContextualCategoryFilters();
 }
