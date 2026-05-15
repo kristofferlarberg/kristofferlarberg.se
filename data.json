@@ -1,0 +1,274 @@
+{
+  "skills": [
+    {
+      "name": "HTML",
+      "type": "technical",
+      "category": "languages",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 4.75,
+      "confidence": 93,
+      "frequency": "daily"
+    },
+    {
+      "name": "CSS",
+      "type": "technical",
+      "category": "languages",
+      "interesting": "false",
+      "collaborated": "true",
+      "experience": 4.75,
+      "confidence": 85,
+      "frequency": "daily"
+    },
+    {
+      "name": "JavaScript",
+      "type": "technical",
+      "category": "languages",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 4.5,
+      "confidence": 58.5,
+      "frequency": "daily"
+    },
+    {
+      "name": "TypeScript",
+      "type": "technical",
+      "category": "languages",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 3.5,
+      "confidence": 55,
+      "frequency": "daily"
+    },
+    {
+      "name": "React",
+      "type": "technical",
+      "category": "frameworks-libraries",
+      "interesting": "false",
+      "collaborated": "true",
+      "experience": 4.5,
+      "confidence": 65.5,
+      "frequency": "daily"
+    },
+    {
+      "name": "React Native",
+      "type": "technical",
+      "category": "frameworks-libraries",
+      "interesting": "false",
+      "collaborated": "true",
+      "experience": 1.5,
+      "confidence": 45,
+      "frequency": "weekly"
+    },
+    {
+      "name": "Vue.js",
+      "type": "technical",
+      "category": "frameworks-libraries",
+      "interesting": "false",
+      "collaborated": "false",
+      "experience": 0.25,
+      "confidence": 50,
+      "frequency": "monthly"
+    },
+    {
+      "name": "Next.js",
+      "type": "technical",
+      "category": "frameworks-libraries",
+      "interesting": "false",
+      "collaborated": "true",
+      "experience": 1.5,
+      "confidence": 65,
+      "frequency": "daily"
+    },
+    {
+      "name": "Gatsby",
+      "type": "technical",
+      "category": "frameworks-libraries",
+      "interesting": "false",
+      "collaborated": "true",
+      "experience": 2.5,
+      "confidence": 75,
+      "frequency": "daily"
+    },
+    {
+      "name": "Node.js",
+      "type": "technical",
+      "category": "backend-data",
+      "interesting": "true",
+      "collaborated": "false",
+      "experience": 1,
+      "confidence": 20,
+      "frequency": "monthly"
+    },
+    {
+      "name": "REST API",
+      "type": "technical",
+      "category": "backend-data",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 4.25,
+      "confidence": 30,
+      "frequency": "monthly"
+    },
+    {
+      "name": "TanStack Query",
+      "type": "technical",
+      "category": "backend-data",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 4,
+      "confidence": 42.5,
+      "frequency": "weekly"
+    },
+    {
+      "name": "Cypress",
+      "type": "technical",
+      "category": "testing",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 0.25,
+      "confidence": 15,
+      "frequency": "daily"
+    },
+    {
+      "name": "Testing Library",
+      "type": "technical",
+      "category": "testing",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 2.75,
+      "confidence": 40,
+      "frequency": "weekly"
+    },
+    {
+      "name": "git",
+      "type": "technical",
+      "category": "technical-tooling",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 4.5,
+      "confidence": 72.5,
+      "frequency": "daily"
+    },
+    {
+      "name": "CircleCI",
+      "type": "technical",
+      "category": "technical-tooling",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 2.5,
+      "confidence": 50,
+      "frequency": "daily"
+    },
+    {
+      "name": "GitHub Actions",
+      "type": "technical",
+      "category": "technical-tooling",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 1.5,
+      "confidence": 25,
+      "frequency": "monthly"
+    },
+    {
+      "name": "Datadog",
+      "type": "technical",
+      "category": "technical-tooling",
+      "interesting": "false",
+      "collaborated": "true",
+      "experience": 2.5,
+      "confidence": 35,
+      "frequency": "daily"
+    },
+    {
+      "name": "Contentful",
+      "type": "technical",
+      "category": "technical-tooling",
+      "interesting": "false",
+      "collaborated": "true",
+      "experience": 3.5,
+      "confidence": 82.5,
+      "frequency": "weekly"
+    },
+    {
+      "name": "Package management",
+      "type": "technical",
+      "category": "technical-tooling",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 4.5,
+      "confidence": 37.5,
+      "frequency": "daily"
+    },
+    {
+      "name": "Test-Driven Development",
+      "type": "process",
+      "category": "practices",
+      "interesting": "true",
+      "collaborated": "false",
+      "experience": 0.25,
+      "confidence": 30,
+      "frequency": "daily"
+    },
+    {
+      "name": "Agile methods",
+      "type": "process",
+      "category": "practices",
+      "interesting": "true",
+      "collaborated": "false",
+      "experience": 4.5,
+      "confidence": 82.5,
+      "frequency": "daily"
+    },
+    {
+      "name": "Pair and mob programming",
+      "type": "process",
+      "category": "practices",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 1.5,
+      "confidence": 55,
+      "frequency": "weekly"
+    },
+    {
+      "name": "Accessibility",
+      "type": "process",
+      "category": "practices",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 4,
+      "confidence": 75,
+      "frequency": "daily"
+    },
+    {
+      "name": "Git workflows",
+      "type": "process",
+      "category": "process-tooling",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 3.75,
+      "confidence": 60,
+      "frequency": "weekly"
+    },
+    {
+      "name": "CI/CD",
+      "type": "process",
+      "category": "process-tooling",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 4.25,
+      "confidence": 50,
+      "frequency": "daily"
+    },
+    {
+      "name": "Observability and incident response",
+      "type": "process",
+      "category": "process-tooling",
+      "interesting": "false",
+      "collaborated": "true",
+      "experience": 1,
+      "confidence": 40,
+      "frequency": "weekly"
+    }
+  ]
+}

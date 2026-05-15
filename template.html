@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Website about Kristoffer Larbergs developer practice"
+    />
+    <meta name="author" content="Kristoffer Larberg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kristofferlarberg.se</title>
+    <link rel="canonical" href="https://kristofferlarberg.se" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>kristofferlarberg.se</h1>
+    </header>
+    <main>
+      <section class="header">
+        <h2 class="sr-only">Introduction</h2>
+        <div class="introduction">
+          I'm a Stockholm based developer who likes building services that help
+          people. This site is a way for me to make sense of my developer
+          practice. Hopefully you'll find it interesting too.
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <figure>
+          <div class="graph-container">
+            <span class="axis-label x-label">
+              <span class="sr-only">X axis:</span>
+              Years of experience
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 7px;
+                "
+              >
+                <span>0</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+              </div>
+            </span>
+            <span class="axis-label y-label">
+              <span class="sr-only">Y axis:</span>
+              Confidence
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 7px;
+                "
+              >
+                <span>0%</span>
+                <span>25%</span>
+                <span>50%</span>
+                <span>75%</span>
+                <span>100%</span>
+              </div>
+            </span>
+            <ul class="skills">
+              <li class="skill hidden" id="skills-placeholder">
+                No skills to display
+              </li>
+              {{#each skills}}
+              <li
+                class="skill {{type}}"
+                data-name="{{name}}"
+                data-category="{{category}}"
+                data-interesting="{{interesting}}"
+                data-collaborated="{{collaborated}}"
+                style="--x: {{experience}}; --y: {{confidence}}"
+              >
+                <div class="{{frequency}} {{type}}" aria-hidden="true"></div>
+                <div class="skill-details-container">
+                  <span>{{name}}</span>
+                  <span class="sr-only">,</span>
+                  <span class="sr-only">{{type_label}} skill</span>
+                  <span class="sr-only">,</span>
+                  <span class="narrow-only">{{frequency_label}} use</span>
+                  <span class="sr-only">,</span>
+                  <span class="narrow-only">{{experience}} years experience</span>
+                  <span class="sr-only">,</span>
+                  <span class="narrow-only">Confidence {{confidence}}%</span>
+                </div>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          <figcaption>
+            Skills listed based on confidence level and years of experience.
+          </figcaption>
+          <div class="legend">
+            <ul>
+              <li class="legend-item">
+                <div class="daily"></div>
+                <span class="sr-only">Large circle</span>
+                Daily activity
+              </li>
+              <li class="legend-item">
+                <div class="weekly"></div>
+                <span class="sr-only">Medium circle</span>
+                Weekly activity
+              </li>
+              <li class="legend-item">
+                <div class="monthly"></div>
+                <span class="sr-only">Small circle</span>
+                Monthly activity
+              </li>
+            </ul>
+          </div>
+        </figure>
+        <div class="filters-container">
+          <div class="filter-buttons">
+            <h3 style="margin: 0">Filters</h3>
+            <div>
+              <button class="all-filters" aria-label="Apply all filters">
+                Apply all
+              </button>
+              <button class="clear-filters" aria-label="Clear all filters">
+                Clear all
+              </button>
+            </div>
+          </div>
+          <div class="fieldsets-container">
+            <fieldset>
+              <legend class="process">Process</legend>
+              <div>
+                <input
+                  id="practices"
+                  class="sr-only"
+                  type="checkbox"
+                  name="process-category"
+                  value="practices"
+                />
+                <label for="practices">Practices</label>
+                <input
+                  id="process-tooling"
+                  class="sr-only"
+                  type="checkbox"
+                  name="process-category"
+                  value="process-tooling"
+                />
+                <label for="process-tooling">Tooling</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend class="technical">Technical</legend>
+              <div>
+                <input
+                  id="languages"
+                  class="sr-only"
+                  type="checkbox"
+                  name="technical-category"
+                  value="languages"
+                />
+                <label for="languages">Languages</label>
+                <input
+                  id="frameworks-libraries"
+                  class="sr-only"
+                  type="checkbox"
+                  name="technical-category"
+                  value="frameworks-libraries"
+                />
+                <label for="frameworks-libraries"
+                  >Frameworks and libraries
+                </label>
+                <input
+                  id="backend-data"
+                  class="sr-only"
+                  type="checkbox"
+                  name="technical-category"
+                  value="backend-data"
+                />
+                <label for="backend-data">Backend and data</label>
+                <input
+                  id="testing"
+                  class="sr-only"
+                  type="checkbox"
+                  name="technical-category"
+                  value="testing"
+                />
+                <label for="testing">Testing</label>
+                <input
+                  id="technical-tooling"
+                  class="sr-only"
+                  type="checkbox"
+                  name="technical-category"
+                  value="technical-tooling"
+                />
+                <label for="technical-tooling">Tooling</label>
+              </div>
+            </fieldset>
+            <fieldset id="contextual-filters">
+              <legend class="contextual">Contextual</legend>
+              <div>
+                <input
+                  id="interesting"
+                  class="sr-only"
+                  type="checkbox"
+                  name="contextual-category"
+                  value="interesting"
+                  disabled
+                />
+                <label for="interesting">Extra interesting</label>
+                <input
+                  id="collaborated"
+                  class="sr-only"
+                  type="checkbox"
+                  name="contextual-category"
+                  value="collaborated"
+                  disabled
+                />
+                <label for="collaborated">Collaborated</label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <h2 class="sr-only">Contact</h2>
+        <a href="mailto:kristoffer.larberg@icloud.com" rel="noreferrer">
+          kristoffer.larberg@icloud.com
+        </a>
+        <a href="https://github.com/kristofferlarberg" rel="noreferrer">
+          <span aria-hidden="true">→</span>
+          GitHub
+        </a>
+      </footer>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
