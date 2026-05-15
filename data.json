@@ -6,8 +6,8 @@
       "category": "languages",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 4.75,
-      "confidence": 93,
+      "experience": 5.5,
+      "confidence": 95,
       "frequency": "daily"
     },
     {
@@ -16,7 +16,7 @@
       "category": "languages",
       "interesting": "false",
       "collaborated": "true",
-      "experience": 4.75,
+      "experience": 5.5,
       "confidence": 85,
       "frequency": "daily"
     },
@@ -26,8 +26,8 @@
       "category": "languages",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 4.5,
-      "confidence": 58.5,
+      "experience": 4.75,
+      "confidence": 60,
       "frequency": "daily"
     },
     {
@@ -36,9 +36,19 @@
       "category": "languages",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 3.5,
-      "confidence": 55,
+      "experience": 4,
+      "confidence": 60,
       "frequency": "daily"
+    },
+    {
+      "name": "Java",
+      "type": "technical",
+      "category": "languages",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 0.5,
+      "confidence": 10,
+      "frequency": "weekly"
     },
     {
       "name": "React",
@@ -46,8 +56,8 @@
       "category": "frameworks-libraries",
       "interesting": "false",
       "collaborated": "true",
-      "experience": 4.5,
-      "confidence": 65.5,
+      "experience": 5,
+      "confidence": 65,
       "frequency": "daily"
     },
     {
@@ -76,7 +86,7 @@
       "category": "frameworks-libraries",
       "interesting": "false",
       "collaborated": "true",
-      "experience": 1.5,
+      "experience": 2,
       "confidence": 65,
       "frequency": "daily"
     },
@@ -86,7 +96,7 @@
       "category": "frameworks-libraries",
       "interesting": "false",
       "collaborated": "true",
-      "experience": 2.5,
+      "experience": 3,
       "confidence": 75,
       "frequency": "daily"
     },
@@ -96,8 +106,8 @@
       "category": "backend-data",
       "interesting": "true",
       "collaborated": "false",
-      "experience": 1,
-      "confidence": 20,
+      "experience": 2,
+      "confidence": 30,
       "frequency": "monthly"
     },
     {
@@ -106,8 +116,8 @@
       "category": "backend-data",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 4.25,
-      "confidence": 30,
+      "experience": 4.5,
+      "confidence": 35,
       "frequency": "monthly"
     },
     {
@@ -116,8 +126,8 @@
       "category": "backend-data",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 4,
-      "confidence": 42.5,
+      "experience": 4.5,
+      "confidence": 43,
       "frequency": "weekly"
     },
     {
@@ -127,7 +137,7 @@
       "interesting": "true",
       "collaborated": "true",
       "experience": 0.25,
-      "confidence": 15,
+      "confidence": 25,
       "frequency": "daily"
     },
     {
@@ -136,7 +146,7 @@
       "category": "testing",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 2.75,
+      "experience": 3,
       "confidence": 40,
       "frequency": "weekly"
     },
@@ -146,8 +156,8 @@
       "category": "technical-tooling",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 4.5,
-      "confidence": 72.5,
+      "experience": 5,
+      "confidence": 74,
       "frequency": "daily"
     },
     {
@@ -156,8 +166,8 @@
       "category": "technical-tooling",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 2.5,
-      "confidence": 50,
+      "experience": 3,
+      "confidence": 55,
       "frequency": "daily"
     },
     {
@@ -167,7 +177,7 @@
       "interesting": "true",
       "collaborated": "true",
       "experience": 1.5,
-      "confidence": 25,
+      "confidence": 30,
       "frequency": "monthly"
     },
     {
@@ -176,7 +186,7 @@
       "category": "technical-tooling",
       "interesting": "false",
       "collaborated": "true",
-      "experience": 2.5,
+      "experience": 3,
       "confidence": 35,
       "frequency": "daily"
     },
@@ -187,7 +197,7 @@
       "interesting": "false",
       "collaborated": "true",
       "experience": 3.5,
-      "confidence": 82.5,
+      "confidence": 83,
       "frequency": "weekly"
     },
     {
@@ -196,18 +206,18 @@
       "category": "technical-tooling",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 4.5,
-      "confidence": 37.5,
+      "experience": 5,
+      "confidence": 38,
       "frequency": "daily"
-    },
+    }, 
     {
       "name": "Test-Driven Development",
       "type": "process",
       "category": "practices",
       "interesting": "true",
       "collaborated": "false",
-      "experience": 0.25,
-      "confidence": 30,
+      "experience": 0.5,
+      "confidence": 45,
       "frequency": "daily"
     },
     {
@@ -216,8 +226,8 @@
       "category": "practices",
       "interesting": "true",
       "collaborated": "false",
-      "experience": 4.5,
-      "confidence": 82.5,
+      "experience": 5,
+      "confidence": 83,
       "frequency": "daily"
     },
     {
@@ -226,7 +236,7 @@
       "category": "practices",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 1.5,
+      "experience": 2,
       "confidence": 55,
       "frequency": "weekly"
     },
@@ -236,8 +246,8 @@
       "category": "practices",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 4,
-      "confidence": 75,
+      "experience": 4.75,
+      "confidence": 80,
       "frequency": "daily"
     },
     {
@@ -246,7 +256,7 @@
       "category": "process-tooling",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 3.75,
+      "experience": 3.5,
       "confidence": 60,
       "frequency": "weekly"
     },
@@ -256,7 +266,7 @@
       "category": "process-tooling",
       "interesting": "true",
       "collaborated": "true",
-      "experience": 4.25,
+      "experience": 4.5,
       "confidence": 50,
       "frequency": "daily"
     },
@@ -266,7 +276,7 @@
       "category": "process-tooling",
       "interesting": "false",
       "collaborated": "true",
-      "experience": 1,
+      "experience": 1.5,
       "confidence": 40,
       "frequency": "weekly"
     }

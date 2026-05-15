@@ -539,7 +539,7 @@ figure {
   min-height: 28px;
 
   @media (min-width: 640px) {
-    --x-max: 5;
+    --x-max: 6;
     --y-max: 100;
     position: relative;
     width: calc(100% - 42px);
