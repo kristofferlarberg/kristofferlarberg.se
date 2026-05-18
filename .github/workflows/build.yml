@@ -3,8 +3,8 @@ name: Build Static Site
 on:
   push:
     branches: [main]
-    paths:
-      - 'data.json'
+    paths-ignore:
+      - 'index.html'
   workflow_dispatch:
 
 jobs:
