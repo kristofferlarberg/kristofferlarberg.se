@@ -19,6 +19,9 @@ def process_loops(template, data):
         if array_name not in data or not isinstance(data[array_name], list):
             return ''
 
+        indent = re.match(r'\n(\s*)', loop_template)
+        prefix = indent.group(1) if indent else ''
+
         rendered_items = []
         for item in data[array_name]:
             enriched = dict(item)
@@ -28,9 +31,9 @@ def process_loops(template, data):
             item_html = loop_template
             for field, value in enriched.items():
                 item_html = item_html.replace(f'{{{{{field}}}}}', str(value))
-            rendered_items.append(item_html.lstrip('\n').rstrip())
+            rendered_items.append(item_html.strip())
 
-        return '\n'.join(rendered_items)
+        return ('\n' + prefix).join(rendered_items)
 
     return re.sub(pattern, replace_loop, template, flags=re.DOTALL)
 
