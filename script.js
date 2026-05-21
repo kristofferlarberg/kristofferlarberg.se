@@ -99,6 +99,18 @@ function applyFilters() {
   }
 
   toggleContextualCategoryFilters();
+  updateFilterButtons();
+}
+
+function updateFilterButtons() {
+  const checkboxes = Array.from(
+    document.querySelectorAll("input[type='checkbox']")
+  );
+  const checkedCount = checkboxes.filter((cb) => cb.checked).length;
+
+  document.querySelector(".all-filters").disabled =
+    checkedCount === checkboxes.length;
+  document.querySelector(".clear-filters").disabled = checkedCount === 0;
 }
 
 function clearFilters() {
@@ -159,3 +171,4 @@ window.addEventListener("resize", sortList);
 window.addEventListener("resize", applyFilters);
 filterListener();
 document.querySelector(".filters-container").style.display = "flex";
+updateFilterButtons();
