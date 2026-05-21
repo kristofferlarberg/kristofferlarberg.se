@@ -105,7 +105,7 @@
       "type": "technical",
       "category": "backend-data",
       "interesting": "true",
-      "collaborated": "false",
+      "collaborated": "true",
       "experience": 2,
       "confidence": 30,
       "frequency": "monthly"
@@ -225,7 +225,7 @@
       "type": "process",
       "category": "practices",
       "interesting": "true",
-      "collaborated": "false",
+      "collaborated": "true",
       "experience": 5,
       "confidence": 83,
       "frequency": "daily"
