@@ -251,16 +251,6 @@
       "frequency": "daily"
     },
     {
-      "name": "Git workflows",
-      "type": "process",
-      "category": "process-tooling",
-      "interesting": "true",
-      "collaborated": "true",
-      "experience": 3.5,
-      "confidence": 60,
-      "frequency": "weekly"
-    },
-    {
       "name": "CI/CD",
       "type": "process",
       "category": "process-tooling",
