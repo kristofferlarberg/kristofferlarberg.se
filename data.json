@@ -1,6 +1,16 @@
 {
   "skills": [
     {
+      "name": "Claude Code",
+      "type": "technical",
+      "category": "tooling",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 1,
+      "confidence": 50,
+      "frequency": "daily"
+    },
+    {
       "name": "HTML",
       "type": "technical",
       "category": "languages",
