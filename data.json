@@ -84,9 +84,9 @@
       "name": "Next.js",
       "type": "technical",
       "category": "frameworks-libraries",
-      "interesting": "false",
+      "interesting": "true",
       "collaborated": "true",
-      "experience": 2,
+      "experience": 2.5,
       "confidence": 65,
       "frequency": "daily"
     },
