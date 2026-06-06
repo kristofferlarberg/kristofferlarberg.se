@@ -203,7 +203,7 @@
     {
       "name": "Contentful",
       "type": "technical",
-      "category": "technical-tooling",
+      "category": "backend-data",
       "interesting": "false",
       "collaborated": "true",
       "experience": 3.5,
