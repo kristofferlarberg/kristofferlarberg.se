@@ -141,6 +141,16 @@
       "frequency": "monthly"
     },
     {
+      "name": "Postgres",
+      "type": "technical",
+      "category": "backend-data",
+      "interesting": "true",
+      "collaborated": "false",
+      "experience": 1,
+      "confidence": 20,
+      "frequency": "monthly"
+    },
+    {
       "name": "TanStack Query",
       "type": "technical",
       "category": "backend-data",
@@ -197,7 +207,7 @@
       "interesting": "true",
       "collaborated": "true",
       "experience": 1.5,
-      "confidence": 30,
+      "confidence": 60,
       "frequency": "monthly"
     },
     {
@@ -281,7 +291,7 @@
       "frequency": "daily"
     },
     {
-      "name": "Observability and incident response",
+      "name": "Incident response",
       "type": "process",
       "category": "process-tooling",
       "interesting": "false",
@@ -289,6 +299,26 @@
       "experience": 1.5,
       "confidence": 40,
       "frequency": "weekly"
+    },
+    {
+      "name": "Observability",
+      "type": "process",
+      "category": "process-tooling",
+      "interesting": "false",
+      "collaborated": "true",
+      "experience": 1.5,
+      "confidence": 30,
+      "frequency": "weekly"
+    },
+    {
+      "name": "Coding agents",
+      "type": "process",
+      "category": "process-tooling",
+      "interesting": "true",
+      "collaborated": "false",
+      "experience": 1.5,
+      "confidence": 60,
+      "frequency": "daily"
     }
   ]
 }
