@@ -71,16 +71,6 @@
       "frequency": "daily"
     },
     {
-      "name": "Java",
-      "type": "technical",
-      "category": "languages",
-      "interesting": "true",
-      "collaborated": "true",
-      "experience": 0.5,
-      "confidence": 10,
-      "frequency": "weekly"
-    },
-    {
       "name": "React",
       "type": "technical",
       "category": "frameworks-libraries",
