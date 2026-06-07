@@ -21,6 +21,26 @@
       "frequency": "daily"
     },
     {
+      "name": "Python",
+      "type": "technical",
+      "category": "languages",
+      "interesting": "true",
+      "collaborated": "false",
+      "experience": 0.5,
+      "confidence": 10,
+      "frequency": "monthly"
+    },
+    {
+      "name": "Java",
+      "type": "technical",
+      "category": "languages",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 0.5,
+      "confidence": 15,
+      "frequency": "weekly"
+    },
+    {
       "name": "CSS",
       "type": "technical",
       "category": "languages",
