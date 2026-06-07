@@ -1,16 +1,6 @@
 {
   "skills": [
     {
-      "name": "Claude Code",
-      "type": "technical",
-      "category": "technical-tooling",
-      "interesting": "true",
-      "collaborated": "true",
-      "experience": 1,
-      "confidence": 50,
-      "frequency": "daily"
-    },
-    {
       "name": "HTML",
       "type": "technical",
       "category": "languages",
@@ -161,6 +151,26 @@
       "frequency": "weekly"
     },
     {
+      "name": "Docker",
+      "type": "technical",
+      "category": "backend-data",
+      "interesting": "true",
+      "collaborated": "false",
+      "experience": 1,
+      "confidence": 10,
+      "frequency": "monthly"
+    },
+    {
+      "name": "Kuberbetes",
+      "type": "technical",
+      "category": "backend-data",
+      "interesting": "true",
+      "collaborated": "false",
+      "experience": 1,
+      "confidence": 5,
+      "frequency": "monthly"
+    },
+    {
       "name": "Cypress",
       "type": "technical",
       "category": "testing",
@@ -199,6 +209,16 @@
       "experience": 3,
       "confidence": 55,
       "frequency": "daily"
+    },
+    {
+      "name": "AWS",
+      "type": "technical",
+      "category": "technical-tooling",
+      "interesting": "true",
+      "collaborated": "true",
+      "experience": 3,
+      "confidence": 25,
+      "frequency": "weekly"
     },
     {
       "name": "GitHub Actions",
