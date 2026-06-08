@@ -127,7 +127,7 @@
       "interesting": "true",
       "collaborated": "true",
       "experience": 5,
-      "confidence": 35,
+      "confidence": 45,
       "frequency": "monthly"
     },
     {
@@ -147,7 +147,7 @@
       "interesting": "true",
       "collaborated": "true",
       "experience": 5.25,
-      "confidence": 45,
+      "confidence": 50,
       "frequency": "weekly"
     },
     {
@@ -257,7 +257,7 @@
       "interesting": "true",
       "collaborated": "true",
       "experience": 5,
-      "confidence": 40,
+      "confidence": 35,
       "frequency": "weekly"
     },
     {
@@ -307,7 +307,7 @@
       "interesting": "true",
       "collaborated": "true",
       "experience": 5,
-      "confidence": 50,
+      "confidence": 52.5,
       "frequency": "daily"
     },
     {
