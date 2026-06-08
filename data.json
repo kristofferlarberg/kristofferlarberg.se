@@ -277,7 +277,7 @@
       "interesting": "true",
       "collaborated": "true",
       "experience": 5.25,
-      "confidence": 83,
+      "confidence": 85,
       "frequency": "daily"
     },
     {
@@ -337,7 +337,7 @@
       "interesting": "true",
       "collaborated": "false",
       "experience": 1.5,
-      "confidence": 60,
+      "confidence": 65,
       "frequency": "daily"
     }
   ]
