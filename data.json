@@ -247,7 +247,7 @@
       "interesting": "false",
       "collaborated": "true",
       "experience": 3.5,
-      "confidence": 83,
+      "confidence": 85,
       "frequency": "weekly"
     },
     {
@@ -259,7 +259,7 @@
       "experience": 5,
       "confidence": 40,
       "frequency": "weekly"
-    }, 
+    },
     {
       "name": "Test-Driven Development",
       "type": "process",
