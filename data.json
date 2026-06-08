@@ -161,7 +161,7 @@
       "frequency": "monthly"
     },
     {
-      "name": "Kuberbetes",
+      "name": "Kubernetes",
       "type": "technical",
       "category": "backend-data",
       "interesting": "true",
